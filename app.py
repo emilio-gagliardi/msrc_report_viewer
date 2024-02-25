@@ -1,7 +1,9 @@
 import streamlit as st
 import os
 import json
-
+import pandas as pd
+from datetime import datetime
+from PIL import Image
 
 # Initialize the app and set the title
 st.set_page_config(page_title='MSRC Report Viewer', layout='wide')
@@ -9,33 +11,63 @@ st.set_page_config(page_title='MSRC Report Viewer', layout='wide')
 
 # Function to load JSON data
 @st.cache
-def load_json_data(report_name):
-    with open(f'json/{report_name}.json') as json_file:
-        return json.load(json_file)
+def load_json_data(file_path):
+    try:
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+        return data
+    except FileNotFoundError:
+        return None
 
 
-# Function to display the report
-def display_report(report_name):
-    # Load the JSON data
-    # data = load_json_data(report_name)
-    # Display data using Streamlit components
-    # TODO: Implement the display logic
-    pass
+def list_report_files(directory, file_extension=".json"):
+    files = [f for f in os.listdir(directory) if f.endswith(file_extension)]
+    return sorted(files)
 
 
-# Function to list all available reports
-def list_reports():
-    return os.listdir('json')
+def extract_date_from_filename(filename):
+    # Assuming the date is always in the format YYYY_MM_DD and at the same position in the filename
+    parts = filename.split('_')
+    date_str = '_'.join(parts[-3:])  # Get the last three parts for the date
+    date_str = date_str.replace('.json', '')  # Remove the file extension
+    return datetime.strptime(date_str, "%Y_%m_%d").date()
 
 
-# Function to style the selected report
-# TODO: Implement styling with Tailwind CSS
+def main():
+    st.title("Weekly Report Viewer")
 
+    # Directory where reports and images are stored
+    report_directory = './json'  # Placeholder path
+    image_directory = './plots'  # Placeholder path
 
-# Sidebar for listing reports
-report_list = list_reports()
-report_name = st.sidebar.selectbox('Select a report:', report_list)
+    # List available report files
+    report_files = list_report_files(report_directory)
+    if not report_files:
+        st.error("No report files found.")
+        return
+    
+    # Convert report filenames to dates and create a selection box
+    report_dates = [extract_date_from_filename(f) for f in report_files]
+    selected_date = st.selectbox("Select a report date:", report_dates)
 
-# Display the selected report
-if report_name:
-    display_report(report_name)
+    # Find the corresponding JSON file for the selected date
+    json_filename = f"periodic_report_CVE_WEEKLY_v1_{selected_date.strftime('%Y_%m_%d')}.json"
+    json_path = os.path.join(report_directory, json_filename)
+    report_data = load_json_data(json_path)
+    
+    # Display report data (Placeholder for displaying actual report data)
+    st.write("Report data will be displayed here.")
+
+    # Display images associated with the report
+    image_filenames = [
+        f"posts_by_day_{selected_date.strftime('%Y_%m_%d')}.png",
+        f"weekly_totals_{selected_date.strftime('%Y_%m_%d')}.png"
+    ]
+    
+    for image_filename in image_filenames:
+        image_path = os.path.join(image_directory, image_filename)
+        try:
+            image = Image.open(image_path)
+            st.image(image, caption=image_filename)
+        except FileNotFoundError:
+            st.error(f"Image not found: {image_filename}")
