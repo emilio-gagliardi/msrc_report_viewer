@@ -63,6 +63,7 @@ def main():
         st.error("No report files found.")
         return
 
+    print("Setting up report data.")
     # Convert report filenames to dates and create a selection box
     report_dates = [extract_date_from_filename(f) for f in report_files]
     selected_date = st.selectbox("Select a report date:", report_dates)
@@ -88,7 +89,9 @@ def main():
             st.image(image, caption=image_filename)
         except FileNotFoundError:
             st.error(f"Image not found: {image_filename}")
-
+    display_report(report_data)
+    st.image(f"plots/posts_by_day_{report_date}.png", caption="Posts by Day")
+    st.image(f"plots/weekly_totals_{report_date}.png", caption="Weekly Totals")
 
 if __name__ == "__main__":
     main()
