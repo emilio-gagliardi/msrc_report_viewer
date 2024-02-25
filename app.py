@@ -6,6 +6,7 @@ import json
 # Initialize the app and set the title
 st.set_page_config(page_title='MSRC Report Viewer', layout='wide')
 
+
 # Function to load JSON data
 @st.cache
 def load_json_data(report_name):
