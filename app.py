@@ -54,43 +54,26 @@ def main():
     st.title("Weekly Report Viewer")
 
     # Directory where reports and images are stored
-    report_directory = './json'  # Placeholder path
-    image_directory = './plots'  # Placeholder path
+    report_directory = './json'
+    image_directory = './plots'
+    print(f"report data is at: {report_directory}"
+          f"report plots are at: {image_directory}")
+    with st.container():
+        st.header("Row 1: Full Width")
 
-    # List available report files
-    report_files = list_report_files(report_directory)
-    if not report_files:
-        st.error("No report files found.")
-        return
+    # Row 2 - 1/3 + 2/3 layout
+    col1, col2 = st.columns([1, 2])
+    with col1:
+        st.subheader("Row 2: 1/3")
+        # Add your widgets here for the 1/3 column
+    with col2:
+        st.subheader("Row 2: 2/3")
+        # Add your widgets here for the 2/3 column
 
-    # Convert report filenames to dates and create a selection box
-    report_dates = [extract_date_from_filename(f) for f in report_files]
-    selected_date = st.selectbox("Select a report date:", report_dates)
+    # Row 3 - Full Width
+    with st.container():
+        st.header("Row 3: Full Width")
 
-    # Find the corresponding JSON file for the selected date
-    json_filename = f"periodic_report_CVE_WEEKLY_v1_{selected_date.strftime('%Y_%m_%d')}.json"
-    json_path = os.path.join(report_directory, json_filename)
-    report_data = load_json_data(json_path)
-
-    # Display report data (Placeholder for displaying actual report data)
-    st.write("Report data will be displayed here.")
-
-    # Display images associated with the report
-    image_filenames = [
-        f"posts_by_day_{selected_date.strftime('%Y_%m_%d')}.png",
-        f"weekly_totals_{selected_date.strftime('%Y_%m_%d')}.png"
-    ]
-
-    for image_filename in image_filenames:
-        image_path = os.path.join(image_directory, image_filename)
-        try:
-            image = Image.open(image_path)
-            st.image(image, caption=image_filename)
-        except FileNotFoundError:
-            st.error(f"Image not found: {image_filename}")
-    display_report(report_data)
-    st.image(f"plots/posts_by_day_{report_date}.png", caption="Posts by Day")
-    st.image(f"plots/weekly_totals_{report_date}.png", caption="Weekly Totals")
 
 if __name__ == "__main__":
     main()

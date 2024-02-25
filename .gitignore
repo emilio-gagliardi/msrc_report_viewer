@@ -482,3 +482,8 @@ static/css/tailwind.css
 # VS Code
 .vscode/
 msrc_report_viewer_v1.code-workspace
+notes/dendron.code-workspace
+notes/dendron.yml
+notes/notes/root.md
+notes/notes/root.schema.yml
+notes/notes/notes.md
