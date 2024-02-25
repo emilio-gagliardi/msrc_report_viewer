@@ -487,3 +487,10 @@ notes/dendron.yml
 notes/notes/root.md
 notes/notes/root.schema.yml
 notes/notes/notes.md
+
+node_modules
+.dendron.*
+build
+seeds
+.next
+pods/service-connections
