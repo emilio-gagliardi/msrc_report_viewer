@@ -63,7 +63,6 @@ def main():
         st.error("No report files found.")
         return
 
-    print("Setting up report data.")
     # Convert report filenames to dates and create a selection box
     report_dates = [extract_date_from_filename(f) for f in report_files]
     selected_date = st.selectbox("Select a report date:", report_dates)
