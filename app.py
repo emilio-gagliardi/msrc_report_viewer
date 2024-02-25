@@ -33,6 +33,23 @@ def extract_date_from_filename(filename):
     return datetime.strptime(date_str, "%Y_%m_%d").date()
 
 
+def display_report(report_data):
+    st.header(report_data['report_title'])
+    st.subheader(report_data['report_subtitle'])
+    st.write(report_data['report_description'])
+
+    # Dynamically generate sections based on table of contents
+    for section_key, section_title in report_data['toc'].items():
+        st.write(f"## {section_title}")
+        section_data = report_data.get(f"{section_key}_data", [])
+        for item in section_data:
+            st.write(f"### {item['title']}")
+            st.write(f"Published: {item['published']}")
+            st.write(f"Source: {item['source']}")
+            st.write(f"Summary: {item['summary']}")
+            # Display more properties as needed
+
+
 def main():
     st.title("Weekly Report Viewer")
 
@@ -45,7 +62,7 @@ def main():
     if not report_files:
         st.error("No report files found.")
         return
-    
+
     # Convert report filenames to dates and create a selection box
     report_dates = [extract_date_from_filename(f) for f in report_files]
     selected_date = st.selectbox("Select a report date:", report_dates)
@@ -54,7 +71,7 @@ def main():
     json_filename = f"periodic_report_CVE_WEEKLY_v1_{selected_date.strftime('%Y_%m_%d')}.json"
     json_path = os.path.join(report_directory, json_filename)
     report_data = load_json_data(json_path)
-    
+
     # Display report data (Placeholder for displaying actual report data)
     st.write("Report data will be displayed here.")
 
@@ -63,7 +80,7 @@ def main():
         f"posts_by_day_{selected_date.strftime('%Y_%m_%d')}.png",
         f"weekly_totals_{selected_date.strftime('%Y_%m_%d')}.png"
     ]
-    
+
     for image_filename in image_filenames:
         image_path = os.path.join(image_directory, image_filename)
         try:
@@ -71,3 +88,7 @@ def main():
             st.image(image, caption=image_filename)
         except FileNotFoundError:
             st.error(f"Image not found: {image_filename}")
+
+
+if __name__ == "__main__":
+    main()
