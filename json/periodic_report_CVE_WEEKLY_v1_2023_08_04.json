@@ -1,0 +1,63 @@
+{
+    "report_day_start": "28",
+    "report_month_start": "July",
+    "report_year_start": "2023",
+    "report_day_end": "04",
+    "report_month_end": "August",
+    "report_year_end": "2023",
+    "report_end_date": "2023_08_04",
+    "report_current_date": "23_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "7442bd29-f7d2-809e-ba5a-874ab3ac0919",
+            "post_id": "CVE-2023-28261",
+            "published": "01-08-2023",
+            "revision": "1.2",
+            "post_type": "Information only",
+            "title": "CVE-2023-28261 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-28261",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an elevation of privilege vulnerability, CVE-2023-28261, with a low severity level. The vulnerability allows a domain user to elevate privileges to the SYSTEM assigned integrity level. It has a high attack complexity, requiring an attacker to win a race condition and take additional actions to prepare the target environment. The attack vector is local, requiring the malicious executable to be loaded onto the victim's machine through social engineering. Successful exploitation could lead to limited ability to perform code execution, with no impact on the availability of the browser. Microsoft has released security updates for Microsoft Edge (Chromium-based) versions 111.0.1661.54 and 110.0.1587.78 to address this vulnerability. System administrators are advised to apply the latest security updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "111.0.1661.54"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (24-03-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#march-24-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 1,
+        "new_cves": 0,
+        "updated_cves": 1
+    },
+    "section_2_data": [],
+    "section_2_metadata": {
+        "total_products": 0
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

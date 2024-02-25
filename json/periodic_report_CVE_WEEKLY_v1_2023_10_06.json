@@ -1,0 +1,486 @@
+{
+    "report_day_start": "29",
+    "report_month_start": "September",
+    "report_year_start": "2023",
+    "report_day_end": "06",
+    "report_month_end": "October",
+    "report_year_end": "2023",
+    "report_end_date": "2023_10_06",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "49d2e10f-42df-46be-037c-65fe5ef4cb57",
+            "post_id": "CVE-2023-4863",
+            "published": "02-10-2023",
+            "revision": "3.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4863 Heap buffer overflow in WebP",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in WebP, identified as CVE-2023-4863. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Google is aware of an exploit for CVE-2023-4863 existing in the wild. Microsoft recommends updating to the latest version of Microsoft Edge (Chromium-based) to mitigate the risk of exploitation. Affected products include Microsoft Edge (Chromium-based), Skype, WebP Image Extension, Microsoft Teams for Mac, and Microsoft Teams for Desktop. System administrators are advised to update the affected products to the latest versions. For more information, refer to the Google Chrome Releases page. App package versions 1.0.62681.0 and later contain this update, and administrators can check the package version in PowerShell using 'Get-AppxPackage -Name Microsoft.WebpImageExtension' to verify if the update is installed.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.81"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (12-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge, Microsoft Skype, WebP Image Extension",
+            "symptoms": "The vulnerability causes a heap buffer overflow in WebP, affecting Chromium.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of the affected products. Microsoft has released updates for all affected products that address this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0c86537f-900e-ff11-ee16-1e618be23c34",
+            "post_id": "CVE-2023-5346",
+            "published": "04-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5346 Type Confusion in V8",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5346",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Type Confusion vulnerability in V8, identified as CVE-2023-5346. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.55. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.55"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (04-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-04-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a type confusion in V8, a component of Chromium. This is exploited when Microsoft Edge, which is based on Chromium, ingests Chromium.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 117.0.2045.55.",
+            "tools": "The tool to apply the fix is the Microsoft Edge browser itself. Users can update their browser to the latest version to mitigate this vulnerability.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "dea40d4c-4f38-1b79-8428-24132952d7ac",
+            "post_id": "CVE-2023-4863",
+            "published": "04-10-2023",
+            "revision": "3.1",
+            "post_type": "Information only",
+            "title": "Chromium: CVE-2023-4863 Heap buffer overflow in WebP",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in WebP, identified as CVE-2023-4863. This vulnerability, assigned by Chrome, is present in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An exploit for this vulnerability is known to exist in the wild. Attackers could leverage this vulnerability to execute arbitrary code. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. Microsoft recommends updating to the latest version to mitigate the risk. The Microsoft Store will automatically update affected customers, and those in disconnected environments can obtain the update through their organizations. App package versions 1.0.62681.0 and later contain this update, and administrators can verify the package version in PowerShell using 'Get-AppxPackage -Name Microsoft.WebpImageExtension'.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.81"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (12-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based), Microsoft Teams for Desktop, Microsoft Teams for Mac, WebP Image Extension",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0e33f5da-16c7-bdb3-8564-670189e36689",
+            "post_id": "CVE-2023-5217",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5217 Heap buffer overflow in vp8 encoding in libvpx",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in vp8 encoding in libvpx, identified as CVE-2023-5217. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium. An exploit for CVE-2023-5217 is known to exist in the wild. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge (Chromium-based). Attackers could exploit this vulnerability to execute arbitrary code. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.98, making the latest version no longer vulnerable. Microsoft is also working to identify and address the impact of this vulnerability on Microsoft Teams and Skype applications. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based), Microsoft Skype, Microsoft Teams",
+            "symptoms": "The vulnerability causes a heap buffer overflow in vp8 encoding in libvpx, which is consumed by Microsoft Edge (Chromium-based). An exploit for this vulnerability exists in the wild.",
+            "fixes": "Microsoft is working to identify and address this vulnerability in affected versions of Microsoft Teams and Skype applications. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0a5334e3-e159-9992-d6ae-213658c87fdf",
+            "post_id": "CVE-2023-5187",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5187 Use after free in Extensions",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5187",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Extensions, identified as CVE-2023-5187. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a use-after-free issue in Extensions of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "f5213a3f-a022-3362-d2ac-3903dbe38f99",
+            "post_id": "CVE-2023-5186",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5186 Use after free in Passwords",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5186",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Passwords, identified as CVE-2023-5186. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.98. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a use after free issue in passwords in Chromium, affecting Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The versions are 117.0.2045.47 (Stable) and 116.0.1938.98 (Extended Stable).",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "ff2e6da9-f9a3-a170-bd1d-4e4495fe8b08",
+            "post_id": "CVE-2023-5217",
+            "published": "30-09-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5217 Heap buffer overflow in vp8 encoding in libvpx",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in vp8 encoding in libvpx, identified as CVE-2023-5217. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An exploit for CVE-2023-5217 is known to exist in the wild. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable to this exploit. Microsoft is actively working to identify and address this vulnerability in certain versions of Microsoft Teams and Skype applications. The remedy for Microsoft Edge is to update to the latest version, such as 117.0.2045.47 or 116.0.1938.98, which includes security updates addressing CVE-2023-5217. System administrators are advised to ensure their Microsoft Edge installations are updated to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based), Microsoft Skype, Microsoft Teams",
+            "symptoms": "The vulnerability causes a heap buffer overflow in vp8 encoding in libvpx, which is consumed by Microsoft Edge (Chromium-based). An exploit for this vulnerability exists in the wild.",
+            "fixes": "The vulnerability has been addressed in the latest version of Microsoft Edge (Chromium-based). Updates are being developed for Microsoft Teams and Skype.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "635e8974-8dfd-497b-f823-b43572715792",
+            "post_id": "CVE-2023-4863",
+            "published": "30-09-2023",
+            "revision": "2.0",
+            "post_type": "Information only",
+            "title": "Chromium: CVE-2023-4863 Heap buffer overflow in WebP",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4863, a heap buffer overflow vulnerability in WebP. This vulnerability was assigned by Chrome and is exploited in the wild. The vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge, making it no longer vulnerable in the latest version. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft recommends updating to the latest version of Microsoft Edge (Chromium-based) to mitigate the risk. Additionally, Microsoft Store will automatically update affected customers, and those in disconnected environments can obtain the update through their organizations. The update can be verified using PowerShell command 'Get-AppxPackage -Name Microsoft.WebpImageExtension'. For more information, refer to the Google Chrome Releases page. Microsoft also released security updates for Microsoft Skype, WebP Image Extension, Microsoft Teams for Mac, and Microsoft Teams for Desktop to address this vulnerability.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.81"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (12-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge, Microsoft Edge (Chromium-based), Microsoft Skype, Microsoft Teams, Microsoft Teams for Desktop, Microsoft Teams for Mac, WebP Image Extension",
+            "symptoms": "The vulnerability causes a heap buffer overflow in WebP, affecting Chromium.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of the affected products. The Microsoft Store will automatically update affected customers. Alternatively, customers can get the update immediately., The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), Microsoft Teams for Desktop, and Microsoft Teams for Mac. The Microsoft Store will automatically update affected customers. Alternatively, customers can get the update immediately.",
+            "tools": "Microsoft Edge browser and Microsoft Teams are the tools affected by this vulnerability. Updating these tools to the latest version mitigates the vulnerability.",
+            "conversation_links": [
+                "https://groups.google.com/d/msgid/patchmanagement/CY8PR19MB7226059156665359B0C8C4FCE5C5A%40CY8PR19MB7226.namprd19.prod.outlook.com",
+                "https://groups.google.com/d/msgid/patchmanagement/CALnECnK3dUzhLxDjgCSUFgxxDj1bDEb-TFjgnSCDoRKn34%3DNKg%40mail.gmail.com",
+                "https://groups.google.com/d/msgid/patchmanagement/MW4PR19MB6627C795D2EE1BDC6CAE80C9F8C5A%40MW4PR19MB6627.namprd19.prod.outlook.com",
+                "https://groups.google.com/d/msgid/patchmanagement/CABMNgASKki5sPyWZw5hrp_ZHa34TKTDSHnGRmou%2B0PYH5xqj7g%40mail.gmail.com",
+                "https://groups.google.com/d/msgid/patchmanagement/829E9851-F331-4B5D-BAA0-FCBA936EC3B0%40me.com",
+                "https://groups.google.com/d/msgid/patchmanagement/DM6PR09MB520735BAAC3C10879732280DDFC5A%40DM6PR09MB5207.namprd09.prod.outlook.com"
+            ],
+            "receivedDateTimes": [
+                "02-10-2023",
+                "02-10-2023",
+                "02-10-2023",
+                "02-10-2023",
+                "02-10-2023",
+                "02-10-2023"
+            ],
+            "pm_fixes": [],
+            "pm_tools": [
+                {
+                    "description": "A link providing a list of apps affected by the 0 day vulnerability in libwebp.",
+                    "url": "https://www.cyberkendra.com/2023/09/webp-0day-google-assign-new-cve-for.html?m=1"
+                },
+                {
+                    "description": "A script that runs on a schedule every night and checks for a new version of libwebp. If a new version is available, it downloads it, packages it up, and deploys it.",
+                    "url": null
+                },
+                {
+                    "description": "Action1 is a patch management solution that can be set to look for updates daily. It can be configured to either ask for approval or automatically run the update. It also includes a vulnerability scanner that alerts the user to any CVE alerts for software on the computer, with suggestions for fixes.",
+                    "url": "Not specified"
+                },
+                {
+                    "description": "Chrome Enterprise is suggested as a tool to push out a GUID to each computer and centrally manage Chrome updates. It is also mentioned that a portable version of Chrome can be used for systems not running an AppLocker variant.",
+                    "url": null
+                },
+                {
+                    "description": "A tool to identify apps impacted by the CVE-2023-4863 vulnerability in libwebp.",
+                    "url": "https://infosec.town/notes/9k8b0ek5ide4xyrp"
+                },
+                {
+                    "description": "Stand-alone WSUS",
+                    "url": "Not specified"
+                },
+                {
+                    "description": "Auto approval rule in SCCM",
+                    "url": "Not specified"
+                }
+            ]
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 8,
+        "new_cves": 4,
+        "updated_cves": 4
+    },
+    "section_2_data": [
+        {
+            "product_name": "Microsoft Edge",
+            "product_version": "117.0.2045.31",
+            "product_id": [
+                "product_49d2e10f-42df-46be-037c-65fe5ef4cb57_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "116.0.1938.81",
+            "product_id": [
+                "product_e211f004-ebbb-872b-c3c9-9074c77cc467_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "116.0.1938.98",
+            "product_id": [
+                "product_f5213a3f-a022-3362-d2ac-3903dbe38f99_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "117.0.2045.47",
+            "product_id": [
+                "product_0e33f5da-16c7-bdb3-8564-670189e36689_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "117.0.2045.55",
+            "product_id": [
+                "product_0c86537f-900e-ff11-ee16-1e618be23c34_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Skype",
+            "product_version": "",
+            "product_id": [
+                "product_0e33f5da-16c7-bdb3-8564-670189e36689_3",
+                "product_ff2e6da9-f9a3-a170-bd1d-4e4495fe8b08_3"
+            ]
+        },
+        {
+            "product_name": "Microsoft Skype",
+            "product_version": "8.105.0.208",
+            "product_id": [
+                "product_49d2e10f-42df-46be-037c-65fe5ef4cb57_3"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams",
+            "product_version": "",
+            "product_id": [
+                "product_635e8974-8dfd-497b-f823-b43572715792_2",
+                "product_ff2e6da9-f9a3-a170-bd1d-4e4495fe8b08_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams",
+            "product_version": "1.6.00.26474",
+            "product_id": [
+                "product_0f3f9c2d-a885-c9b8-f3ca-e00718910ef6_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams",
+            "product_version": "Not specified",
+            "product_id": [
+                "product_dea40d4c-4f38-1b79-8428-24132952d7ac_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams for Desktop",
+            "product_version": "1.6.00.26474",
+            "product_id": [
+                "product_e211f004-ebbb-872b-c3c9-9074c77cc467_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams for Mac",
+            "product_version": "1.6.00.26463",
+            "product_id": [
+                "product_e211f004-ebbb-872b-c3c9-9074c77cc467_3"
+            ]
+        },
+        {
+            "product_name": "WebP Image Extension",
+            "product_version": "1.0.62681.0",
+            "product_id": [
+                "product_49d2e10f-42df-46be-037c-65fe5ef4cb57_4"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 13
+    },
+    "section_3_data": [
+        {
+            "tool_id": "tool_e211f004-ebbb-872b-c3c9-9074c77cc467_1",
+            "tool_description": "Microsoft Edge browser and Microsoft Teams are the tools affected by this vulnerability. Updating these tools to the latest version mitigates the vulnerability.",
+            "tool_url": "https://teams.microsoft.com/download",
+            "mongo_ids": [
+                "635e8974-8dfd-497b-f823-b43572715792"
+            ],
+            "published_dates": "12-09-2023"
+        },
+        {
+            "tool_id": "tool_0c86537f-900e-ff11-ee16-1e618be23c34_1",
+            "tool_description": "The tool to apply the fix is the Microsoft Edge browser itself. Users can update their browser to the latest version to mitigate this vulnerability.",
+            "tool_url": "https://www.microsoft.com/en-us/edge",
+            "mongo_ids": [
+                "0c86537f-900e-ff11-ee16-1e618be23c34"
+            ],
+            "published_dates": "04-10-2023"
+        }
+    ],
+    "section_3_metadata": {
+        "total_tools": 2
+    }
+}

@@ -1,0 +1,411 @@
+{
+    "report_day_start": "20",
+    "report_month_start": "October",
+    "report_year_start": "2023",
+    "report_day_end": "27",
+    "report_month_end": "October",
+    "report_year_end": "2023",
+    "report_end_date": "2023_10_27",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "c3386492-fca1-2f06-a6ae-1faef66f85d6",
+            "post_id": "CVE-2023-38545",
+            "published": "20-10-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-38545 MITRE: CVE-2023-38545 SOCKS5 heap buffer overflow",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38545",
+            "summary": "Microsoft Windows is affected by a remote code execution vulnerability, identified as CVE-2023-38545, in the curl.exe software. This vulnerability is triggered when the victim manually executes the curl.exe utility while using a SOCKS5 proxy with a rate limit option set to 65540 or lower, allowing an attacker to execute arbitrary code. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for supported versions. In the meantime, system administrators are advised to deploy a code integrity policy to restrict the execution of vulnerable versions of curl.exe. Workarounds include using a WDAC policy to deny execution of the vulnerable executable, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's crucial not to remove or replace curl.exe, as doing so may damage the Windows Update component store. For more information and updates, system administrators can refer to the Microsoft Security Update Guide and register for security notifications. The vulnerability affects various versions of Windows, including Windows 10, Windows 11, and Windows Server 2019 and 2022.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2715",
+                "10.0.22621.2715",
+                "10.0.19044.3693",
+                "10.0.19045.3693",
+                "10.0.22000.2600"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5032192",
+                    "kb_link": "https://support.microsoft.com/help/5032192#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032190",
+                    "kb_link": "https://support.microsoft.com/help/5032190#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032189",
+                    "kb_link": "https://support.microsoft.com/help/5032189#october-19-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5032192)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192"
+                },
+                {
+                    "package_type": "Security Update (KB5032190)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190"
+                },
+                {
+                    "package_type": "Security Update (KB5032189)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Windows, curl.exe",
+            "symptoms": "The symptom of this vulnerability is a heap buffer overflow in the SOCKS5 protocol when using the curl.exe utility.",
+            "fixes": "The fix is to install the Windows security updates released on November 14, 2023, which includes curl 8.4.0. Customers whose Windows devices are configured to receive automatic updates do not need to take any further action.",
+            "tools": "The Windows Defender Application Control (WDAC) can be used to deny execution of the \\system32\\curl.exe executable as a workaround.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "9c5165de-0ea9-77a2-3b98-539b26a986e6",
+            "post_id": "CVE-2023-38039",
+            "published": "20-10-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38039 Hackerone: CVE-2023-38039 HTTP headers eat all memory",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38039",
+            "summary": "The vulnerability identified as CVE-2023-38039 affects the curl.exe software consumed by Microsoft Windows, leading to a denial of service. An attacker could exploit this vulnerability by convincing the victim to manually launch the curl utility and direct it to connect to a compromised server. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for currently supported, on-premise versions of Windows clients and servers. The Security Updates table for this CVE will be updated with the Windows update KB numbers for all supported versions as they are released. In the meantime, system administrators are advised to deploy a code integrity policy that restricts the execution of vulnerable versions of curl.exe. This can be achieved using Windows Defender Application Control (WDAC) policies, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's important to note that under no circumstances should the curl.exe file be removed or replaced, as doing so may damage the Windows Update component store and prevent the installation of further security updates. The workaround only provides an operating system level guarantee that the vulnerable version of the curl tool cannot be executed. More information about this vulnerability and the workaround can be found in the NVD and curl.se websites.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2715",
+                "10.0.22621.2715",
+                "10.0.19044.3693",
+                "10.0.19045.3693",
+                "10.0.22000.2600"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5032192",
+                    "kb_link": "https://support.microsoft.com/help/5032192#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032190",
+                    "kb_link": "https://support.microsoft.com/help/5032190#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032189",
+                    "kb_link": "https://support.microsoft.com/help/5032189#october-19-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5032192)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192"
+                },
+                {
+                    "package_type": "Security Update (KB5032190)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190"
+                },
+                {
+                    "package_type": "Security Update (KB5032189)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "curl.exe",
+            "symptoms": "The vulnerability can cause a denial of service of curl when the victim manually launches the curl utility and directs it to connect to a compromised server.",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "5a3b3255-3123-3ec9-8ab0-55414f9e410b",
+            "post_id": "CVE-2023-36409",
+            "published": "20-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36409 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36409",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an Information Disclosure Vulnerability, identified as CVE-2023-36409, with a CVSS score of 6.5/5.7. The vulnerability allows an attacker to perform enclave memory read and unprivileged write to enclave memory from a host application, potentially leaking memory contents. Successful exploitation could lead to some loss of integrity, such as file overwrite with minimal impact. The attack vector is network-based, with low attack complexity and no privileges required. User interaction is not necessary for exploitation. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, addressing this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of information disclosure. For further details, refer to the Microsoft Security Response Center page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (20-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-20-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "The system allows an attacker to gain unauthorized access to restricted information over the network without any user interaction.",
+            "fixes": "Microsoft has released an official fix to address this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "43cd0f48-1d3b-1e2c-7711-4a53ea021b7d",
+            "post_id": "CVE-2023-38171",
+            "published": "26-10-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38171 Microsoft QUIC Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38171",
+            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-38171, impacting PowerShell 7.3 and various Windows and Visual Studio versions. The vulnerability has a base score of 7.5 and a temporal score of 6.5, indicating a high impact on availability. It is remotely exploitable with low attack complexity and requires no user interaction, making it a serious threat. The exploit code maturity is unproven, but an official fix is available, reducing the urgency for remediation. System administrators are advised to apply the security updates for affected products, including PowerShell 7.3, .NET 7.0, Windows 11, Windows Server 2022, and Microsoft Visual Studio 2022. The revised Security Updates table now includes PowerShell 7.3 as an affected version, providing additional information for administrators to prioritize remediation efforts. For more details, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle for software support information.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2538",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "PowerShell",
+            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
+            "fixes": "The fix for this vulnerability involves updating to the latest version of PowerShell 7.3, which contains a patch for this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "997a2599-f326-9b3a-1b43-4552deea3e56",
+            "post_id": "CVE-2023-36435",
+            "published": "26-10-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36435 Microsoft QUIC Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36435",
+            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-36435, impacting PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. The vulnerability is rated as important with a CVSS score of 7.5. It is caused by a flaw in the Microsoft QUIC protocol, allowing an attacker to exploit it remotely without user interaction. The vulnerability results in a total loss of availability, enabling the attacker to fully deny access to resources. Microsoft has provided an official fix for this vulnerability through security updates for the affected products, including PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2538",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "PowerShell",
+            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
+            "fixes": "The fix involves updating to the latest version of PowerShell 7.3 which contains a patch for this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "08fe0e15-0f00-9566-6e35-18e4a98ccbb6",
+            "post_id": "CVE-2023-5472",
+            "published": "27-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5472: Use after free in Profiles",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5472",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Profiles, identified as CVE-2023-5472. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (27-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability allows for a use-after-free condition in the Profiles feature of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a9198d51-6c41-1d7e-c415-bbb561df0c8a",
+            "post_id": "CVE-2023-44323",
+            "published": "27-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-44323 Adobe: CVE-2023-44323 Adobe PDF Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44323",
+            "summary": "Microsoft Edge (Chromium-based) is affected by the Adobe PDF Remote Code Execution Vulnerability, identified as CVE-2023-44323. This vulnerability allows remote code execution and is considered to have a moderate severity. The vulnerability is in Adobe software consumed by Microsoft Edge, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.76 is no longer vulnerable. An attacker could exploit this vulnerability to execute arbitrary code on the victim's system. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) to address this vulnerability. System administrators are advised to update their Microsoft Edge installations to the latest version (118.0.2088.76) to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (27-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Adobe PDF, Microsoft Edge (Chromium-based)",
+            "symptoms": "A vulnerability in Adobe software used by Microsoft Edge allows for remote code execution.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 7,
+        "new_cves": 3,
+        "updated_cves": 4
+    },
+    "section_2_data": [
+        {
+            "product_name": "Adobe PDF",
+            "product_version": "",
+            "product_id": [
+                "product_a9198d51-6c41-1d7e-c415-bbb561df0c8a_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "118.0.2088.76",
+            "product_id": [
+                "product_a9198d51-6c41-1d7e-c415-bbb561df0c8a_1"
+            ]
+        },
+        {
+            "product_name": "PowerShell",
+            "product_version": "7.3",
+            "product_id": [
+                "product_997a2599-f326-9b3a-1b43-4552deea3e56_1"
+            ]
+        },
+        {
+            "product_name": "Windows",
+            "product_version": "All supported versions",
+            "product_id": [
+                "product_7001567b-77d3-824e-62c4-9c022f0f7278_1"
+            ]
+        },
+        {
+            "product_name": "curl.exe",
+            "product_version": "8.4.0",
+            "product_id": [
+                "product_c3386492-fca1-2f06-a6ae-1faef66f85d6_1"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 5
+    },
+    "section_3_data": [
+        {
+            "tool_id": "tool_7001567b-77d3-824e-62c4-9c022f0f7278_1",
+            "tool_description": "The Windows Defender Application Control (WDAC) can be used to deny execution of the \\system32\\curl.exe executable as a workaround.",
+            "tool_url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune",
+            "mongo_ids": [
+                "c3386492-fca1-2f06-a6ae-1faef66f85d6"
+            ],
+            "published_dates": "14-11-2023"
+        }
+    ],
+    "section_3_metadata": {
+        "total_tools": 1
+    }
+}

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Hat Group Weekly Security Update Report - (Windows and Edge Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleSummary(id) {
+            var summary = document.getElementById(id);
+            var btn = document.querySelector("a[onclick='toggleSummary(\"" + id + "\")']");
+
+            if (summary.classList.contains('expanded')) {
+            summary.classList.remove('expanded');
+            btn.textContent = 'Show More'; 
+            } else {
+            summary.classList.add('expanded');
+            btn.textContent = 'Show Less';
+            }
+        }
+        function toggleCoreProducts(elementId, button) {
+            var element = document.getElementById(elementId);
+            // Toggle the 'expanded' class
+            element.classList.toggle('expanded');
+        
+            // Check if the element has the class after the toggle and update the button text
+            if (element.classList.contains('expanded')) {
+                button.textContent = 'Show Less'; 
+            } else {
+                button.textContent = 'Show More';
+            }
+        }
+    </script>
+    <style>
+        /* General Styles */
+        body {
+            font-size: 14px;
+        }
+        body.report-body {
+            background-color: #f8f8f8;
+            font-family: 'Sora', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .report {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section-container {
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .data-container, .metadata-container {
+            margin-bottom: 16px;
+        }
+
+        .metadata-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+        h3 {
+            font-size: 1.4em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+        h4 {
+            font-size: 1.2em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #302f2f;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        a {
+            font-weight: 400;
+            color: #1a0dab;
+            letter-spacing: 0.5px;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff5722;
+        }
+
+        /* Button Class */
+        .button {
+            display: inline-block;
+            padding: 3px 6px;
+            background-color: #babbbb;
+            color: #111111;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 4px;
+            font-size:11px;
+            position: relative;
+            right: 0;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* Data Item Styles */
+        .data-item {
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+
+        .data-item-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top:6px;
+        }
+        .data-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .data-item-link, .data-item-property, .data-item-summary, .data-item-products, .data-item-symptoms, .data-item-fixes, .data-item-tools {
+            margin-bottom: 4px;
+            font-family: "Sora", sans-serif;
+        }
+        .data-item-link{
+            font-weight: 500;
+            line-height: 1.2em;
+        }
+        /* Metadata Item Styles */
+        .metadata-item {
+            background-color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: "Sora", sans-serif;
+        }
+        /* default font-size for property text */
+        .data-item-property{
+            font-family: "Sora", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        /* Label Class */
+        .label {
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            color: #383838 !important;
+            font-size: 14px;
+        }
+
+        /* New Revision Class */
+        .new-revision {
+            color: #ff5722;
+            font-weight: bold;
+        }
+        .expandable-core_products {
+            /* Initial state with overflow hidden */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Number of lines when contracted */
+            -webkit-box-orient: vertical;
+            height: calc(1.6em * 1); /* Assuming line height is 1.2em */
+        }
+        
+        .expandable-core_products.expanded {
+            /* State when expanded */
+            -webkit-line-clamp: 5; /* Number of lines when expanded */
+            height: calc(1.2em * 5); /* Adjust line height accordingly */
+            overflow-y: auto; /* Show scrollbar if content overflows */
+        }
+
+        /* Summary Content Limit */
+        .data-item-summary {
+            max-height: 145px;
+            overflow: hidden;
+            color: #302f2f;
+        }
+
+        /* Summary Expanded */
+        .data-item-summary.expanded {
+            max-height: none;
+        }
+        /* Additional CSS class definitions for pm_fixes and pm_tools */
+
+        .fix-link, .tool-link {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #1a0dab;
+            letter-spacing: 0.5px;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        .fix-link:hover, .tool-link:hover {
+            color: #ff5722;
+        }
+
+        .report-dates {
+            font-family: "Source Code Pro", monospace;
+            margin-bottom:6px;
+            display: flex;
+            justify-content: center;
+        }
+        .report-dates span {
+            white-space: nowrap;
+        }
+        .month {
+            font-size: 1.2em;
+            color: #131269;
+            margin-left: 8px;}
+
+        .day {font-size: 1.23em;}
+
+        .year {
+            font-size: 1.2em;
+            color: #131269;}
+        
+        li {
+            list-style-type: none;
+            margin-bottom: 8px;
+        }
+        .image-wrapper {
+            text-align: center;
+            border-radius: 0px;
+            overflow: hidden;
+            line-height: 0; 
+        }
+        .image-wrapper img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .report-description {
+            font-size: 0.85em;
+            font-weight: 400;
+            line-height: 1.7;
+            font-family: 'Roboto', sans-serif;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        .data-item-kb-articles ul.kb-articles-list {
+            list-style-type: none; /* Remove default list bullet */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Display list items in a row */
+            flex-wrap: wrap; /* Allow list items to wrap onto the next line if necessary */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li {
+            display: inline-block; /* Display list items inline */
+            margin-right: 2px; /* Control spacing between items - adjust as needed */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li::after {
+            content: ", "; /* Add a comma after each list item */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li:last-child::after {
+            content: ""; /* Remove the comma after the last list item */
+        }
+        .pill-banner {
+            background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(184, 245, 225) 10%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .data-item-build-numbers span {
+            font-family: 'Sora', sans-serif;
+        }
+        @media (max-width: 300px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class='report-body'>
+    <div class="report">
+        <h1 class="text-4xl">Big Hat Group Weekly Security Update Report</h1>
+        <h4 class="text-2xl text-center">(Windows and Edge Edition)</h4>
+        <div class="report-dates">
+            <span class="month">November</span>&nbsp;<span class="day">17</span>&nbsp;-&nbsp;<span class="month">November</span>&nbsp;<span class="day">24</span>,&nbsp;<span class="year">2023</span>
+        </div>
+        <div class="flex">
+            <div class="flex-1">
+                <div class='image-wrapper'>
+                    <img src="../plots/posts_by_day_2023_11_24.png" alt="Publication Days"> 
+                </div>
+            </div>
+            <div class="flex-1 bg-white p-2 flex flex-col justify-center">
+                <div class="max-w-md mx-auto">
+                    <p class="report-description mb-4">The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.</p>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class='section-container'>
+            <div class='section' id='section_1'>
+                <h2 class="text-3xl mb-1">MSRC Posts</h2>
+                <div class='metadata-container'>
+                    <div class='metadata-item'><span class="label">Total CVEs:</span> 1</div>
+                    <div class='metadata-item'><span class="label">New CVEs:</span> 0</div>
+                    <div class='metadata-item'><span class="label">Updated CVEs:</span> 1</div>
+                </div>
+                <div class='data-container'>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36025' class='data-item-link' id='08e11356-4cf0-b487-2d88-be69035f315a' target='_blank'>CVE-2023-36025 Windows SmartScreen Security Feature Bypass Vulnerability</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.1
+                                    
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 22-11-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-08e11356-4cf0-b487-2d88-be69035f315a">
+                                <span class="label">Product family info:</span> windows 10  32-bit_systems, windows 10  x64-based_systems, windows 10 21H2 32-bit_systems, windows 10 21H2 x64-based_systems, windows 10 22H2 32-bit_systems, windows 10 22H2 x64-based_systems, windows 11 21H2 x64-based_systems, windows 11 22H2 x64-based_systems, windows 11 23H2 x64-based_systems
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-08e11356-4cf0-b487-2d88-be69035f315a", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22631.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19043.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.10240.20308
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22621.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19045.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22000.2600
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032199#november-14-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032199</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032192#november-14-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032192</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032190#november-14-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032190</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032189#november-14-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032189</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032199" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032199)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032192)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032190)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032189)</a>
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-08e11356-4cf0-b487-2d88-be69035f315a'><span class="label">Summary:</span> Windows SmartScreen Security Feature Bypass Vulnerability (CVE-2023-36025) has been identified with a maximum severity of Important. The vulnerability allows an attacker to bypass Windows Defender SmartScreen checks and associated prompts by exploiting a specially crafted Internet Shortcut (.URL) or hyperlink pointing to an Internet Shortcut file. The attack vector is through user interaction, requiring the user to click on the malicious link. The impact includes a total loss of confidentiality, integrity, and availability. Microsoft has provided an official fix for this vulnerability through security updates for various affected products, including Windows Server 2012, 2016, 2008, and different versions of Windows 10 and 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The base and temporal CVSS scores are 8.8 and 8.2, respectively, indicating the severity and exploitability of the vulnerability. The attacker's exploit code maturity is functional, and the remediation level is an official fix, signifying the urgency of applying the provided security updates. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-08e11356-4cf0-b487-2d88-be69035f315a")'>Show More</a></div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-row justify-center">
+            <div class='image-wrapper'>
+                <img src="../plots/weekly_totals_2023_11_24.png" alt="Publication activity (last 90 days)"> 
+            </div>
+        </div>
+        <div class='image-wrapper flex justify-center'>
+            <img src="https://bhgaistorage.blob.core.windows.net/msrc-summary-report/html/android-chrome-192x192.png" alt="Big Hat Group - Security and Systems Aggregation report">
+        </div>
+    </div>
+    
+</body>
+</html>

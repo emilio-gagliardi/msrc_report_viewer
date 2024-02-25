@@ -1,0 +1,2194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Hat Group Weekly Security Update Report - (Windows and Edge Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleSummary(id) {
+            var summary = document.getElementById(id);
+            var btn = document.querySelector("a[onclick='toggleSummary(\"" + id + "\")']");
+
+            if (summary.classList.contains('expanded')) {
+            summary.classList.remove('expanded');
+            btn.textContent = 'Show More'; 
+            } else {
+            summary.classList.add('expanded');
+            btn.textContent = 'Show Less';
+            }
+        }
+        function toggleCoreProducts(elementId, button) {
+            var element = document.getElementById(elementId);
+            // Toggle the 'expanded' class
+            element.classList.toggle('expanded');
+        
+            // Check if the element has the class after the toggle and update the button text
+            if (element.classList.contains('expanded')) {
+                button.textContent = 'Show Less'; 
+            } else {
+                button.textContent = 'Show More';
+            }
+        }
+    </script>
+    <style>
+        /* General Styles */
+        body {
+            font-size: 14px;
+        }
+        body.report-body {
+            background-color: #f8f8f8;
+            font-family: 'Sora', sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .report {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section-container {
+            background-color: #ffffff;
+            border-radius: 4px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .data-container, .metadata-container {
+            margin-bottom: 16px;
+        }
+
+        .metadata-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 1px;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+        h3 {
+            font-size: 1.4em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+        h4 {
+            font-size: 1.2em!important;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333333;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        p {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #302f2f;
+            letter-spacing: 0.5px;
+            font-family: 'Sora', sans-serif;
+        }
+
+        a {
+            font-weight: 400;
+            color: #1a0dab;
+            letter-spacing: 0.5px;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff5722;
+        }
+
+        /* Button Class */
+        .button {
+            display: inline-block;
+            padding: 3px 6px;
+            background-color: #babbbb;
+            color: #111111;
+            text-align: center;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 4px;
+            font-size:11px;
+            position: relative;
+            right: 0;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+
+        /* Data Item Styles */
+        .data-item {
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+
+        .data-item-info {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-top:6px;
+        }
+        .data-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .data-item-link, .data-item-property, .data-item-summary, .data-item-products, .data-item-symptoms, .data-item-fixes, .data-item-tools {
+            margin-bottom: 4px;
+            font-family: "Sora", sans-serif;
+        }
+        .data-item-link{
+            font-weight: 500;
+            line-height: 1.2em;
+        }
+        /* Metadata Item Styles */
+        .metadata-item {
+            background-color: #ffffff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-family: "Sora", sans-serif;
+        }
+        /* default font-size for property text */
+        .data-item-property{
+            font-family: "Sora", sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+        }
+        /* Label Class */
+        .label {
+            font-family: "Sora", sans-serif;
+            font-weight: 600;
+            color: #383838 !important;
+            font-size: 14px;
+        }
+
+        /* New Revision Class */
+        .new-revision {
+            color: #ff5722;
+            font-weight: bold;
+        }
+        .expandable-core_products {
+            /* Initial state with overflow hidden */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Number of lines when contracted */
+            -webkit-box-orient: vertical;
+            height: calc(1.6em * 1); /* Assuming line height is 1.2em */
+        }
+        
+        .expandable-core_products.expanded {
+            /* State when expanded */
+            -webkit-line-clamp: 5; /* Number of lines when expanded */
+            height: calc(1.2em * 5); /* Adjust line height accordingly */
+            overflow-y: auto; /* Show scrollbar if content overflows */
+        }
+
+        /* Summary Content Limit */
+        .data-item-summary {
+            max-height: 145px;
+            overflow: hidden;
+            color: #302f2f;
+        }
+
+        /* Summary Expanded */
+        .data-item-summary.expanded {
+            max-height: none;
+        }
+        /* Additional CSS class definitions for pm_fixes and pm_tools */
+
+        .fix-link, .tool-link {
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #1a0dab;
+            letter-spacing: 0.5px;
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+        }
+
+        .fix-link:hover, .tool-link:hover {
+            color: #ff5722;
+        }
+
+        .report-dates {
+            font-family: "Source Code Pro", monospace;
+            margin-bottom:6px;
+            display: flex;
+            justify-content: center;
+        }
+        .report-dates span {
+            white-space: nowrap;
+        }
+        .month {
+            font-size: 1.2em;
+            color: #131269;
+            margin-left: 8px;}
+
+        .day {font-size: 1.23em;}
+
+        .year {
+            font-size: 1.2em;
+            color: #131269;}
+        
+        li {
+            list-style-type: none;
+            margin-bottom: 8px;
+        }
+        .image-wrapper {
+            text-align: center;
+            border-radius: 0px;
+            overflow: hidden;
+            line-height: 0; 
+        }
+        .image-wrapper img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+        }
+        .report-description {
+            font-size: 0.85em;
+            font-weight: 400;
+            line-height: 1.7;
+            font-family: 'Roboto', sans-serif;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+        .data-item-kb-articles ul.kb-articles-list {
+            list-style-type: none; /* Remove default list bullet */
+            padding: 0; /* Remove default padding */
+            margin: 0; /* Remove default margin */
+            display: flex; /* Display list items in a row */
+            flex-wrap: wrap; /* Allow list items to wrap onto the next line if necessary */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li {
+            display: inline-block; /* Display list items inline */
+            margin-right: 2px; /* Control spacing between items - adjust as needed */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li::after {
+            content: ", "; /* Add a comma after each list item */
+        }
+
+        .data-item-kb-articles ul.kb-articles-list li:last-child::after {
+            content: ""; /* Remove the comma after the last list item */
+        }
+        .pill-banner {
+            background: linear-gradient(90deg, rgb(253, 253, 253) 0%, rgb(184, 245, 225) 10%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .data-item-build-numbers span {
+            font-family: 'Sora', sans-serif;
+        }
+        @media (max-width: 300px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class='report-body'>
+    <div class="report">
+        <h1 class="text-4xl">Big Hat Group Weekly Security Update Report</h1>
+        <h4 class="text-2xl text-center">(Windows and Edge Edition)</h4>
+        <div class="report-dates">
+            <span class="month">October</span>&nbsp;<span class="day">13</span>&nbsp;-&nbsp;<span class="month">October</span>&nbsp;<span class="day">20</span>,&nbsp;<span class="year">2023</span>
+        </div>
+        <div class="flex">
+            <div class="flex-1">
+                <div class='image-wrapper'>
+                    <img src="../plots/posts_by_day_2023_10_20.png" alt="Publication Days"> 
+                </div>
+            </div>
+            <div class="flex-1 bg-white p-2 flex flex-col justify-center">
+                <div class="max-w-md mx-auto">
+                    <p class="report-description mb-4">The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.</p>
+                </div>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+        <div class='section-container'>
+            <div class='section' id='section_1'>
+                <h2 class="text-3xl mb-1">MSRC Posts</h2>
+                <div class='metadata-container'>
+                    <div class='metadata-item'><span class="label">Total CVEs:</span> 20</div>
+                    <div class='metadata-item'><span class="label">New CVEs:</span> 16</div>
+                    <div class='metadata-item'><span class="label">Updated CVEs:</span> 4</div>
+                </div>
+                <div class='data-container'>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5487' class='data-item-link' id='d1259f6c-602b-3859-86f8-609cdb69c877' target='_blank'>Chromium: CVE-2023-5487 Inappropriate implementation in Fullscreen</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-d1259f6c-602b-3859-86f8-609cdb69c877">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-d1259f6c-602b-3859-86f8-609cdb69c877", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-d1259f6c-602b-3859-86f8-609cdb69c877'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by CVE-2023-5487, an inappropriate implementation vulnerability in Fullscreen, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, released on 13th October 2023. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure and recommends checking the Microsoft Support Lifecycle for software support lifecycle information. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-d1259f6c-602b-3859-86f8-609cdb69c877")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5486' class='data-item-link' id='e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a' target='_blank'>Chromium: CVE-2023-5486 Inappropriate implementation in Input</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by CVE-2023-5486, an inappropriate implementation in Input vulnerability assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The latest version of Microsoft Edge (Chromium-based) with the fix is 118.0.2088.46, released on 13th October 2023. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5485' class='data-item-link' id='e3eab75d-757a-38b3-38b4-804dc383ac4a' target='_blank'>Chromium: CVE-2023-5485 Inappropriate implementation in Autofill</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-e3eab75d-757a-38b3-38b4-804dc383ac4a">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-e3eab75d-757a-38b3-38b4-804dc383ac4a", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-e3eab75d-757a-38b3-38b4-804dc383ac4a'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a vulnerability, CVE-2023-5485, related to inappropriate implementation in Autofill. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-e3eab75d-757a-38b3-38b4-804dc383ac4a")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5484' class='data-item-link' id='a104b87a-07d8-83b7-2242-8dc9ca3bff4e' target='_blank'>Chromium: CVE-2023-5484 Inappropriate implementation in Navigation</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-a104b87a-07d8-83b7-2242-8dc9ca3bff4e">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-a104b87a-07d8-83b7-2242-8dc9ca3bff4e", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-a104b87a-07d8-83b7-2242-8dc9ca3bff4e'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by CVE-2023-5484, an inappropriate implementation in Navigation. This vulnerability, assigned by Chrome, is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version, 118.0.2088.46, to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. The vulnerability is documented in the Security Update Guide to announce that the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. Microsoft recognizes the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-a104b87a-07d8-83b7-2242-8dc9ca3bff4e")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5483' class='data-item-link' id='7291d842-9d2d-571b-6af9-97f9b8966dcb' target='_blank'>Chromium: CVE-2023-5483 Inappropriate implementation in Intents</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-7291d842-9d2d-571b-6af9-97f9b8966dcb">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-7291d842-9d2d-571b-6af9-97f9b8966dcb", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-7291d842-9d2d-571b-6af9-97f9b8966dcb'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by CVE-2023-5483, an inappropriate implementation in Intents vulnerability assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, released on 13th October 2023. Microsoft has provided a security update to mitigate the risk of exploitation. No specific workaround or mitigation beyond updating to the latest version is mentioned. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-7291d842-9d2d-571b-6af9-97f9b8966dcb")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5481' class='data-item-link' id='4538856e-d8b5-aaf4-0ad1-104205dda55e' target='_blank'>Chromium: CVE-2023-5481 Inappropriate implementation in Downloads</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-4538856e-d8b5-aaf4-0ad1-104205dda55e">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-4538856e-d8b5-aaf4-0ad1-104205dda55e", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-4538856e-d8b5-aaf4-0ad1-104205dda55e'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by CVE-2023-5481, an inappropriate implementation vulnerability in Downloads, assigned by Chrome. This vulnerability is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-4538856e-d8b5-aaf4-0ad1-104205dda55e")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5479' class='data-item-link' id='7e5c8bc4-8060-7808-c6f8-b0e2d3e83514' target='_blank'>Chromium: CVE-2023-5479 Inappropriate implementation in Extensions API</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-7e5c8bc4-8060-7808-c6f8-b0e2d3e83514">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-7e5c8bc4-8060-7808-c6f8-b0e2d3e83514", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-7e5c8bc4-8060-7808-c6f8-b0e2d3e83514'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a vulnerability (CVE-2023-5479) in the Extensions API, assigned by Chrome. This vulnerability is caused by inappropriate implementation in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The impact of this vulnerability could allow an attacker to compromise the affected system. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. It is essential for system administrators to apply this update to mitigate the risk of exploitation. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-7e5c8bc4-8060-7808-c6f8-b0e2d3e83514")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5478' class='data-item-link' id='8d01ccca-58e9-516c-97b3-61b045bbda76' target='_blank'>Chromium: CVE-2023-5478 Inappropriate implementation in Autofill</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-8d01ccca-58e9-516c-97b3-61b045bbda76">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-8d01ccca-58e9-516c-97b3-61b045bbda76", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-8d01ccca-58e9-516c-97b3-61b045bbda76'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by an inappropriate implementation vulnerability in Autofill, identified as CVE-2023-5478. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-8d01ccca-58e9-516c-97b3-61b045bbda76")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5477' class='data-item-link' id='169598b1-b165-785c-aeb1-35777edd3b4a' target='_blank'>Chromium: CVE-2023-5477 Inappropriate implementation in Installer</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-169598b1-b165-785c-aeb1-35777edd3b4a">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-169598b1-b165-785c-aeb1-35777edd3b4a", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-169598b1-b165-785c-aeb1-35777edd3b4a'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a vulnerability (CVE-2023-5477) due to inappropriate implementation in the installer. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in the installer. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-169598b1-b165-785c-aeb1-35777edd3b4a")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5476' class='data-item-link' id='a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687' target='_blank'>Chromium: CVE-2023-5476 Use after free in Blink History</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Blink History, identified as CVE-2023-5476. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5475' class='data-item-link' id='0efa8bac-be8e-684c-838d-a5b1b313f223' target='_blank'>Chromium: CVE-2023-5475 Inappropriate implementation in DevTools</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-0efa8bac-be8e-684c-838d-a5b1b313f223">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-0efa8bac-be8e-684c-838d-a5b1b313f223", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-0efa8bac-be8e-684c-838d-a5b1b313f223'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a vulnerability identified as CVE-2023-5475, which was assigned by Chrome. This vulnerability is related to an inappropriate implementation in DevTools. The underlying cause is a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46 resolves this vulnerability. Microsoft acknowledges the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-0efa8bac-be8e-684c-838d-a5b1b313f223")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5474' class='data-item-link' id='a9f0689f-8b8e-41f8-d546-a40abe8b5fd2' target='_blank'>Chromium: CVE-2023-5474 Heap buffer overflow in PDF</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-a9f0689f-8b8e-41f8-d546-a40abe8b5fd2">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-a9f0689f-8b8e-41f8-d546-a40abe8b5fd2", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-a9f0689f-8b8e-41f8-d546-a40abe8b5fd2'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in PDF, identified as CVE-2023-5474. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-a9f0689f-8b8e-41f8-d546-a40abe8b5fd2")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5473' class='data-item-link' id='2dd992a3-50b4-9d11-06f6-e996bbd8935b' target='_blank'>Chromium: CVE-2023-5473 Use after free in Cast</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-2dd992a3-50b4-9d11-06f6-e996bbd8935b">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-2dd992a3-50b4-9d11-06f6-e996bbd8935b", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-2dd992a3-50b4-9d11-06f6-e996bbd8935b'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Cast, identified as CVE-2023-5473. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-2dd992a3-50b4-9d11-06f6-e996bbd8935b")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5218' class='data-item-link' id='63e6cb66-4a6e-5750-a587-cb40d9d1895c' target='_blank'>Chromium: CVE-2023-5218 Use after free in Site Isolation</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-63e6cb66-4a6e-5750-a587-cb40d9d1895c">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-63e6cb66-4a6e-5750-a587-cb40d9d1895c", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-63e6cb66-4a6e-5750-a587-cb40d9d1895c'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Site Isolation, identified as CVE-2023-5218. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46 mitigates the risk of exploitation. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-63e6cb66-4a6e-5750-a587-cb40d9d1895c")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44487' class='data-item-link' id='678adb44-cbe2-bb2b-72de-3f224bcfeb93' target='_blank'>CVE-2023-44487 MITRE: CVE-2023-44487 HTTP/2 Rapid Reset Attack</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.2
+                                    
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-678adb44-cbe2-bb2b-72de-3f224bcfeb93">
+                                <span class="label">Product family info:</span> windows 10 21H2 32-bit_systems, windows 10 21H2 x64-based_systems, windows 10 22H2 32-bit_systems, windows 10 22H2 x64-based_systems, windows 11 21H2 x64-based_systems, windows 11 22H2 x64-based_systems
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-678adb44-cbe2-bb2b-72de-3f224bcfeb93", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19044.3570
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22000.2538
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19045.3570
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22621.2428
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031358#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031358</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031356#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031356</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031354#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031354</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031358)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031356" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031356)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031354)</a>
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-678adb44-cbe2-bb2b-72de-3f224bcfeb93'><span class="label">Summary:</span> The CVE-2023-44487 vulnerability affects various Microsoft products, including Windows Server, Windows 10, Windows 11, ASP.NET Core, Microsoft Visual Studio, and .NET. It is a Denial of Service (DoS) vulnerability with a maximum severity of Important. The vulnerability is related to the HTTP/2 protocol and can be exploited to cause a DoS condition. Microsoft has provided workarounds to mitigate the risk, including disabling the HTTP/2 protocol on web servers using Registry Editor and limiting applications to HTTP1.1 via configuration settings for Kestrel endpoints. It's crucial to install the security updates for the affected products as soon as possible. The impact of exploitation could lead to service unavailability, affecting the availability and reliability of web services and applications. System administrators should carefully follow the provided workarounds, considering the potential risks associated with Registry Editor modifications. Microsoft has released security updates for the affected products, addressing the vulnerability and providing protection against potential exploitation. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-678adb44-cbe2-bb2b-72de-3f224bcfeb93")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36559' class='data-item-link' id='94a12fa3-9eb8-86a2-a9cd-08d97f15ea98' target='_blank'>CVE-2023-36559 Microsoft Edge (Chromium-based) Spoofing Vulnerability</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 13-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Information update only</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-94a12fa3-9eb8-86a2-a9cd-08d97f15ea98">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-94a12fa3-9eb8-86a2-a9cd-08d97f15ea98", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (13-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-94a12fa3-9eb8-86a2-a9cd-08d97f15ea98'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a Spoofing Vulnerability identified as CVE-2023-36559, with a low severity base score of 4.2. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to minor loss of confidentiality and integrity, with no availability impact. An attacker would need to combine this with other vulnerabilities to perform an attack. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, addressing this vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. For more information, refer to the Microsoft Support Lifecycle page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-94a12fa3-9eb8-86a2-a9cd-08d97f15ea98")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-41765' class='data-item-link' id='16f48b64-6419-f7c3-344a-5ad673ea36af' target='_blank'>CVE-2023-41765 Layer 2 Tunneling Protocol Remote Code Execution Vulnerability</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.2
+                                    
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 16-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-16f48b64-6419-f7c3-344a-5ad673ea36af">
+                                <span class="label">Product family info:</span> windows 10  32-bit_systems, windows 10  x64-based_systems, windows 10 21H2 32-bit_systems, windows 10 21H2 x64-based_systems, windows 10 22H2 32-bit_systems, windows 10 22H2 x64-based_systems, windows 11 21H2 x64-based_systems, windows 11 22H2 x64-based_systems
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-16f48b64-6419-f7c3-344a-5ad673ea36af", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19045.3570
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22000.2538
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19041.3570
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.10240.20232
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22621.2428
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031377#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031377</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031358#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031358</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031356#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031356</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5031354#october-10-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5031354</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031377" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031377)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031358)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031356" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031356)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5031354)</a>
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-16f48b64-6419-f7c3-344a-5ad673ea36af'><span class="label">Summary:</span> The Layer 2 Tunneling Protocol (L2TP) Remote Code Execution Vulnerability, identified as CVE-2023-41765, impacts Windows Server and Windows client operating systems, including Windows 10 and 11. The vulnerability allows an unauthenticated attacker to send a specially crafted protocol message to a Routing and Remote Access Service (RRAS) server, potentially leading to remote code execution on the server machine. The attack complexity is high, requiring the attacker to win a race condition, and no user interaction or privileges are needed for exploitation. Successful exploitation results in a critical impact on confidentiality, integrity, and availability. Microsoft has provided a solution by releasing security updates for affected Windows Server and client versions, including Server Core installations. System administrators are advised to apply the official patches to mitigate the risk of exploitation. Additionally, the vulnerability is only exploitable on Windows Servers that have installed and configured the RRAS role with L2TP support, which is not installed and configured by default, providing some level of mitigation for systems without this configuration. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-16f48b64-6419-f7c3-344a-5ad673ea36af")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38545' class='data-item-link' id='c3386492-fca1-2f06-a6ae-1faef66f85d6' target='_blank'>CVE-2023-38545 MITRE: CVE-2023-38545 SOCKS5 heap buffer overflow</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.1
+                                    
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 20-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Information update only</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-c3386492-fca1-2f06-a6ae-1faef66f85d6">
+                                <span class="label">Product family info:</span> windows 10 21H2 32-bit_systems, windows 10 21H2 x64-based_systems, windows 10 22H2 32-bit_systems, windows 10 22H2 x64-based_systems, windows 11 21H2 x64-based_systems, windows 11 22H2 x64-based_systems, windows 11 23H2 x64-based_systems
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-c3386492-fca1-2f06-a6ae-1faef66f85d6", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22631.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22621.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19044.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19045.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22000.2600
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032192#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032192</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032190#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032190</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032189#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032189</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032192)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032190)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032189)</a>
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-c3386492-fca1-2f06-a6ae-1faef66f85d6'><span class="label">Summary:</span> Microsoft Windows is affected by a remote code execution vulnerability, identified as CVE-2023-38545, in the curl.exe software. This vulnerability is triggered when the victim manually executes the curl.exe utility while using a SOCKS5 proxy with a rate limit option set to 65540 or lower, allowing an attacker to execute arbitrary code. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for supported versions. In the meantime, system administrators are advised to deploy a code integrity policy to restrict the execution of vulnerable versions of curl.exe. Workarounds include using a WDAC policy to deny execution of the vulnerable executable, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's crucial not to remove or replace curl.exe, as doing so may damage the Windows Update component store. For more information and updates, system administrators can refer to the Microsoft Security Update Guide and register for security notifications. The vulnerability affects various versions of Windows, including Windows 10, Windows 11, and Windows Server 2019 and 2022. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-c3386492-fca1-2f06-a6ae-1faef66f85d6")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38039' class='data-item-link' id='9c5165de-0ea9-77a2-3b98-539b26a986e6' target='_blank'>CVE-2023-38039 Hackerone: CVE-2023-38039 HTTP headers eat all memory</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.1
+                                    
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 20-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-9c5165de-0ea9-77a2-3b98-539b26a986e6">
+                                <span class="label">Product family info:</span> windows 10 21H2 32-bit_systems, windows 10 21H2 x64-based_systems, windows 10 22H2 32-bit_systems, windows 10 22H2 x64-based_systems, windows 11 21H2 x64-based_systems, windows 11 22H2 x64-based_systems, windows 11 23H2 x64-based_systems
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-9c5165de-0ea9-77a2-3b98-539b26a986e6", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22631.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22621.2715
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19044.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.19045.3693
+                                                    </span>
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        10.0.22000.2600
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032192#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032192</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032190#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032190</a>
+                                                    </li>
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://support.microsoft.com/help/5032189#october-19-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5032189</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032192)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032190)</a>
+                                                        
+                                                    </li>
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5032189)</a>
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-9c5165de-0ea9-77a2-3b98-539b26a986e6'><span class="label">Summary:</span> The vulnerability identified as CVE-2023-38039 affects the curl.exe software consumed by Microsoft Windows, leading to a denial of service. An attacker could exploit this vulnerability by convincing the victim to manually launch the curl utility and direct it to connect to a compromised server. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for currently supported, on-premise versions of Windows clients and servers. The Security Updates table for this CVE will be updated with the Windows update KB numbers for all supported versions as they are released. In the meantime, system administrators are advised to deploy a code integrity policy that restricts the execution of vulnerable versions of curl.exe. This can be achieved using Windows Defender Application Control (WDAC) policies, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's important to note that under no circumstances should the curl.exe file be removed or replaced, as doing so may damage the Windows Update component store and prevent the installation of further security updates. The workaround only provides an operating system level guarantee that the vulnerable version of the curl tool cannot be executed. More information about this vulnerability and the workaround can be found in the NVD and curl.se websites. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-9c5165de-0ea9-77a2-3b98-539b26a986e6")'>Show More</a></div>
+                        </div>
+                    
+                        <div class='data-item'>
+                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36409' class='data-item-link' id='5a3b3255-3123-3ec9-8ab0-55414f9e410b' target='_blank'>CVE-2023-36409 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability</a></h3>
+                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
+                                <div class='data-item-property' style="margin-right: 6px;">
+                                    <span class="label">Revision:</span> 1.0
+                                     <span class="text-green-600">(NEW)</span>
+                                </div>
+                                <div class='data-item-property'>
+                                    <span class="label">Published:</span> 20-10-2023
+                                </div>
+                                <div class='data-item-property flex items-center'>
+                                    <span class="label mr-1">Official Fix:</span>
+                                    
+                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
+                                        <span class="ml-1">Yes</span>
+                                    
+                                </div>
+                            </div>
+                            <!-- Windows Info -->
+                            <div class='data-item-property expandable-core_products' id="product-family-info-5a3b3255-3123-3ec9-8ab0-55414f9e410b">
+                                <span class="label">Product family info:</span> microsoft edge (chromium-based)  
+                            </div>
+                            <div style="display: flex; justify-content: flex-end; width: auto;">
+                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-5a3b3255-3123-3ec9-8ab0-55414f9e410b", this)'>Show More</a>
+                            </div>
+                            <div class="flex flex-wrap -mx-2">
+                                <!-- Build numbers card -->
+                                <div class="w-full px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-build-numbers mb-1'>
+                                            <span class="label mb-1 block">Build numbers:</span>
+                                            <div class="flex flex-wrap gap-2">
+                                                
+                                                    <span class="text-green-700 border border-green-700 bg-white px-1 py-1 rounded" style="border-radius: 4px; font-size: 11.5px;line-height:12.5px;letter-spacing: 0.75px;">
+                                                        118.0.2088.46
+                                                    </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                <!-- KB Articles card -->
+                                
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-kb-articles'>
+                                            <span class="label mb-1 block">KB Articles:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                        <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-20-2023" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (20-10-2023)</a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            
+                                <!-- Package pairs card -->
+                                <div class="w-1/2 px-2 card">
+                                    <div class="rounded overflow-hidden p-1 bg-white">
+                                        <div class='data-item-package-pairs'>
+                                            <span class="label mb-1 block">Update Packages:</span>
+                                            <ul class="list-none">
+                                                
+                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                        
+                                                            Edge Update
+                                                        
+                                                    </li>
+                                                
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class='data-item-summary' id='summary-5a3b3255-3123-3ec9-8ab0-55414f9e410b'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by an Information Disclosure Vulnerability, identified as CVE-2023-36409, with a CVSS score of 6.5/5.7. The vulnerability allows an attacker to perform enclave memory read and unprivileged write to enclave memory from a host application, potentially leaking memory contents. Successful exploitation could lead to some loss of integrity, such as file overwrite with minimal impact. The attack vector is network-based, with low attack complexity and no privileges required. User interaction is not necessary for exploitation. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, addressing this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of information disclosure. For further details, refer to the Microsoft Security Response Center page. </div>
+                            <div style="display: flex;
+                            justify-content: flex-end;width: auto;">
+                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-5a3b3255-3123-3ec9-8ab0-55414f9e410b")'>Show More</a></div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 bg-white p-2 flex flex-row justify-center">
+            <div class='image-wrapper'>
+                <img src="../plots/weekly_totals_2023_10_20.png" alt="Publication activity (last 90 days)"> 
+            </div>
+        </div>
+        <div class='image-wrapper flex justify-center'>
+            <img src="https://bhgaistorage.blob.core.windows.net/msrc-summary-report/html/android-chrome-192x192.png" alt="Big Hat Group - Security and Systems Aggregation report">
+        </div>
+    </div>
+    
+</body>
+</html>

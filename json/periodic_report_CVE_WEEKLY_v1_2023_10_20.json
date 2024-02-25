@@ -1,0 +1,934 @@
+{
+    "report_day_start": "13",
+    "report_month_start": "October",
+    "report_year_start": "2023",
+    "report_day_end": "20",
+    "report_month_end": "October",
+    "report_year_end": "2023",
+    "report_end_date": "2023_10_20",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "d1259f6c-602b-3859-86f8-609cdb69c877",
+            "post_id": "CVE-2023-5487",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5487 Inappropriate implementation in Fullscreen",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5487",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-5487, an inappropriate implementation vulnerability in Fullscreen, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, released on 13th October 2023. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure and recommends checking the Microsoft Support Lifecycle for software support lifecycle information.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e1e9edbb-bf2b-36ae-5aa0-cd6130a23e3a",
+            "post_id": "CVE-2023-5486",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5486 Inappropriate implementation in Input",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5486",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-5486, an inappropriate implementation in Input vulnerability assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The latest version of Microsoft Edge (Chromium-based) with the fix is 118.0.2088.46, released on 13th October 2023.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e3eab75d-757a-38b3-38b4-804dc383ac4a",
+            "post_id": "CVE-2023-5485",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5485 Inappropriate implementation in Autofill",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5485",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability, CVE-2023-5485, related to inappropriate implementation in Autofill. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a104b87a-07d8-83b7-2242-8dc9ca3bff4e",
+            "post_id": "CVE-2023-5484",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5484 Inappropriate implementation in Navigation",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5484",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-5484, an inappropriate implementation in Navigation. This vulnerability, assigned by Chrome, is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version, 118.0.2088.46, to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. The vulnerability is documented in the Security Update Guide to announce that the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. Microsoft recognizes the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in navigation within Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "7291d842-9d2d-571b-6af9-97f9b8966dcb",
+            "post_id": "CVE-2023-5483",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5483 Inappropriate implementation in Intents",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5483",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-5483, an inappropriate implementation in Intents vulnerability assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. Attackers could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, released on 13th October 2023. Microsoft has provided a security update to mitigate the risk of exploitation. No specific workaround or mitigation beyond updating to the latest version is mentioned.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in Intents in Chromium which is consumed by Microsoft Edge.",
+            "fixes": "The fix is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable to this issue.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "4538856e-d8b5-aaf4-0ad1-104205dda55e",
+            "post_id": "CVE-2023-5481",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5481 Inappropriate implementation in Downloads",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5481",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-5481, an inappropriate implementation vulnerability in Downloads, assigned by Chrome. This vulnerability is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in the Downloads feature of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "7e5c8bc4-8060-7808-c6f8-b0e2d3e83514",
+            "post_id": "CVE-2023-5479",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5479 Inappropriate implementation in Extensions API",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5479",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability (CVE-2023-5479) in the Extensions API, assigned by Chrome. This vulnerability is caused by inappropriate implementation in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The impact of this vulnerability could allow an attacker to compromise the affected system. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. It is essential for system administrators to apply this update to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the Extensions API of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "8d01ccca-58e9-516c-97b3-61b045bbda76",
+            "post_id": "CVE-2023-5478",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5478 Inappropriate implementation in Autofill",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5478",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an inappropriate implementation vulnerability in Autofill, identified as CVE-2023-5478. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as an inappropriate implementation in the Autofill feature of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "tools": "The tool to check the version of the browser is the 'About Microsoft Edge' section, which can be accessed by clicking on the 3 dots (...) on the very right-hand side of the window, then clicking on 'Help and Feedback', and finally on 'About Microsoft Edge'.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "169598b1-b165-785c-aeb1-35777edd3b4a",
+            "post_id": "CVE-2023-5477",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5477 Inappropriate implementation in Installer",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5477",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability (CVE-2023-5477) due to inappropriate implementation in the installer. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in the installer. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in the Chromium installer.",
+            "fixes": "The fix is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable to this issue. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a3d6cb0b-6bce-3c3a-9fb8-d44239c1e687",
+            "post_id": "CVE-2023-5476",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5476 Use after free in Blink History",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5476",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Blink History, identified as CVE-2023-5476. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "The vulnerability allows for a use after free in Blink History in Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0efa8bac-be8e-684c-838d-a5b1b313f223",
+            "post_id": "CVE-2023-5475",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5475 Inappropriate implementation in DevTools",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5475",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability identified as CVE-2023-5475, which was assigned by Chrome. This vulnerability is related to an inappropriate implementation in DevTools. The underlying cause is a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46 resolves this vulnerability. Microsoft acknowledges the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the DevTools of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 118.0.2088.46.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a9f0689f-8b8e-41f8-d546-a40abe8b5fd2",
+            "post_id": "CVE-2023-5474",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5474 Heap buffer overflow in PDF",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5474",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in PDF, identified as CVE-2023-5474. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "2dd992a3-50b4-9d11-06f6-e996bbd8935b",
+            "post_id": "CVE-2023-5473",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5473 Use after free in Cast",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5473",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Cast, identified as CVE-2023-5473. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.46 is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "63e6cb66-4a6e-5750-a587-cb40d9d1895c",
+            "post_id": "CVE-2023-5218",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5218 Use after free in Site Isolation",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5218",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Site Isolation, identified as CVE-2023-5218. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. The security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46 mitigates the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "678adb44-cbe2-bb2b-72de-3f224bcfeb93",
+            "post_id": "CVE-2023-44487",
+            "published": "13-10-2023",
+            "revision": "1.2",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-44487 MITRE: CVE-2023-44487 HTTP/2 Rapid Reset Attack",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44487",
+            "summary": "The CVE-2023-44487 vulnerability affects various Microsoft products, including Windows Server, Windows 10, Windows 11, ASP.NET Core, Microsoft Visual Studio, and .NET. It is a Denial of Service (DoS) vulnerability with a maximum severity of Important. The vulnerability is related to the HTTP/2 protocol and can be exploited to cause a DoS condition. Microsoft has provided workarounds to mitigate the risk, including disabling the HTTP/2 protocol on web servers using Registry Editor and limiting applications to HTTP1.1 via configuration settings for Kestrel endpoints. It's crucial to install the security updates for the affected products as soon as possible. The impact of exploitation could lead to service unavailability, affecting the availability and reliability of web services and applications. System administrators should carefully follow the provided workarounds, considering the potential risks associated with Registry Editor modifications. Microsoft has released security updates for the affected products, addressing the vulnerability and providing protection against potential exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19044.3570",
+                "10.0.22000.2538",
+                "10.0.19045.3570",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031356",
+                    "kb_link": "https://support.microsoft.com/help/5031356#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031356)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031356"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "94a12fa3-9eb8-86a2-a9cd-08d97f15ea98",
+            "post_id": "CVE-2023-36559",
+            "published": "13-10-2023",
+            "revision": "1.0",
+            "post_type": "Information only",
+            "title": "CVE-2023-36559 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36559",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Spoofing Vulnerability identified as CVE-2023-36559, with a low severity base score of 4.2. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to minor loss of confidentiality and integrity, with no availability impact. An attacker would need to combine this with other vulnerabilities to perform an attack. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, addressing this vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. For more information, refer to the Microsoft Support Lifecycle page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (13-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-13-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "16f48b64-6419-f7c3-344a-5ad673ea36af",
+            "post_id": "CVE-2023-41765",
+            "published": "16-10-2023",
+            "revision": "1.2",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-41765 Layer 2 Tunneling Protocol Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-41765",
+            "summary": "The Layer 2 Tunneling Protocol (L2TP) Remote Code Execution Vulnerability, identified as CVE-2023-41765, impacts Windows Server and Windows client operating systems, including Windows 10 and 11. The vulnerability allows an unauthenticated attacker to send a specially crafted protocol message to a Routing and Remote Access Service (RRAS) server, potentially leading to remote code execution on the server machine. The attack complexity is high, requiring the attacker to win a race condition, and no user interaction or privileges are needed for exploitation. Successful exploitation results in a critical impact on confidentiality, integrity, and availability. Microsoft has provided a solution by releasing security updates for affected Windows Server and client versions, including Server Core installations. System administrators are advised to apply the official patches to mitigate the risk of exploitation. Additionally, the vulnerability is only exploitable on Windows Servers that have installed and configured the RRAS role with L2TP support, which is not installed and configured by default, providing some level of mitigation for systems without this configuration.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19045.3570",
+                "10.0.22000.2538",
+                "10.0.19041.3570",
+                "10.0.10240.20232",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031377",
+                    "kb_link": "https://support.microsoft.com/help/5031377#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031356",
+                    "kb_link": "https://support.microsoft.com/help/5031356#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031377)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031377"
+                },
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031356)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031356"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Layer 2 Tunneling Protocol",
+            "symptoms": "The vulnerability allows an attacker to execute arbitrary code remotely through the Layer 2 Tunneling Protocol.",
+            "fixes": "The fix for this vulnerability has not been provided in the post. It is recommended to check the source link for updates on the mitigation strategy.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "c3386492-fca1-2f06-a6ae-1faef66f85d6",
+            "post_id": "CVE-2023-38545",
+            "published": "20-10-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-38545 MITRE: CVE-2023-38545 SOCKS5 heap buffer overflow",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38545",
+            "summary": "Microsoft Windows is affected by a remote code execution vulnerability, identified as CVE-2023-38545, in the curl.exe software. This vulnerability is triggered when the victim manually executes the curl.exe utility while using a SOCKS5 proxy with a rate limit option set to 65540 or lower, allowing an attacker to execute arbitrary code. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for supported versions. In the meantime, system administrators are advised to deploy a code integrity policy to restrict the execution of vulnerable versions of curl.exe. Workarounds include using a WDAC policy to deny execution of the vulnerable executable, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's crucial not to remove or replace curl.exe, as doing so may damage the Windows Update component store. For more information and updates, system administrators can refer to the Microsoft Security Update Guide and register for security notifications. The vulnerability affects various versions of Windows, including Windows 10, Windows 11, and Windows Server 2019 and 2022.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2715",
+                "10.0.22621.2715",
+                "10.0.19044.3693",
+                "10.0.19045.3693",
+                "10.0.22000.2600"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5032192",
+                    "kb_link": "https://support.microsoft.com/help/5032192#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032190",
+                    "kb_link": "https://support.microsoft.com/help/5032190#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032189",
+                    "kb_link": "https://support.microsoft.com/help/5032189#october-19-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5032192)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192"
+                },
+                {
+                    "package_type": "Security Update (KB5032190)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190"
+                },
+                {
+                    "package_type": "Security Update (KB5032189)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Windows, curl.exe",
+            "symptoms": "The symptom of this vulnerability is a heap buffer overflow in the SOCKS5 protocol when using the curl.exe utility.",
+            "fixes": "The fix is to install the Windows security updates released on November 14, 2023, which includes curl 8.4.0. Customers whose Windows devices are configured to receive automatic updates do not need to take any further action.",
+            "tools": "The Windows Defender Application Control (WDAC) can be used to deny execution of the \\system32\\curl.exe executable as a workaround.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "9c5165de-0ea9-77a2-3b98-539b26a986e6",
+            "post_id": "CVE-2023-38039",
+            "published": "20-10-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38039 Hackerone: CVE-2023-38039 HTTP headers eat all memory",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38039",
+            "summary": "The vulnerability identified as CVE-2023-38039 affects the curl.exe software consumed by Microsoft Windows, leading to a denial of service. An attacker could exploit this vulnerability by convincing the victim to manually launch the curl utility and direct it to connect to a compromised server. Microsoft is actively working to release version 8.4.0 of curl.exe in a future Windows update for currently supported, on-premise versions of Windows clients and servers. The Security Updates table for this CVE will be updated with the Windows update KB numbers for all supported versions as they are released. In the meantime, system administrators are advised to deploy a code integrity policy that restricts the execution of vulnerable versions of curl.exe. This can be achieved using Windows Defender Application Control (WDAC) policies, which can be deployed via Mobile Device Management (MDM) solutions, Microsoft Configuration Manager, scripts, or group policies. It's important to note that under no circumstances should the curl.exe file be removed or replaced, as doing so may damage the Windows Update component store and prevent the installation of further security updates. The workaround only provides an operating system level guarantee that the vulnerable version of the curl tool cannot be executed. More information about this vulnerability and the workaround can be found in the NVD and curl.se websites.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2715",
+                "10.0.22621.2715",
+                "10.0.19044.3693",
+                "10.0.19045.3693",
+                "10.0.22000.2600"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5032192",
+                    "kb_link": "https://support.microsoft.com/help/5032192#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032190",
+                    "kb_link": "https://support.microsoft.com/help/5032190#october-19-2023"
+                },
+                {
+                    "kb_id": "kb5032189",
+                    "kb_link": "https://support.microsoft.com/help/5032189#october-19-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5032192)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192"
+                },
+                {
+                    "package_type": "Security Update (KB5032190)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190"
+                },
+                {
+                    "package_type": "Security Update (KB5032189)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "curl.exe",
+            "symptoms": "The vulnerability can cause a denial of service of curl when the victim manually launches the curl utility and directs it to connect to a compromised server.",
+            "fixes": "",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "5a3b3255-3123-3ec9-8ab0-55414f9e410b",
+            "post_id": "CVE-2023-36409",
+            "published": "20-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36409 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36409",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an Information Disclosure Vulnerability, identified as CVE-2023-36409, with a CVSS score of 6.5/5.7. The vulnerability allows an attacker to perform enclave memory read and unprivileged write to enclave memory from a host application, potentially leaking memory contents. Successful exploitation could lead to some loss of integrity, such as file overwrite with minimal impact. The attack vector is network-based, with low attack complexity and no privileges required. User interaction is not necessary for exploitation. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.46, addressing this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of information disclosure. For further details, refer to the Microsoft Security Response Center page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.46"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (20-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-20-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "The system allows an attacker to gain unauthorized access to restricted information over the network without any user interaction.",
+            "fixes": "Microsoft has released an official fix to address this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 20,
+        "new_cves": 16,
+        "updated_cves": 4
+    },
+    "section_2_data": [
+        {
+            "product_name": "Layer 2 Tunneling Protocol",
+            "product_version": "",
+            "product_id": [
+                "product_16f48b64-6419-f7c3-344a-5ad673ea36af_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "118.0.2088.46",
+            "product_id": [
+                "product_7e5c8bc4-8060-7808-c6f8-b0e2d3e83514_1",
+                "product_7291d842-9d2d-571b-6af9-97f9b8966dcb_1"
+            ]
+        },
+        {
+            "product_name": "Windows",
+            "product_version": "All supported versions",
+            "product_id": [
+                "product_7001567b-77d3-824e-62c4-9c022f0f7278_1"
+            ]
+        },
+        {
+            "product_name": "curl.exe",
+            "product_version": "8.4.0",
+            "product_id": [
+                "product_c3386492-fca1-2f06-a6ae-1faef66f85d6_1"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 4
+    },
+    "section_3_data": [
+        {
+            "tool_id": "tool_7001567b-77d3-824e-62c4-9c022f0f7278_1",
+            "tool_description": "The Windows Defender Application Control (WDAC) can be used to deny execution of the \\system32\\curl.exe executable as a workaround.",
+            "tool_url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune",
+            "mongo_ids": [
+                "c3386492-fca1-2f06-a6ae-1faef66f85d6"
+            ],
+            "published_dates": "14-11-2023"
+        },
+        {
+            "tool_id": "tool_8d01ccca-58e9-516c-97b3-61b045bbda76_1",
+            "tool_description": "The tool to check the version of the browser is the 'About Microsoft Edge' section, which can be accessed by clicking on the 3 dots (...) on the very right-hand side of the window, then clicking on 'Help and Feedback', and finally on 'About Microsoft Edge'.",
+            "tool_url": null,
+            "mongo_ids": [
+                "8d01ccca-58e9-516c-97b3-61b045bbda76"
+            ],
+            "published_dates": "13-10-2023"
+        }
+    ],
+    "section_3_metadata": {
+        "total_tools": 2
+    }
+}

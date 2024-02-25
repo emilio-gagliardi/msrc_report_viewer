@@ -1,0 +1,267 @@
+{
+    "report_day_start": "01",
+    "report_month_start": "September",
+    "report_year_start": "2023",
+    "report_day_end": "08",
+    "report_month_end": "September",
+    "report_year_end": "2023",
+    "report_end_date": "2023_09_08",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "9db4c9f2-96f6-6d27-d026-626674e32c91",
+            "post_id": "CVE-2023-24872",
+            "published": "03-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-24872",
+            "summary": "Microsoft has updated the links to the Windows Update Catalog for the CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability. This is an informational change only. The vulnerability allows remote code execution and has a CVSS score of 8.8. An authenticated attacker with normal privileges could send a modified XPS file to a shared printer, resulting in remote code execution. The attack vector is network-based, with low attack complexity and no user interaction required. The impact includes high confidentiality, integrity, and availability. Microsoft has provided security updates for various Windows versions, including Windows 10, Windows 11, and Windows Server, addressing the vulnerability with build numbers 10.0.22621.1413, 10.0.19044.2728, 10.0.20348.1607, and others. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Support Lifecycle and the Windows Update Catalog.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.19805",
+                "10.0.19042.2728",
+                "10.0.22000.1696",
+                "10.0.22621.1413",
+                "10.0.19044.2728",
+                "10.0.19045.2728"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5023713",
+                    "kb_link": "https://support.microsoft.com/help/5023713#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023706",
+                    "kb_link": "https://support.microsoft.com/help/5023706#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023698",
+                    "kb_link": "https://support.microsoft.com/help/5023698#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023696",
+                    "kb_link": "https://support.microsoft.com/help/5023696#march-14-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5023713)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023713"
+                },
+                {
+                    "package_type": "Security Update (KB5023706)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023706"
+                },
+                {
+                    "package_type": "Security Update (KB5023698)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023698"
+                },
+                {
+                    "package_type": "Security Update (KB5023696)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023696"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 20H2 32-bit_systems",
+                "windows 10 20H2 x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Microsoft PostScript and PCL6 Class Printer Driver",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "b0ffb799-ca0d-6d87-55c8-3229b0f9fff7",
+            "post_id": "CVE-2023-4764",
+            "published": "07-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4764 Incorrect security UI in BFCache",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4764",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4764, an incorrect security UI vulnerability in BFCache. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (07-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-07-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "6e989bab-6e6c-0c2b-4378-8842568fe01f",
+            "post_id": "CVE-2023-4763",
+            "published": "07-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4763 Use after free in Networks",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4763",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Networks, identified as CVE-2023-4763. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (07-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-07-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "b2a6ebd7-7232-1203-9e47-755ee0dae482",
+            "post_id": "CVE-2023-4762",
+            "published": "07-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4762 Type Confusion in V8",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4762",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Type Confusion vulnerability in V8, identified as CVE-2023-4762. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 116.0.1938.76 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (07-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-07-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a type confusion in the V8 engine of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version information for this release is Microsoft Edge Version: 116.0.1938.xxx, Date Released: 9/7/2023, Based on Chromium Version: 116.0.5845.179/.180.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "5ad9ad10-a62a-a040-f2b1-f1752a417b4a",
+            "post_id": "CVE-2023-4761",
+            "published": "07-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4761 Out of bounds memory access in FedCM",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4761",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an out of bounds memory access vulnerability in FedCM, identified as CVE-2023-4761. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 116.0.1938.76 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (07-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-07-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 5,
+        "new_cves": 4,
+        "updated_cves": 1
+    },
+    "section_2_data": [
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "116.0.1938.xxx",
+            "product_id": [
+                "product_b2a6ebd7-7232-1203-9e47-755ee0dae482_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft PostScript and PCL6 Class Printer Driver",
+            "product_version": "",
+            "product_id": [
+                "product_9db4c9f2-96f6-6d27-d026-626674e32c91_1"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 2
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "report_day_start": "26",
+    "report_month_start": "January",
+    "report_year_start": "2024",
+    "report_day_end": "02",
+    "report_month_end": "February",
+    "report_year_end": "2024",
+    "report_end_date": "2024_02_02",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "84878446-52ac-d2e9-a104-111388a10507",
+            "post_id": "CVE-2024-21336",
+            "published": "26-01-2024",
+            "revision": "1.0",
+            "post_type": "Information only",
+            "title": "CVE-2024-21336 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21336",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a low severity spoofing vulnerability identified as CVE-2024-21336. The vulnerability allows an attacker to cover and spoof elements of the UI, with the modified information being only visual. Successful exploitation of this vulnerability requires user interaction, where the victim needs to open the vulnerable app. The attack complexity is high, requiring the attacker to take additional actions prior to exploitation to prepare the target environment. Microsoft has provided a security update for Microsoft Edge (Chromium-based) with the build number 121.0.2277.83, addressing this vulnerability. System administrators are advised to apply this security update to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "121.0.2277.83"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (26-01-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-26-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "9ec6d30e-8a43-443a-3047-7e9ba49fe430",
+            "post_id": "CVE-2024-21388",
+            "published": "30-01-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2024-21388 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21388",
+            "summary": "Microsoft Edge (Chromium-based) is impacted by an elevation of privilege vulnerability identified as CVE-2024-21388, with a CVSS base score of 6.5 and a temporal score of 5.7. The vulnerability allows an attacker to gain the privileges required to install an extension without user interaction. It is remotely exploitable, requiring no user privileges, and has a high attack complexity. Successful exploitation could lead to a browser sandbox escape, with potential minor impacts on confidentiality, integrity, and availability. Microsoft has released a security update for Microsoft Edge (Chromium-based) with build number 121.0.2277.83, addressing this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "121.0.2277.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (30-01-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-30-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 2,
+        "new_cves": 2,
+        "updated_cves": 0
+    },
+    "section_2_data": [],
+    "section_2_metadata": {
+        "total_products": 0
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

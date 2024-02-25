@@ -1,0 +1,92 @@
+{
+    "report_day_start": "02",
+    "report_month_start": "February",
+    "report_year_start": "2024",
+    "report_day_end": "09",
+    "report_month_end": "February",
+    "report_year_end": "2024",
+    "report_end_date": "2024_02_09",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "65923399-e8f0-70e7-9b1b-9f25778df8a5",
+            "post_id": "CVE-2024-1284",
+            "published": "08-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1284 Use after free in Mojo",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1284",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Mojo, identified as CVE-2024-1284. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The vulnerability stems from a flaw in the Chromium Open Source Software (OSS) that Microsoft Edge consumes. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft has released security updates for Microsoft Edge (Chromium-based) versions 120.0.2210.175 and 121.0.2277.113 to mitigate this issue. System administrators are advised to update their Microsoft Edge installations to the latest versions provided to eliminate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "121.0.2277.113"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (08-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-08-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "46817eb4-92a1-9403-e7ec-9c155dac4c16",
+            "post_id": "CVE-2024-1283",
+            "published": "08-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1283 Heap buffer overflow in Skia",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1283",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in Skia, identified as CVE-2024-1283. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The vulnerability stems from a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft has released security updates for Microsoft Edge (Chromium-based) versions 120.0.2210.175 and 121.0.2277.113 to mitigate this issue. System administrators are advised to update their Microsoft Edge installations to the latest versions to eliminate the risk of exploitation. For further details, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "121.0.2277.113"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (08-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-08-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 2,
+        "new_cves": 2,
+        "updated_cves": 0
+    },
+    "section_2_data": [],
+    "section_2_metadata": {
+        "total_products": 0
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

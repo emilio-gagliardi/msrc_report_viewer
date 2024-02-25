@@ -1,0 +1,78 @@
+{
+    "report_day_start": "25",
+    "report_month_start": "August",
+    "report_year_start": "2023",
+    "report_day_end": "01",
+    "report_month_end": "September",
+    "report_year_end": "2023",
+    "report_end_date": "2023_09_01",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "2a89d8fa-4a75-639c-c0ef-b17c30d775ff",
+            "post_id": "CVE-2023-4572",
+            "published": "31-08-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4572 Use after free in MediaStream",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4572",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in MediaStream, identified as CVE-2023-4572. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft Edge (Chromium-based) ingests Chromium, which addresses this vulnerability. The latest version of Microsoft Edge (Chromium-based) with the build number 116.0.1938.69 is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.69"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (31-08-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#august-31-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability allows for a use-after-free condition in MediaStream, potentially allowing an attacker to execute arbitrary code.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 116.0.1938.69.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 1,
+        "new_cves": 1,
+        "updated_cves": 0
+    },
+    "section_2_data": [
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "116.0.1938.69",
+            "product_id": [
+                "product_2a89d8fa-4a75-639c-0ef-b17c30d775ff_1"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 1
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

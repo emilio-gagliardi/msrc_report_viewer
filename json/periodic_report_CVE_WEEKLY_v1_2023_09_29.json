@@ -1,0 +1,366 @@
+{
+    "report_day_start": "22",
+    "report_month_start": "September",
+    "report_year_start": "2023",
+    "report_day_end": "29",
+    "report_month_end": "September",
+    "report_year_end": "2023",
+    "report_end_date": "2023_09_29",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "e145de53-27a3-b0a6-7783-98151cf1588f",
+            "post_id": "CVE-2023-36805",
+            "published": "22-09-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36805 Windows MSHTML Platform Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36805",
+            "summary": "Windows MSHTML Platform Security Feature Bypass Vulnerability, identified as CVE-2023-36805, impacts all supported versions of Microsoft Windows. The vulnerability allows for remote code execution with a base score of 7.0 and a temporal score of 6.1. It is caused by a flaw in the MSHTML platform, which could lead to high privilege access for an attacker. Successful exploitation could result in a major loss of confidentiality, integrity, and availability. Microsoft recommends installing the September 2023 updates to be fully protected. Customers who install the Security Only updates for affected Windows Server versions should also install the IE Cumulative update. Automatic update configurations do not need further action. The vulnerability affects Windows Server 2008 R2, Windows Server 2012, and other Windows versions. The underlying MSHTML, EdgeHTML, and scripting platforms are still supported despite the retirement of Internet Explorer 11 and deprecation of Microsoft Edge Legacy. The IE Cumulative updates include changes to address vulnerabilities in the MSHTML platform and scripting engine. System administrators should prioritize the installation of the recommended updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Windows Server",
+            "symptoms": "The vulnerability allows for a security feature bypass in the MSHTML platform.",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "d3955f7b-cc16-0d57-b9f2-691326e46363",
+            "post_id": "CVE-2023-29345",
+            "published": "26-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-29345 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29345",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Security Feature Bypass vulnerability, CVE-2023-29345, with a CVSS score of 6.1/5.3. The vulnerability allows an attacker to bypass the permissions dialog feature prompt presented to users when initiating a download, requiring user interaction by clicking on a specially crafted URL. Successful exploitation could lead to a browser sandbox escape, impacting integrity and confidentiality. The attack vector is network-based, with low attack complexity and no privileges required. Microsoft has released a security update (build number 114.0.1823.37) to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "114.0.1823.37"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (02-06-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#june-02-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "27fee58c-8dc5-b697-48f4-1f9ecd9d2b55",
+            "post_id": "CVE-2023-38148",
+            "published": "28-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-38148 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38148",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution vulnerability, CVE-2023-38148. The vulnerability allows an unauthorized attacker to send a specially crafted network packet to the ICS service, leading to remote code execution. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. No user interaction or privileges are required for exploitation. The impact includes high confidentiality, integrity, and availability loss. Microsoft has released security updates for various affected products, including Windows 10, Windows 11, and Windows Server 2022, addressing the vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. Exploitation of this vulnerability requires that the Internet Connection Sharing (ICS) is enabled, and no exploit code is currently available. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.19044.3448",
+                "10.0.22000.2416",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Internet Connection Sharing (ICS)",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0e33f5da-16c7-bdb3-8564-670189e36689",
+            "post_id": "CVE-2023-5217",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5217 Heap buffer overflow in vp8 encoding in libvpx",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5217",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in vp8 encoding in libvpx, identified as CVE-2023-5217. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium. An exploit for CVE-2023-5217 is known to exist in the wild. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge (Chromium-based). Attackers could exploit this vulnerability to execute arbitrary code. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.98, making the latest version no longer vulnerable. Microsoft is also working to identify and address the impact of this vulnerability on Microsoft Teams and Skype applications. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based), Microsoft Skype, Microsoft Teams",
+            "symptoms": "The vulnerability causes a heap buffer overflow in vp8 encoding in libvpx, which is consumed by Microsoft Edge (Chromium-based). An exploit for this vulnerability exists in the wild.",
+            "fixes": "Microsoft is working to identify and address this vulnerability in affected versions of Microsoft Teams and Skype applications. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0a5334e3-e159-9992-d6ae-213658c87fdf",
+            "post_id": "CVE-2023-5187",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5187 Use after free in Extensions",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5187",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Extensions, identified as CVE-2023-5187. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a use-after-free issue in Extensions of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "f5213a3f-a022-3362-d2ac-3903dbe38f99",
+            "post_id": "CVE-2023-5186",
+            "published": "29-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5186 Use after free in Passwords",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5186",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Passwords, identified as CVE-2023-5186. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.98. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "116.0.1938.98"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (29-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-29-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as a use after free issue in passwords in Chromium, affecting Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The versions are 117.0.2045.47 (Stable) and 116.0.1938.98 (Extended Stable).",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 6,
+        "new_cves": 3,
+        "updated_cves": 3
+    },
+    "section_2_data": [
+        {
+            "product_name": "Internet Connection Sharing (ICS)",
+            "product_version": "",
+            "product_id": [
+                "product_27fee58c-8dc5-b697-48f4-1f9ecd9d2b55_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "",
+            "product_id": [
+                "product_d3955f7b-cc16-0d57-b9f2-691326e46363_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "116.0.1938.98",
+            "product_id": [
+                "product_f5213a3f-a022-3362-d2ac-3903dbe38f99_2"
+            ]
+        },
+        {
+            "product_name": "Microsoft Edge (Chromium-based)",
+            "product_version": "117.0.2045.47",
+            "product_id": [
+                "product_0e33f5da-16c7-bdb3-8564-670189e36689_1"
+            ]
+        },
+        {
+            "product_name": "Microsoft Skype",
+            "product_version": "",
+            "product_id": [
+                "product_0e33f5da-16c7-bdb3-8564-670189e36689_3"
+            ]
+        },
+        {
+            "product_name": "Microsoft Teams",
+            "product_version": "",
+            "product_id": [
+                "product_635e8974-8dfd-497b-f823-b43572715792_2"
+            ]
+        },
+        {
+            "product_name": "Windows Server",
+            "product_version": "2008 R2",
+            "product_id": [
+                "product_e145de53-27a3-b0a6-7783-98151cf1588f_1"
+            ]
+        },
+        {
+            "product_name": "Windows Server",
+            "product_version": "2012",
+            "product_id": [
+                "product_e145de53-27a3-b0a6-7783-98151cf1588f_2"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 8
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}

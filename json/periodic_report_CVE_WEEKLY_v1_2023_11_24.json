@@ -1,0 +1,115 @@
+{
+    "report_day_start": "17",
+    "report_month_start": "November",
+    "report_year_start": "2023",
+    "report_day_end": "24",
+    "report_month_end": "November",
+    "report_year_end": "2023",
+    "report_end_date": "2023_11_24",
+    "report_current_date": "24_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "08e11356-4cf0-b487-2d88-be69035f315a",
+            "post_id": "CVE-2023-36025",
+            "published": "22-11-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36025 Windows SmartScreen Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36025",
+            "summary": "Windows SmartScreen Security Feature Bypass Vulnerability (CVE-2023-36025) has been identified with a maximum severity of Important. The vulnerability allows an attacker to bypass Windows Defender SmartScreen checks and associated prompts by exploiting a specially crafted Internet Shortcut (.URL) or hyperlink pointing to an Internet Shortcut file. The attack vector is through user interaction, requiring the user to click on the malicious link. The impact includes a total loss of confidentiality, integrity, and availability. Microsoft has provided an official fix for this vulnerability through security updates for various affected products, including Windows Server 2012, 2016, 2008, and different versions of Windows 10 and 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The base and temporal CVSS scores are 8.8 and 8.2, respectively, indicating the severity and exploitability of the vulnerability. The attacker's exploit code maturity is functional, and the remediation level is an official fix, signifying the urgency of applying the provided security updates.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2715",
+                "10.0.19043.3693",
+                "10.0.10240.20308",
+                "10.0.22621.2715",
+                "10.0.19045.3693",
+                "10.0.22000.2600"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5032199",
+                    "kb_link": "https://support.microsoft.com/help/5032199#november-14-2023"
+                },
+                {
+                    "kb_id": "kb5032192",
+                    "kb_link": "https://support.microsoft.com/help/5032192#november-14-2023"
+                },
+                {
+                    "kb_id": "kb5032190",
+                    "kb_link": "https://support.microsoft.com/help/5032190#november-14-2023"
+                },
+                {
+                    "kb_id": "kb5032189",
+                    "kb_link": "https://support.microsoft.com/help/5032189#november-14-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5032199)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032199"
+                },
+                {
+                    "package_type": "Security Update (KB5032192)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032192"
+                },
+                {
+                    "package_type": "Security Update (KB5032190)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032190"
+                },
+                {
+                    "package_type": "Security Update (KB5032189)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5032189"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Windows SmartScreen",
+            "symptoms": "An attacker can bypass security features in Microsoft Office, leading to a potential compromise of data integrity.",
+            "fixes": "Microsoft has released an official fix to address this vulnerability. Users are advised to apply the update immediately to protect their systems.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 1,
+        "new_cves": 0,
+        "updated_cves": 1
+    },
+    "section_2_data": [
+        {
+            "product_name": "Windows SmartScreen",
+            "product_version": "",
+            "product_id": [
+                "product_08e11356-4cf0-b487-2d88-be69035f315a_1"
+            ]
+        }
+    ],
+    "section_2_metadata": {
+        "total_products": 1
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    }
+}
