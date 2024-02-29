@@ -146,92 +146,104 @@ h4#windows-and-edge-edition {
     st.markdown(style, unsafe_allow_html=True)
     st.title("Big Hat Group Weekly Security Update Report")
     st.markdown("#### (Windows and Edge Edition)")
-    col1, col2 = st.columns([1, 2])
+    # col1, col2 = st.columns([1, 2])
 
-    with col1:
-        # Initialize selected_report with a placeholder for no selection
-        report_options = ["Please select a report"] + sorted_formatted_names
-        selected_report = st.selectbox("Select a report",
+    # Initialize selected_report with a placeholder for no selection
+    report_options = ["Please select a report"] + sorted_formatted_names
+    selected_report = st.sidebar.selectbox("Select a report",
                                        options=report_options,
                                        index=0)
+    st.sidebar.markdown('Jump to [Section 1: MSRC Posts](#msrcs_posts)', unsafe_allow_html=True)
+    st.sidebar.markdown('Jump to [Section 2: Appendix](#appendix)', unsafe_allow_html=True)
+    
+    # Check if a report has been selected and update session state accordingly
+    if selected_report != "Please select a report":
+        selected_file = formatted_names_to_files[selected_report]
+        st.session_state.selected_file = selected_file
+    else:
+        # Handle the case where no report is selected
+        st.session_state.selected_file = None
 
-        if selected_report != "Please select a report":
-            selected_file = formatted_names_to_files[selected_report]
-            st.session_state.selected_file = selected_file
-        else:
-            # Handle the case where no report is selected
-            st.session_state.selected_file = None
+    if 'selected_file' in st.session_state and st.session_state.selected_file:
+        file_path = os.path.join(data_directory,
+                                    st.session_state.selected_file)
+        with open(file_path, 'r', encoding='utf-8',
+                    errors='replace') as file:
+            report_data = json.load(file)
+        section_1_metadata = report_data['section_1_metadata']
+        section_1_data = report_data['section_1_data']
 
-    with col2:
-        if 'selected_file' in st.session_state and st.session_state.selected_file:
-            file_path = os.path.join(data_directory,
-                                     st.session_state.selected_file)
-            with open(file_path, 'r', encoding='utf-8',
-                      errors='replace') as file:
-                report_data = json.load(file)
-            section_1_metadata = report_data['section_1_metadata']
-            section_1_data = report_data['section_1_data']
+        with st.container():
+            st.markdown('<a id="msrcs_posts"></a></br>', unsafe_allow_html=True)
+            st.subheader("MSRC Posts")
+            # Now, iterate through the metadata dictionary
+            metadata_string = ""
+            for key, value in section_1_metadata.items():
 
-            with st.container():
-                st.write("## MSRC Posts")
-                # Now, iterate through the metadata dictionary
-                metadata_string = ""
-                for key, value in section_1_metadata.items():
+                metadata_string += f"**{key.replace('_',' ').capitalize()}:** {value},   "
+            metadata_string = metadata_string[:-4]
+            st.markdown(metadata_string, unsafe_allow_html=True)
 
-                    metadata_string += f"**{key.replace('_',' ').capitalize()}:** {value},   "
-                metadata_string = metadata_string[:-4]
-                st.markdown(metadata_string, unsafe_allow_html=True)
+        for item in section_1_data:
+            post_title = {'title': item['title'], 'source': item['source']}
+            st.markdown(
+                f"<a href='{item['source']}'><h3>{item['title']}</h3></a>",
+                unsafe_allow_html=True)
+            post_metadata = f"**Revision:** {item['revision']} - **Published:** {item['published']} - **Official Fix:** {'Yes' if item['post_type'] in ['Solution provided', 'Information only'] else 'No'}"
+            st.markdown(post_metadata, unsafe_allow_html=True)
 
-            for item in section_1_data:
-                post_title = {'title': item['title'], 'source': item['source']}
-                st.markdown(
-                    f"<a href='{item['source']}'><h3>{item['title']}</h3></a>",
-                    unsafe_allow_html=True)
-                post_metadata = f"**Revision:** {item['revision']} - **Published:** {item['published']} - **Official Fix:** {'Yes' if item['post_type'] in ['Solution provided', 'Information only'] else 'No'}"
-                st.markdown(post_metadata, unsafe_allow_html=True)
+            st.markdown(
+                f"**Product Family:** {', '.join(item['core_products'])}")
+            
+            st.markdown(
+                f"**Build Numbers:** {', '.join(item['build_number_str'])}"
+            )
 
-                st.markdown(
-                    f"**Product Family:** {', '.join(item['core_products'])}")
+            # KB Articles
+            kb_articles_md = ", ".join([
+                f"[{kb['kb_id']}]({kb['kb_link']})"
+                for kb in item['kb_article_pairs']
+            ])
+            st.markdown(f"**KB Articles:** {kb_articles_md}")
+
+            # Update Packages
+            update_packages_md = ", ".join([
+                f"[{package['package_type']}]({package['package_url']})"
+                for package in item['package_pairs']
+            ])
+            st.markdown(f"**Update Packages:** {update_packages_md}")
+
+            st.markdown(f"**Summary:** {item['summary']}")
+
+            st.markdown("---")
                 
-                st.markdown(
-                    f"**Build Numbers:** {', '.join(item['build_number_str'])}"
-                )
-
-                # KB Articles
-                kb_articles_md = ", ".join([
-                    f"[{kb['kb_id']}]({kb['kb_link']})"
-                    for kb in item['kb_article_pairs']
-                ])
-                st.markdown(f"**KB Articles:** {kb_articles_md}")
-
-                # Update Packages
-                update_packages_md = ", ".join([
-                    f"[{package['package_type']}]({package['package_url']})"
-                    for package in item['package_pairs']
-                ])
-                st.markdown(f"**Update Packages:** {update_packages_md}")
-
-                st.markdown(f"**Summary:** {item['summary']}")
-
-                st.markdown("---")
+        section_4_data = report_data.get('section_4_data', [])  # section_4_data = report_data['section_4_data']
+        # section_4_metadata = report_data['section_4_metadata']
+        collection_label = ""
+        st.markdown('<a id="appendix"></a>', unsafe_allow_html=True)
+        st.header("Appendix")
+        for doc in section_4_data:
+            if collection_label == "":
+                collection_label = doc['collection'].replace("_", " ").capitalize()
+                if "windows" not in collection_label.lower():
+                    
+                    st.markdown(f"### Edge {collection_label}")
+                else:
+                    st.markdown(f"### {collection_label}")
+            elif doc['collection'].replace("_", " ").capitalize() != collection_label.replace("Edge ", ""):
+                collection_label = doc['collection'].replace("_", " ").capitalize()
+                if "windows" not in collection_label.lower():
+                    st.markdown(f"### Edge {collection_label}")
+                else:
+                    st.markdown(f"### {collection_label}")
                 
-            section_4_data = report_data['section_4_data']
-            section_4_metadata = report_data['section_4_metadata']
-            collection_label = ""
-            for doc in section_4_data:
-                if collection_label == "":
-                    collection_label = doc['collection'].replace("_", " ").capitalize()
-                    st.markdown(f"### {collection_label}")
-                elif doc['collection'].replace("_", " ").capitalize() != collection_label:
-                    collection_label = doc['collection'].replace("_", " ").capitalize()
-                    st.markdown(f"### {collection_label}")
-                    
-                st.markdown(f"[{doc['title']}]({doc['source']})")
+            st.markdown(f"[{doc['title']}]({doc['source']})")
+        st.markdown("</br>---</br>", unsafe_allow_html=True)
                     
 
-        else:
-            # Display a friendly message
-            st.text("Select a report to view its details.")
+    else:
+        # Display a friendly message
+        st.text("Select a report to view its details.")
 
 
 if __name__ == "__main__":

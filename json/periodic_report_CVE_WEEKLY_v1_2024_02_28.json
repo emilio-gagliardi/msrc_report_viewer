@@ -497,11 +497,13 @@
             "collection": "stable_channel_notes",
             "published": "2024-02-15",
             "title": "Version 121.0.2277.128: February 15, 2024"
+        },
+        {
+            "id": "b09d2093-3ea1-6815-dcab-56834dbe364c",
+            "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#february-23-2024",
+            "collection": "security_update_notes",
+            "published": "2024-02-23",
+            "title": "February 23, 2024"
         }
-    ],
-    "section_4_metadata": {
-        "collection_1_count": 4,
-        "collection_2_count": 0,
-        "collection_3_count": 0
-    }
+    ]
 }
