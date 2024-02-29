@@ -3,12 +3,19 @@ import os
 import json
 import pandas as pd
 from datetime import datetime, timedelta
-from PIL import Image
+# from PIL import Image
 from bs4 import BeautifulSoup
 
 # Initialize the app and set the title
 st.set_page_config(page_title='MSRC Report Viewer', layout='wide')
 
+# flex_container_start = """
+# <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+# """
+
+# flex_container_end = """
+# </div>
+# """
 
 # Function to load JSON data
 @st.cache
@@ -185,6 +192,7 @@ h4#windows-and-edge-edition {
 
                 st.markdown(
                     f"**Product Family:** {', '.join(item['core_products'])}")
+                
                 st.markdown(
                     f"**Build Numbers:** {', '.join(item['build_number_str'])}"
                 )
@@ -206,6 +214,20 @@ h4#windows-and-edge-edition {
                 st.markdown(f"**Summary:** {item['summary']}")
 
                 st.markdown("---")
+                
+            section_4_data = report_data['section_4_data']
+            section_4_metadata = report_data['section_4_metadata']
+            collection_label = ""
+            for doc in section_4_data:
+                if collection_label == "":
+                    collection_label = doc['collection'].replace("_", " ").capitalize()
+                    st.markdown(f"### {collection_label}")
+                elif doc['collection'].replace("_", " ").capitalize() != collection_label:
+                    collection_label = doc['collection'].replace("_", " ").capitalize()
+                    st.markdown(f"### {collection_label}")
+                    
+                st.markdown(f"[{doc['title']}]({doc['source']})")
+                    
 
         else:
             # Display a friendly message

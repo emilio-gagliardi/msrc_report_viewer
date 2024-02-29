@@ -1,0 +1,507 @@
+{
+    "report_day_start": "14",
+    "report_month_start": "February",
+    "report_year_start": "2024",
+    "report_day_end": "28",
+    "report_month_end": "February",
+    "report_year_end": "2024",
+    "report_end_date": "2024_02_28",
+    "report_current_date": "29_02_2024",
+    "report_title": "Big Hat Group Weekly Security Update Report",
+    "report_subtitle": "(Windows and Edge Edition)",
+    "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
+    "plot_path": "../plots/",
+    "toc": {
+        "section_1": "MSRC Posts",
+        "section_2": "Products",
+        "section_3": "Tooling Support"
+    },
+    "section_1_data": [
+        {
+            "id": "0ae56980-81c5-ab67-1ebd-83e3e0f04e1c",
+            "post_id": "CVE-2024-21357",
+            "published": "14-02-2024",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2024-21357 Windows Pragmatic General Multicast (PGM) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21357",
+            "summary": "Windows Pragmatic General Multicast (PGM) is affected by a Critical Remote Code Execution vulnerability identified as CVE-2024-21357. The vulnerability has a CVSS score of 8.1/7.1 and can be exploited remotely over the network without user interaction. An attacker could exploit this vulnerability by sending specially crafted malicious traffic to a vulnerable server. The attack complexity is high, requiring the attacker to invest effort in preparation. The impact includes total loss of confidentiality, integrity, and availability. Microsoft has provided an official fix for various Windows versions, including Windows Server 2012, 2008, 2016, 2019, and multiple versions of Windows 10 and 11. System administrators are advised to apply the security updates promptly to mitigate the risk of remote code execution.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19045.4046",
+                "10.0.10240.20469",
+                "10.0.22631.3155",
+                "10.0.22621.3155",
+                "10.0.22000.2777",
+                "10.0.19044.4046"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5034774",
+                    "kb_link": "https://support.microsoft.com/help/5034774#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034768",
+                    "kb_link": "https://support.microsoft.com/help/5034768#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034767",
+                    "kb_link": "https://support.microsoft.com/help/5034767#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034766",
+                    "kb_link": "https://support.microsoft.com/help/5034766#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034765",
+                    "kb_link": "https://support.microsoft.com/help/5034765#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034763",
+                    "kb_link": "https://support.microsoft.com/help/5034763#february-13-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5034774)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034774"
+                },
+                {
+                    "package_type": "Security Update (KB5034768)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034768"
+                },
+                {
+                    "package_type": "Security Update (KB5034767)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034767"
+                },
+                {
+                    "package_type": "Security Update (KB5034766)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034766"
+                },
+                {
+                    "package_type": "Security Update (KB5034765)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034765"
+                },
+                {
+                    "package_type": "Security Update (KB5034763)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034763"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ]
+        },
+        {
+            "id": "e9e627cd-0165-a0a1-ad3a-cfdf63bc6e97",
+            "post_id": "CVE-2024-21351",
+            "published": "15-02-2024",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2024-21351 Windows SmartScreen Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21351",
+            "summary": "The Windows SmartScreen Security Feature Bypass Vulnerability (CVE-2024-21351) affects various Windows versions. The vulnerability allows an attacker to bypass the SmartScreen user experience by injecting code into SmartScreen, potentially leading to data exposure and system unavailability. The attack vector is network-based, requiring no privileges, but user interaction is needed to open a malicious file. Successful exploitation could result in some loss of confidentiality, total loss of integrity, and some loss of availability. Microsoft has provided an official fix through security updates for affected Windows versions, addressing the moderate severity issue. System administrators are advised to apply the security updates promptly to mitigate the risk of exploitation. For more details, refer to the Microsoft Security Response Center page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19045.4046",
+                "10.0.10240.20469",
+                "10.0.22631.3155",
+                "10.0.22621.3155",
+                "10.0.22000.2777",
+                "10.0.19044.4046"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5034774",
+                    "kb_link": "https://support.microsoft.com/help/5034774#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034766",
+                    "kb_link": "https://support.microsoft.com/help/5034766#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034765",
+                    "kb_link": "https://support.microsoft.com/help/5034765#february-13-2024"
+                },
+                {
+                    "kb_id": "kb5034763",
+                    "kb_link": "https://support.microsoft.com/help/5034763#february-13-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5034774)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034774"
+                },
+                {
+                    "package_type": "Security Update (KB5034766)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034766"
+                },
+                {
+                    "package_type": "Security Update (KB5034765)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034765"
+                },
+                {
+                    "package_type": "Security Update (KB5034763)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034763"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ]
+        },
+        {
+            "id": "b1f9aa62-9c95-ff4e-d62f-61edc68c700c",
+            "post_id": "CVE-2024-26192",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2024-26192 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26192",
+            "summary": "Microsoft Edge (Chromium-based) is impacted by an Information Disclosure Vulnerability, assigned as CVE-2024-26192, with a CVSS score of 8.2. The vulnerability could lead to a browser sandbox escape and requires user interaction to be exploited. An attacker could host a specially crafted website to convince a user to view it, potentially compromising the user by clicking on a specially crafted URL. Successful exploitation could result in some loss of availability, causing performance interruptions. Microsoft has released a security update for Microsoft Edge (Chromium-based) with build number 122.0.2365.52, addressing this vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. For further details, refer to the Microsoft Security Response Center page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "81130d3b-7a9c-d043-63be-767339d30288",
+            "post_id": "CVE-2024-21423",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2024-21423 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21423",
+            "summary": "Microsoft Edge (Chromium-based) is impacted by an Information Disclosure Vulnerability identified as CVE-2024-21423. The vulnerability has a low severity with a CVSS score of 4.8/4.2. It is caused by a flaw that allows limited information disclosure, with no sensitive information being obtainable. Successful exploitation of this vulnerability requires high attack complexity and no user interaction. An attacker could exploit this vulnerability remotely without any privileges, impacting the confidentiality and integrity of the system. Microsoft has provided a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52 to address this vulnerability. System administrators are advised to apply this update to mitigate the risk of information disclosure. For further details, refer to the Microsoft Support Lifecycle page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "cc447771-31dc-8e78-644d-857df9a7134f",
+            "post_id": "CVE-2024-1676",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1676 Inappropriate implementation in Navigation",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1676",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-1676, an inappropriate implementation vulnerability in Navigation. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in the Navigation feature. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "069f63f6-493e-e69c-4a49-c630f0ee09d6",
+            "post_id": "CVE-2024-1675",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1675 Insufficient policy enforcement in Download",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1675",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-1675, an Insufficient policy enforcement vulnerability in the Download feature. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 122.0.2365.52 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "9bbbb693-312c-b174-1e8d-8a885d05b059",
+            "post_id": "CVE-2024-1674",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1674 Inappropriate implementation in Navigation",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1674",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-1674, an inappropriate implementation vulnerability in Navigation, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version. For more information, refer to the Google Chrome Releases page. The latest stable version of Microsoft Edge (Chromium-based) is 122.0.2365.52, released on 23-02-2024. Microsoft recognizes the efforts of the security community in coordinated vulnerability disclosure. There are no explicit workarounds or mitigations provided for this vulnerability.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "ae10fdfe-1015-f1bd-2215-d0386c2ef587",
+            "post_id": "CVE-2024-1673",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1673 Use after free in Accessibility",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1673",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Accessibility, identified as CVE-2024-1673. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 122.0.2365.52 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the mentioned build number. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. More information can be found on the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "cc7c922d-41ab-5c6b-c3b5-2b9c010ebfc6",
+            "post_id": "CVE-2024-1672",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1672 Inappropriate implementation in Content Security Policy",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1672",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-1672, an inappropriate implementation in Content Security Policy. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 122.0.2365.52 is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in Content Security Policy, which could be exploited by an attacker to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "200b1e46-0a00-8f72-0c72-329854c60040",
+            "post_id": "CVE-2024-1671",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1671 Inappropriate implementation in Site Isolation",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1671",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-1671, an inappropriate implementation in Site Isolation, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version, such as build number 122.0.2365.52, to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "f100b0ef-9591-e4ac-100e-3a1b8b7fcf68",
+            "post_id": "CVE-2024-1670",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1670 Use after free in Mojo",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1670",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Mojo, identified as CVE-2024-1670. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 122.0.2365.52 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        },
+        {
+            "id": "a848b7aa-ac6a-07d0-107c-a68429d0e55e",
+            "post_id": "CVE-2024-1669",
+            "published": "23-02-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-1669 Out of bounds memory access in Blink",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-1669",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a new out of bounds memory access vulnerability in Blink, identified as CVE-2024-1669. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 122.0.2365.52 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "122.0.2365.52"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (23-02-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ]
+        }
+    ],
+    "section_1_metadata": {
+        "total_cves": 12,
+        "new_cves": 10,
+        "updated_cves": 2
+    },
+    "section_2_data": [],
+    "section_2_metadata": {
+        "total_products": 0
+    },
+    "section_3_data": [],
+    "section_3_metadata": {
+        "total_tools": 0
+    },
+    "section_4_data": [
+        {
+            "id": "6bdefa64-b0d4-f190-2eb2-e55a4cced631",
+            "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1220236559-february-27-2024",
+            "collection": "stable_channel_notes",
+            "published": "2024-02-27",
+            "title": "Version 122.0.2365.59: February 27, 2024"
+        },
+        {
+            "id": "99eeb2dd-1fcb-d84e-0205-096bc36ee57b",
+            "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1220236552-february-23-2024",
+            "collection": "stable_channel_notes",
+            "published": "2024-02-23",
+            "title": "Version 122.0.2365.52: February 23, 2024"
+        },
+        {
+            "id": "e0817fc7-f53b-e263-cfa2-c1668ccc0386",
+            "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12002210181-february-20-2024",
+            "collection": "stable_channel_notes",
+            "published": "2024-02-20",
+            "title": "Version 120.0.2210.181: February 20, 2024"
+        },
+        {
+            "id": "1651af84-f8fa-ebd6-9c17-90c8c2c68d18",
+            "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12102277128-february-15-2024",
+            "collection": "stable_channel_notes",
+            "published": "2024-02-15",
+            "title": "Version 121.0.2277.128: February 15, 2024"
+        }
+    ],
+    "section_4_metadata": {
+        "collection_1_count": 4,
+        "collection_2_count": 0,
+        "collection_3_count": 0
+    }
+}
