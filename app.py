@@ -67,11 +67,11 @@ def format_filename_to_date(file_name, prefix=None, suffix=None):
         label = f"{prefix if prefix else ''}{date_obj.strftime('%B %d, %Y')}{suffix if suffix else ''}"
         return label, date_obj
     except ValueError:
-        # Returns None if the filename does not match the expected format
+
         return file_name
 
 
-def display_report(report_data):
+def display_section_1(report_data):
     st.header(report_data['report_title'])
     st.subheader(report_data['report_subtitle'])
     st.write(report_data['report_description'])
@@ -89,7 +89,6 @@ def display_report(report_data):
 
 
 def main():
-    st.title("Weekly Report Viewer")
 
     # Directory where reports and images are stored
     data_directory = './json'
@@ -99,54 +98,118 @@ def main():
     # with st.container():
     #     st.header("Row 1: Full Width")
 
-    html_files = list_html_files(html_directory)
+    json_files = list_data_files(data_directory)
     formatted_names_to_files = {}
+    dates_to_files = {}
 
-    for file in html_files:
+    for file in json_files:
         formatted_name, date_obj = format_filename_to_date(file, "Report ")
-        if formatted_name:
+        if formatted_name and date_obj:
             formatted_names_to_files[formatted_name] = file
+            dates_to_files[file] = date_obj
 
-    # Row 2 - 1/3 + 2/3 layout
+    # Sort the files by their associated date object
+    # sorted_files = sorted(dates_to_files, key=dates_to_files.get, reverse=True)
+
+    # If you need to get the sorted formatted names instead of filenames
+    sorted_formatted_names = [
+        key for key, value in sorted(formatted_names_to_files.items(),
+                                     key=lambda item: dates_to_files[item[1]],
+                                     reverse=True)
+    ]
+    style = """
+<style>
+#root div.withScreencast div div div > section > div {
+    padding: 10px; 
+}
+
+h1#big-hat-group-weekly-security-update-report {
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+h4#windows-and-edge-edition {
+    font-family: Roboto, sans-serif;
+    width: 100%;
+    text-align: center;
+}
+</style>
+"""
+    st.markdown(style, unsafe_allow_html=True)
+    st.title("Big Hat Group Weekly Security Update Report")
+    st.markdown("#### (Windows and Edge Edition)")
     col1, col2 = st.columns([1, 2])
 
     with col1:
+        # Initialize selected_report with a placeholder for no selection
+        report_options = ["Please select a report"] + sorted_formatted_names
         selected_report = st.selectbox("Select a report",
-                                       options=list(
-                                           formatted_names_to_files.keys()))
-        selected_file = formatted_names_to_files[selected_report]
-        st.session_state.selected_file = selected_file
+                                       options=report_options,
+                                       index=0)
+
+        if selected_report != "Please select a report":
+            selected_file = formatted_names_to_files[selected_report]
+            st.session_state.selected_file = selected_file
+        else:
+            # Handle the case where no report is selected
+            st.session_state.selected_file = None
 
     with col2:
-
         if 'selected_file' in st.session_state and st.session_state.selected_file:
-            # Construct the full path by concatenating the directory and the file name
-            file_path = os.path.join(html_directory,
+            file_path = os.path.join(data_directory,
                                      st.session_state.selected_file)
             with open(file_path, 'r', encoding='utf-8',
                       errors='replace') as file:
-                html_content = file.read()
-                soup = BeautifulSoup(html_content, 'html.parser')
-            h1_to_remove = soup.find("h1", class_="text-4xl")
-            h1_to_remove.decompose()
-            h4_to_remove = soup.find("h4", class_="text-2xl text-center")
-            h4_to_remove.decompose()
-            description_remove = soup.find(
-                "div",
-                class_="flex-1 bg-white p-2 flex flex-col justify-center")
-            description_remove.decompose()
-            for show_more_remove in soup.find_all("a", class_="button"):
-                show_more_remove.decompose()
+                report_data = json.load(file)
+            section_1_metadata = report_data['section_1_metadata']
+            section_1_data = report_data['section_1_data']
 
-            body_content = soup.body
-            st.markdown(str(body_content), unsafe_allow_html=True)
+            with st.container():
+                st.write("## MSRC Posts")
+                # Now, iterate through the metadata dictionary
+                metadata_string = ""
+                for key, value in section_1_metadata.items():
+
+                    metadata_string += f"**{key.replace('_',' ').capitalize()}:** {value},   "
+                metadata_string = metadata_string[:-4]
+                st.markdown(metadata_string, unsafe_allow_html=True)
+
+            for item in section_1_data:
+                post_title = {'title': item['title'], 'source': item['source']}
+                st.markdown(
+                    f"<a href='{item['source']}'><h3>{item['title']}</h3></a>",
+                    unsafe_allow_html=True)
+                post_metadata = f"**Revision:** {item['revision']} - **Published:** {item['published']} - **Official Fix:** {'Yes' if item['post_type'] in ['Solution provided', 'Information only'] else 'No'}"
+                st.markdown(post_metadata, unsafe_allow_html=True)
+
+                st.markdown(
+                    f"**Product Family:** {', '.join(item['core_products'])}")
+                st.markdown(
+                    f"**Build Numbers:** {', '.join(item['build_number_str'])}"
+                )
+
+                # KB Articles
+                kb_articles_md = ", ".join([
+                    f"[{kb['kb_id']}]({kb['kb_link']})"
+                    for kb in item['kb_article_pairs']
+                ])
+                st.markdown(f"**KB Articles:** {kb_articles_md}")
+
+                # Update Packages
+                update_packages_md = ", ".join([
+                    f"[{package['package_type']}]({package['package_url']})"
+                    for package in item['package_pairs']
+                ])
+                st.markdown(f"**Update Packages:** {update_packages_md}")
+
+                st.markdown(f"**Summary:** {item['summary']}")
+
+                st.markdown("---")
 
         else:
-            st.write("Please select a report from the dropdown.")
-
-    # Row 3 - Full Width
-    with st.container():
-        st.header("Row 3: Full Width")
+            # Display a friendly message
+            st.text("Select a report to view its details.")
 
 
 if __name__ == "__main__":

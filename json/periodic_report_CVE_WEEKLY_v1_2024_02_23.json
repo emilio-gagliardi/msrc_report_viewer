@@ -6,7 +6,7 @@
     "report_month_end": "February",
     "report_year_end": "2024",
     "report_end_date": "2024_02_23",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "27_02_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -17,36 +17,6 @@
         "section_3": "Tooling Support"
     },
     "section_1_data": [
-        {
-            "id": "0c6e162a-8b2c-75d6-f946-58664ecd6050",
-            "post_id": "CVE-2023-36019",
-            "published": "16-02-2024",
-            "revision": "1.2",
-            "post_type": "Information only",
-            "title": "CVE-2023-36019 Microsoft Power Platform Connector Spoofing Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36019",
-            "summary": "Microsoft Power Platform Connector is impacted by a critical spoofing vulnerability, CVE-2023-36019, with a CVSS score of 9.6. The vulnerability allows an attacker to manipulate a malicious link, application, or file to disguise it as legitimate, tricking the victim. It requires user interaction, where the user must click on a specially crafted URL to be compromised. Successful exploitation could lead to a scope change, with malicious scripts executing in the victim\u2019s browser. Microsoft has provided a mitigation by requiring custom connectors using OAuth 2.0 to use a per-connector redirect URI, with a deadline of March 29, 2024. After this date, users will no longer be able to create connections to or use existing OAuth 2.0 custom connectors that have not been updated. Affected customers were notified via the Microsoft 365 Admin Center and Service Health in the Azure Portal. System administrators are advised to validate and update their custom connectors to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [],
-            "kb_article_pairs": [],
-            "package_pairs": [],
-            "core_products": []
-        },
-        {
-            "id": "ba930fad-3758-26e9-5daa-9bd2ca7284b7",
-            "post_id": "CVE-2024-21315",
-            "published": "20-02-2024",
-            "revision": "1.0",
-            "post_type": "Information only",
-            "title": "CVE-2024-21315 Microsoft Defender for Endpoint Protection Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21315",
-            "summary": "Microsoft Defender for Endpoint Protection is affected by an elevation of privilege vulnerability identified as CVE-2024-21315, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It was addressed by updates released in November 2023, but inadvertently omitted from the November 2023 Security Updates. Microsoft strongly recommends installing the November 2023 updates to mitigate this vulnerability. Various Windows versions and editions, including Windows Server and Windows 10, are impacted. Security updates with build numbers 5032202, 5032189, 5032190, 5034819, 5032197, 5034830, and others are available to address this issue. The impact of exploitation includes high confidentiality, integrity, and availability risks. The attack vector is local, with low attack complexity and privileges required. No user interaction is needed for exploitation. A complete vendor solution is available, and no exploit code is currently available, making exploitation less likely. System administrators are strongly advised to install the recommended updates to protect affected systems from this elevation of privilege vulnerability.",
-            "related_posts": "[]",
-            "build_number_str": [],
-            "kb_article_pairs": [],
-            "package_pairs": [],
-            "core_products": []
-        },
         {
             "id": "b1f9aa62-9c95-ff4e-d62f-61edc68c700c",
             "post_id": "CVE-2024-26192",
@@ -77,21 +47,6 @@
             ]
         },
         {
-            "id": "c9afb5fa-103b-54a4-f749-79d347784d06",
-            "post_id": "CVE-2024-26188",
-            "published": "23-02-2024",
-            "revision": "1.0",
-            "post_type": "Information only",
-            "title": "CVE-2024-26188 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26188",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a low severity spoofing vulnerability, identified as CVE-2024-26188. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to some loss of integrity, allowing the attacker to cover and spoof elements of the UI, with the modified information being only visual. The vulnerability has a low attack complexity and does not require any privileges or specialized access conditions. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52 to address this vulnerability. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Response Center page.",
-            "related_posts": "[]",
-            "build_number_str": [],
-            "kb_article_pairs": [],
-            "package_pairs": [],
-            "core_products": []
-        },
-        {
             "id": "81130d3b-7a9c-d043-63be-767339d30288",
             "post_id": "CVE-2024-21423",
             "published": "23-02-2024",
@@ -119,70 +74,6 @@
             "core_products": [
                 "microsoft edge (chromium-based)  "
             ]
-        },
-        {
-            "id": "fb470399-6f69-3e0b-7202-71c666081627",
-            "post_id": "CVE-2024-21307",
-            "published": "23-02-2024",
-            "revision": "2.1",
-            "post_type": "Information only",
-            "title": "CVE-2024-21307 Remote Desktop Client Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21307",
-            "summary": "The CVE-2024-21307 vulnerability affects the Remote Desktop client for Windows Desktop, Windows Server, and various Windows versions, leading to remote code execution. The vulnerability has a base score of 7.5 and a temporal score of 6.5, indicating high severity. It is remotely exploitable, requires no privileges, and demands user interaction. Successful exploitation could result in total loss of confidentiality, integrity, and availability. Microsoft has provided a security update for the affected products, with build numbers ranging from 1.2.5105.0 to 10.0.14393.6614. System administrators are advised to ensure that the mentioned versions or higher are installed to mitigate the risk of exploitation. The attack complexity is high, requiring an attacker to win a race condition, and an unauthorized attacker must wait for a user to initiate a connection. This is an informational change only, with no substantive updates beyond the previous revision.",
-            "related_posts": "[]",
-            "build_number_str": [],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5034134",
-                    "kb_link": "https://support.microsoft.com/help/5034134#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034123",
-                    "kb_link": "https://support.microsoft.com/help/5034123#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034122",
-                    "kb_link": "https://support.microsoft.com/help/5034122#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034121",
-                    "kb_link": "https://support.microsoft.com/help/5034121#january-09-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5034134)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134"
-                },
-                {
-                    "package_type": "Security Update (KB5034123)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123"
-                },
-                {
-                    "package_type": "Security Update (KB5034122)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122"
-                },
-                {
-                    "package_type": "Security Update (KB5034121)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121"
-                }
-            ],
-            "core_products": []
-        },
-        {
-            "id": "eb6d8df7-4877-a25c-13b4-f84066849667",
-            "post_id": "CVE-2024-20677",
-            "published": "23-02-2024",
-            "revision": "2.1",
-            "post_type": "Information only",
-            "title": "CVE-2024-20677 Microsoft Office Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20677",
-            "summary": "A remote code execution vulnerability, CVE-2024-20677, affects Microsoft Office, including Office 2019, Office 2021, Office LTSC for Mac 2021, and Microsoft 365. The vulnerability exists in FBX, leading to remote code execution, and has a CVSS base score of 7.8. The attack vector is local, requiring user interaction, and successful exploitation could result in total loss of confidentiality, integrity, and availability. To mitigate this, the ability to insert FBX files has been disabled in Word, Excel, PowerPoint, Outlook, and 3D Viewer. The change is effective as of the January 9, 2024 security update. Microsoft has provided security updates for affected products, and affected customers can get the update from the Microsoft Store or through their organizations. Additionally, PowerShell command 'Get-AppxPackage -Name Microsoft.Microsoft3DViewer' can be used to check if the update is installed. The security update for Microsoft Office 2021 for Mac is not immediately available, and affected customers will be notified when it is released.",
-            "related_posts": "[]",
-            "build_number_str": [],
-            "kb_article_pairs": [],
-            "package_pairs": [],
-            "core_products": []
         },
         {
             "id": "cc447771-31dc-8e78-644d-857df9a7134f",
@@ -418,9 +309,9 @@
         }
     ],
     "section_1_metadata": {
-        "total_cves": 15,
-        "new_cves": 12,
-        "updated_cves": 3
+        "total_cves": 10,
+        "new_cves": 10,
+        "updated_cves": 0
     },
     "section_2_data": [],
     "section_2_metadata": {
