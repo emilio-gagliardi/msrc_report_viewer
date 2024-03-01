@@ -222,24 +222,18 @@ h4#windows-and-edge-edition {
         collection_label = ""
         st.markdown('<a id="appendix"></a>', unsafe_allow_html=True)
         st.header("Appendix")
-        for doc in section_4_data:
-            if collection_label == "":
-                collection_label = doc['collection'].replace("_", " ").capitalize()
-                if "windows" not in collection_label.lower():
-                    
-                    st.markdown(f"### Edge {collection_label}")
-                else:
-                    st.markdown(f"### {collection_label}")
-            elif doc['collection'].replace("_", " ").capitalize() != collection_label.replace("Edge ", ""):
-                collection_label = doc['collection'].replace("_", " ").capitalize()
-                if "windows" not in collection_label.lower():
-                    st.markdown(f"### Edge {collection_label}")
-                else:
-                    st.markdown(f"### {collection_label}")
-                
-            st.markdown(f"[{doc['title']}]({doc['source']})")
+        for collection, docs in section_4_data.items():
+            collection_label = collection.replace("_", " ").capitalize()
+            if "windows" not in collection_label.lower():
+                st.markdown(f"### Edge {collection_label}")
+            else:
+                st.markdown(f"### {collection_label}")
+            
+            for doc in docs:
+                st.markdown(f"[{doc['title']}]({doc['source']})")
+            st.markdown("</br>", unsafe_allow_html=True)
         st.markdown("</br>---</br>", unsafe_allow_html=True)
-                    
+                            
 
     else:
         # Display a friendly message

@@ -6,7 +6,7 @@
     "report_month_end": "September",
     "report_year_end": "2023",
     "report_end_date": "2023_09_29",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,176 +14,10 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
-        {
-            "id": "e145de53-27a3-b0a6-7783-98151cf1588f",
-            "post_id": "CVE-2023-36805",
-            "published": "22-09-2023",
-            "revision": "2.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36805 Windows MSHTML Platform Security Feature Bypass Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36805",
-            "summary": "Windows MSHTML Platform Security Feature Bypass Vulnerability, identified as CVE-2023-36805, impacts all supported versions of Microsoft Windows. The vulnerability allows for remote code execution with a base score of 7.0 and a temporal score of 6.1. It is caused by a flaw in the MSHTML platform, which could lead to high privilege access for an attacker. Successful exploitation could result in a major loss of confidentiality, integrity, and availability. Microsoft recommends installing the September 2023 updates to be fully protected. Customers who install the Security Only updates for affected Windows Server versions should also install the IE Cumulative update. Automatic update configurations do not need further action. The vulnerability affects Windows Server 2008 R2, Windows Server 2012, and other Windows versions. The underlying MSHTML, EdgeHTML, and scripting platforms are still supported despite the retirement of Internet Explorer 11 and deprecation of Microsoft Edge Legacy. The IE Cumulative updates include changes to address vulnerabilities in the MSHTML platform and scripting engine. System administrators should prioritize the installation of the recommended updates to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "Windows Server",
-            "symptoms": "The vulnerability allows for a security feature bypass in the MSHTML platform.",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "d3955f7b-cc16-0d57-b9f2-691326e46363",
-            "post_id": "CVE-2023-29345",
-            "published": "26-09-2023",
-            "revision": "1.1",
-            "post_type": "Information only",
-            "title": "CVE-2023-29345 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29345",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a Security Feature Bypass vulnerability, CVE-2023-29345, with a CVSS score of 6.1/5.3. The vulnerability allows an attacker to bypass the permissions dialog feature prompt presented to users when initiating a download, requiring user interaction by clicking on a specially crafted URL. Successful exploitation could lead to a browser sandbox escape, impacting integrity and confidentiality. The attack vector is network-based, with low attack complexity and no privileges required. Microsoft has released a security update (build number 114.0.1823.37) to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "114.0.1823.37"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (02-06-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#june-02-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "27fee58c-8dc5-b697-48f4-1f9ecd9d2b55",
-            "post_id": "CVE-2023-38148",
-            "published": "28-09-2023",
-            "revision": "1.1",
-            "post_type": "Information only",
-            "title": "CVE-2023-38148 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38148",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution vulnerability, CVE-2023-38148. The vulnerability allows an unauthorized attacker to send a specially crafted network packet to the ICS service, leading to remote code execution. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. No user interaction or privileges are required for exploitation. The impact includes high confidentiality, integrity, and availability loss. Microsoft has released security updates for various affected products, including Windows 10, Windows 11, and Windows Server 2022, addressing the vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. Exploitation of this vulnerability requires that the Internet Connection Sharing (ICS) is enabled, and no exploit code is currently available. For more information, refer to the Microsoft Security Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.19044.3448",
-                "10.0.22000.2416",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "Internet Connection Sharing (ICS)",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
         {
             "id": "0e33f5da-16c7-bdb3-8564-670189e36689",
             "post_id": "CVE-2023-5217",
@@ -291,6 +125,173 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
+        },
+        {
+            "id": "27fee58c-8dc5-b697-48f4-1f9ecd9d2b55",
+            "post_id": "CVE-2023-38148",
+            "published": "28-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-38148 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38148",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution vulnerability, CVE-2023-38148. The vulnerability allows an unauthorized attacker to send a specially crafted network packet to the ICS service, leading to remote code execution. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. No user interaction or privileges are required for exploitation. The impact includes high confidentiality, integrity, and availability loss. Microsoft has released security updates for various affected products, including Windows 10, Windows 11, and Windows Server 2022, addressing the vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. Exploitation of this vulnerability requires that the Internet Connection Sharing (ICS) is enabled, and no exploit code is currently available. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.19044.3448",
+                "10.0.22000.2416",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Internet Connection Sharing (ICS)",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "d3955f7b-cc16-0d57-b9f2-691326e46363",
+            "post_id": "CVE-2023-29345",
+            "published": "26-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-29345 Microsoft Edge (Chromium-based) Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-29345",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Security Feature Bypass vulnerability, CVE-2023-29345, with a CVSS score of 6.1/5.3. The vulnerability allows an attacker to bypass the permissions dialog feature prompt presented to users when initiating a download, requiring user interaction by clicking on a specially crafted URL. Successful exploitation could lead to a browser sandbox escape, impacting integrity and confidentiality. The attack vector is network-based, with low attack complexity and no privileges required. Microsoft has released a security update (build number 114.0.1823.37) to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "114.0.1823.37"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (02-06-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#june-02-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e145de53-27a3-b0a6-7783-98151cf1588f",
+            "post_id": "CVE-2023-36805",
+            "published": "22-09-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36805 Windows MSHTML Platform Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36805",
+            "summary": "Windows MSHTML Platform Security Feature Bypass Vulnerability, identified as CVE-2023-36805, impacts all supported versions of Microsoft Windows. The vulnerability allows for remote code execution with a base score of 7.0 and a temporal score of 6.1. It is caused by a flaw in the MSHTML platform, which could lead to high privilege access for an attacker. Successful exploitation could result in a major loss of confidentiality, integrity, and availability. Microsoft recommends installing the September 2023 updates to be fully protected. Customers who install the Security Only updates for affected Windows Server versions should also install the IE Cumulative update. Automatic update configurations do not need further action. The vulnerability affects Windows Server 2008 R2, Windows Server 2012, and other Windows versions. The underlying MSHTML, EdgeHTML, and scripting platforms are still supported despite the retirement of Internet Explorer 11 and deprecation of Microsoft Edge Legacy. The IE Cumulative updates include changes to address vulnerabilities in the MSHTML platform and scripting engine. System administrators should prioritize the installation of the recommended updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Windows Server",
+            "symptoms": "The vulnerability allows for a security feature bypass in the MSHTML platform.",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -362,5 +363,681 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "4cab02f2-153d-5492-4e22-28e9a7ae2769",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-29-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-29",
+                "title": "September 29, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "a9f0a8aa-94bb-25a4-764d-880790c8591d",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204547-september-29-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-29",
+                "title": "Version 117.0.2045.47: September 29, 2023"
+            },
+            {
+                "id": "cd73c385-c175-b24d-2715-14e88a7a3a28",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1160193898-september-29-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-29",
+                "title": "Version 116.0.1938.98: September 29, 2023"
+            },
+            {
+                "id": "4475b12c-bf96-6354-8496-56d987ba3f8f",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204543-september-25-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-25",
+                "title": "Version 117.0.2045.43: September 25, 2023"
+            },
+            {
+                "id": "97521c1a-dcb3-da88-4163-749c4a2b696a",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204541-september-23-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-23",
+                "title": "Version 117.0.2045.41: September 23, 2023"
+            },
+            {
+                "id": "6afe562c-e876-7394-c87d-516709f44556",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204540-september-22-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-22",
+                "title": "Version 117.0.2045.40: September 22, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "7d4ba93f-915d-7589-1556-2a9c3aa152ea",
+                "source": "https://support.microsoft.com/en-us/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8",
+                "collection": "windows_10",
+                "published": "2023-09-29",
+                "title": "KB5020276\u2014Netjoin: Domain join hardening changes - Microsoft Support"
+            },
+            {
+                "id": "20ab5ef2-3df4-33bc-69f9-c2318add5c57",
+                "source": "https://support.microsoft.com/en-us/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Find and open File Explorer - Microsoft Support"
+            },
+            {
+                "id": "37972b72-17cb-cc83-f417-cd1f636ef88d",
+                "source": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Complete guide to Narrator - Microsoft Support"
+            },
+            {
+                "id": "f487787a-e234-d33b-5e22-e1004863685b",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-share-files-in-file-explorer-on-windows-dcf7d3dc-40f7-111a-0c9e-a8981c4bbc32",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "How to share files in File Explorer on Windows - Microsoft Support"
+            },
+            {
+                "id": "c0e7baa4-9e9a-fc60-c1e5-b484e9c2f59b",
+                "source": "https://support.microsoft.com/en-us/windows/fix-file-explorer-if-it-won-t-open-or-start-ce614e06-be97-fe4a-a7ce-d6bf13a8cb98",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Fix File Explorer if it won't open or start - Microsoft Support"
+            },
+            {
+                "id": "a3131668-2660-c6a9-4759-04fa909ab537",
+                "source": "https://support.microsoft.com/en-us/windows/set-file-explorer-to-open-to-this-pc-instead-of-quick-access-b2c7d271-027b-b35f-917e-897f66e68e5c",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Set File Explorer to open to This PC instead of Quick Access - Microsoft Support"
+            },
+            {
+                "id": "b8a2d794-26a4-f0df-09cc-811d34e91fb3",
+                "source": "https://support.microsoft.com/en-us/windows/help-in-file-explorer-a2d33543-5242-788d-8994-b0be10ae5bca",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Help in File Explorer - Microsoft Support"
+            },
+            {
+                "id": "a072f0dc-6ba5-73c4-b9f2-aa3f71ed46a9",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-password-reset-disk-for-a-local-account-in-windows-9a54a5ca-27bc-de72-244a-27b7d62951de",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Create a password reset disk for a local account in Windows - Microsoft Support"
+            },
+            {
+                "id": "eaec0c6d-cb99-b0f3-73c1-04e377a59176",
+                "source": "https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "View hidden files and folders in Windows - Microsoft Support"
+            },
+            {
+                "id": "30da678c-c02b-5a10-b837-b2fcf1c2453d",
+                "source": "https://support.microsoft.com/en-us/windows/sign-in-to-windows-8f1f3c05-e479-4e9a-666b-90091d052aaf",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Sign in to Windows - Microsoft Support"
+            },
+            {
+                "id": "272da654-69d1-9407-1d35-6e8fe25e2508",
+                "source": "https://support.microsoft.com/en-us/windows/reset-your-windows-local-account-password-86912508-e584-37cc-86eb-6e9b0542b5ba",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Reset your Windows local account password - Microsoft Support"
+            },
+            {
+                "id": "65bfcd09-853e-175c-a7fd-0add33bfc6d8",
+                "source": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-for-game-bar-85d97243-c89b-1ae1-6402-0faf35d6489d",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Keyboard shortcuts for Game Bar - Microsoft Support"
+            },
+            {
+                "id": "bea5b77b-e386-f545-8215-b6df56bd869b",
+                "source": "https://support.microsoft.com/en-us/windows/change-or-reset-your-windows-password-8271d17c-9f9e-443f-835a-8318c8f68b9c",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Change or reset your Windows password - Microsoft Support"
+            },
+            {
+                "id": "8fcdb519-112d-f9f2-3153-f3a87d1ca9f7",
+                "source": "https://support.microsoft.com/en-us/windows/fix-problems-with-game-bar-on-windows-74a718a1-2fbf-2ce3-5fbe-e959be352277",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Fix problems with Game Bar on Windows - Microsoft Support"
+            },
+            {
+                "id": "18cc3d0c-8c7c-3329-b231-0447325bd705",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-switch-users-accounts-in-windows-660d4dcd-fa8d-7467-10b3-fee0e70e11d4",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "How to switch users (accounts) in Windows - Microsoft Support"
+            },
+            {
+                "id": "109cdb7e-d1f8-4e92-4bdf-53cf36f7cd76",
+                "source": "https://support.microsoft.com/en-us/windows/hide-windows-updates-or-driver-updates-5df410a1-90f7-b744-0682-43be9c8fa17c",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Hide Windows Updates or driver updates - Microsoft Support"
+            },
+            {
+                "id": "0bf3dfb8-b2ac-6bd1-7d22-03f7d912e139",
+                "source": "https://support.microsoft.com/en-us/windows/switch-from-a-local-account-to-a-microsoft-account-395203bf-9f1b-eb24-b042-5b8dae6c1d20",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Switch from a local account to a Microsoft account - Microsoft Support"
+            },
+            {
+                "id": "7583ae4d-115c-8bd6-6ee1-8c4b250887c6",
+                "source": "https://support.microsoft.com/en-us/windows/change-your-account-picture-3645cdc7-acab-49d2-76a9-4ce7e5e10939",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Change your account picture - Microsoft Support"
+            },
+            {
+                "id": "59e7a67b-51d7-3eb4-e846-e83ca4f029ca",
+                "source": "https://support.microsoft.com/en-us/windows/sign-out-of-windows-346925bb-024c-cd86-7a53-9066242a9ed3",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Sign out of Windows - Microsoft Support"
+            },
+            {
+                "id": "fe8288c2-c93f-9f2b-12bb-5b18b66e548b",
+                "source": "https://support.microsoft.com/en-us/windows/record-a-game-clip-on-your-pc-with-game-bar-2f477001-54d4-1276-9144-b0416a307f3c",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Record a game clip on your PC with Game Bar - Microsoft Support"
+            },
+            {
+                "id": "04d8a75b-c0f2-276d-6eeb-7e31fabc3c25",
+                "source": "https://support.microsoft.com/en-us/windows/troubleshoot-problems-signing-in-to-windows-298cfd5f-df1f-c66b-36ad-f2a61a73baad",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Troubleshoot problems signing in to Windows - Microsoft Support"
+            },
+            {
+                "id": "6cbb499d-9703-985b-d3bf-8e87dc4120c2",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-local-user-or-administrator-account-in-windows-20de74e0-ac7f-3502-a866-32915af2a34d",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Create a local user or administrator account in Windows - Microsoft Support"
+            },
+            {
+                "id": "dfe372bf-90ee-afe1-1c96-c42a2ae61e3b",
+                "source": "https://support.microsoft.com/en-us/windows/windows-error-message-we-can-t-sign-in-to-your-account-18d55f00-a6e7-9106-29ee-54fa223c0ca8",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Windows error message: \"We can't sign in to your account\" - Microsoft Support"
+            },
+            {
+                "id": "fb3e58eb-1861-fccb-ea02-c26e9c6737ac",
+                "source": "https://support.microsoft.com/en-us/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32",
+                "collection": "windows_10",
+                "published": "2023-09-28",
+                "title": "Add or remove accounts on your PC - Microsoft Support"
+            },
+            {
+                "id": "b9fbb797-ff43-adc2-4a95-71544672558f",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-7-customizing-narrator-ce950246-c915-0d44-9be6-fb474387a285",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 7: Customizing Narrator - Microsoft Support"
+            },
+            {
+                "id": "68a27036-9a8f-b421-add4-c58a399d13ad",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-b-narrator-keyboard-commands-and-touch-gestures-8bdab3f4-b3e9-4554-7f28-8b15bd37410a",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Appendix B: Narrator keyboard commands and touch gestures - Microsoft Support"
+            },
+            {
+                "id": "0253be0b-e63c-3899-3e30-99b4945bef69",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-4-reading-text-8054c6cd-dccf-5070-e405-953f036e4a15",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 4: Reading text - Microsoft Support"
+            },
+            {
+                "id": "fe9edc87-52a9-cbdc-90bd-5e62f1a891fe",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-3-using-scan-mode-7b2af804-5a2f-90fd-b0e0-672f7cbbf2da",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 3: Using scan mode - Microsoft Support"
+            },
+            {
+                "id": "79ae1bc9-f89e-7acb-bf54-5a05ca00a86b",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-5-navigation-68941680-3245-6ef5-5012-0674b8b6fc59",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 5: Navigation - Microsoft Support"
+            },
+            {
+                "id": "faf844ca-530e-2eac-7673-31ff139ca59e",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-c-supported-braille-displays-65c40265-8aa6-9b53-9bc8-8a7a87e5dd8a",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Appendix C: Supported braille displays - Microsoft Support"
+            },
+            {
+                "id": "d24e1c37-c746-1b52-7c0e-52a18a1870ce",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-6-using-narrator-with-touch-60f8f38b-23fa-ebe2-4345-c900d1b2e22f",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 6: Using Narrator with touch - Microsoft Support"
+            },
+            {
+                "id": "c2896d2d-d6ce-f54e-4f4c-f0b3c051e47e",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-2-narrator-basics-5ff4591e-7b6d-245e-c95d-ce83c0a1a8d4",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 2: Narrator basics - Microsoft Support"
+            },
+            {
+                "id": "117ec1b1-3774-b2c7-c6a0-564d6c828256",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-a-supported-languages-and-voices-4486e345-7730-53da-fcfe-55cc64300f01",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Appendix A: Supported languages and voices - Microsoft Support"
+            },
+            {
+                "id": "7d860aea-605e-86ca-c768-aa3b4da44b94",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-8-using-narrator-with-braille-3e5f065b-1c9d-6eb2-ec6d-1d07c9e94b20",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Chapter 8: Using Narrator with braille - Microsoft Support"
+            },
+            {
+                "id": "930ad17e-25ef-cd58-6b08-77a1e03b2741",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-d-narrator-sounds-12a4cdaa-882c-c1a1-e666-ae8d6c570887",
+                "collection": "windows_10",
+                "published": "2023-09-27",
+                "title": "Appendix D: Narrator sounds - Microsoft Support"
+            },
+            {
+                "id": "12664627-fc9e-140e-1bf2-c93e8a0238aa",
+                "source": "https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc",
+                "collection": "windows_10",
+                "published": "2023-09-26",
+                "title": "Zip and unzip files - Microsoft Support"
+            },
+            {
+                "id": "2efde652-68a7-d468-62db-2b0018d64096",
+                "source": "https://support.microsoft.com/en-us/windows/edit-photos-and-videos-in-windows-a3a6e711-1b70-250a-93fa-ef99048a2c86",
+                "collection": "windows_10",
+                "published": "2023-09-26",
+                "title": "Edit photos and videos in Windows - Microsoft Support"
+            },
+            {
+                "id": "4bd4a8a8-e1ca-b9f9-47a3-497b3079d77e",
+                "source": "https://support.microsoft.com/en-us/windows/set-your-data-limit-031dcc15-fa0f-ad39-8e60-634500585630",
+                "collection": "windows_10",
+                "published": "2023-09-26",
+                "title": "Set your data limit - Microsoft Support"
+            },
+            {
+                "id": "723a550c-4575-9e6b-44a1-d5de013fec05",
+                "source": "https://support.microsoft.com/en-us/topic/kb5013438-recovery-discs-created-by-using-the-backup-and-restore-windows-7-app-in-control-panel-are-unable-to-start-78e6d004-39df-4446-bcf8-20a45ffe8b70",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "KB5013438: Recovery discs created by using the \"Backup and Restore (Windows 7)\u201d app in Control Panel are unable to start - Microsoft Support"
+            },
+            {
+                "id": "fc319c33-481a-4ea6-5f3b-8ee28fc1cc1b",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Create a recovery drive - Microsoft Support"
+            },
+            {
+                "id": "32c691a2-56bd-b97b-5316-efb3d96b2859",
+                "source": "https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Create installation media for Windows - Microsoft Support"
+            },
+            {
+                "id": "ffc2a7a0-a4f6-719b-4f3a-17727e81a1e4",
+                "source": "https://support.microsoft.com/en-us/windows/getting-the-most-out-of-your-pc-backup-71839239-55bf-40b5-a523-8a8486bd3dea",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Getting the most out of your PC backup - Microsoft Support"
+            },
+            {
+                "id": "7be78dc5-873d-181d-f997-8895b19c90ed",
+                "source": "https://support.microsoft.com/en-us/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Recovery options in Windows - Microsoft Support"
+            },
+            {
+                "id": "3a1a13ce-5066-02e1-56ad-3317ec319841",
+                "source": "https://support.microsoft.com/en-us/windows/choose-a-backup-solution-in-windows-10-31495e5d-370e-3631-c773-44de4301e070",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Choose a backup solution in Windows 10 - Microsoft Support"
+            },
+            {
+                "id": "9a4af118-917f-6b59-2076-f06fc81f7b9f",
+                "source": "https://support.microsoft.com/en-us/windows/what-s-new-in-recent-windows-updates-2df971e0-341a-68b1-3bf8-bc3e3ff8c3a5",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "What's new in recent Windows updates - Microsoft Support"
+            },
+            {
+                "id": "f1dd5730-696a-3744-c159-faad5737ecc3",
+                "source": "https://support.microsoft.com/en-us/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Troubleshoot problems updating Windows - Microsoft Support"
+            },
+            {
+                "id": "cebad779-c0b8-7318-9cd1-90f65cac5919",
+                "source": "https://support.microsoft.com/en-us/windows/protect-your-pc-from-ransomware-08ed68a7-939f-726c-7e84-a72ba92c01c3",
+                "collection": "windows_10",
+                "published": "2023-09-25",
+                "title": "Protect your PC from ransomware - Microsoft Support"
+            },
+            {
+                "id": "d5cdce54-5614-8bab-e247-2cb0d68e2a97",
+                "source": "https://support.microsoft.com/en-us/topic/august-9-2022-kb5016616-os-builds-19042-1889-19043-1889-and-19044-1889-67412989-3b5f-4443-89b4-f743382ab970",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "August 9, 2022\u2014KB5016616 (OS Builds 19042.1889, 19043.1889, and 19044.1889) - Microsoft Support"
+            },
+            {
+                "id": "dcb98061-773d-9112-5488-30fa127aa877",
+                "source": "https://support.microsoft.com/en-us/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "May 10, 2022\u2014KB5013942 (OS Builds 19042.1706, 19043.1706, and 19044.1706) - Microsoft Support"
+            },
+            {
+                "id": "d43207f8-da65-e0d7-125c-b401f8ece3aa",
+                "source": "https://support.microsoft.com/en-us/account-billing/how-to-sign-in-to-a-microsoft-account-2ffedaca-6e1b-bc18-f28c-58539e1cb6d3",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "How to sign in to a Microsoft account - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "6e0b69aa-1dbe-610f-a31b-a58420c32534",
+                "source": "https://support.microsoft.com/en-us/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8",
+                "collection": "windows_11",
+                "published": "2023-09-29",
+                "title": "KB5020276\u2014Netjoin: Domain join hardening changes - Microsoft Support"
+            },
+            {
+                "id": "1db41dcf-71fb-f7cf-a57f-d35f247a87ac",
+                "source": "https://support.microsoft.com/en-us/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Find and open File Explorer - Microsoft Support"
+            },
+            {
+                "id": "300327d4-c33f-090e-03f3-fe5c961bbeba",
+                "source": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Complete guide to Narrator - Microsoft Support"
+            },
+            {
+                "id": "28691b9c-00c2-c6f0-7af2-0db3b409ae74",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-share-files-in-file-explorer-on-windows-dcf7d3dc-40f7-111a-0c9e-a8981c4bbc32",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "How to share files in File Explorer on Windows - Microsoft Support"
+            },
+            {
+                "id": "4c3007bb-3287-b64c-8d5b-e77dca2129fb",
+                "source": "https://support.microsoft.com/en-us/windows/fix-file-explorer-if-it-won-t-open-or-start-ce614e06-be97-fe4a-a7ce-d6bf13a8cb98",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Fix File Explorer if it won't open or start - Microsoft Support"
+            },
+            {
+                "id": "3d76bb74-8f0d-d8a7-9949-7e750d28c959",
+                "source": "https://support.microsoft.com/en-us/windows/set-file-explorer-to-open-to-this-pc-instead-of-quick-access-b2c7d271-027b-b35f-917e-897f66e68e5c",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Set File Explorer to open to This PC instead of Quick Access - Microsoft Support"
+            },
+            {
+                "id": "a3c6c40d-b4ff-ac8e-99f7-4ce81e8605a6",
+                "source": "https://support.microsoft.com/en-us/windows/help-in-file-explorer-a2d33543-5242-788d-8994-b0be10ae5bca",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Help in File Explorer - Microsoft Support"
+            },
+            {
+                "id": "8a994b8f-a820-a8a4-4de5-7649b823f140",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-password-reset-disk-for-a-local-account-in-windows-9a54a5ca-27bc-de72-244a-27b7d62951de",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Create a password reset disk for a local account in Windows - Microsoft Support"
+            },
+            {
+                "id": "5dfad4ff-2722-6c9f-ddb0-d6c35d07e5af",
+                "source": "https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "View hidden files and folders in Windows - Microsoft Support"
+            },
+            {
+                "id": "9ec2b777-cdb6-a54e-35d0-5bf3c702e16e",
+                "source": "https://support.microsoft.com/en-us/windows/sign-in-to-windows-8f1f3c05-e479-4e9a-666b-90091d052aaf",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Sign in to Windows - Microsoft Support"
+            },
+            {
+                "id": "b0786336-b84c-730b-7a9f-696aa13ee9a3",
+                "source": "https://support.microsoft.com/en-us/windows/reset-your-windows-local-account-password-86912508-e584-37cc-86eb-6e9b0542b5ba",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Reset your Windows local account password - Microsoft Support"
+            },
+            {
+                "id": "9b95698d-0b39-6355-70b6-5a6378560d31",
+                "source": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-for-game-bar-85d97243-c89b-1ae1-6402-0faf35d6489d",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Keyboard shortcuts for Game Bar - Microsoft Support"
+            },
+            {
+                "id": "a276c02d-b515-dd02-713d-99a53a58051c",
+                "source": "https://support.microsoft.com/en-us/windows/change-or-reset-your-windows-password-8271d17c-9f9e-443f-835a-8318c8f68b9c",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Change or reset your Windows password - Microsoft Support"
+            },
+            {
+                "id": "7ccf9e97-f8aa-6257-23a6-5a97976ae222",
+                "source": "https://support.microsoft.com/en-us/windows/fix-problems-with-game-bar-on-windows-74a718a1-2fbf-2ce3-5fbe-e959be352277",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Fix problems with Game Bar on Windows - Microsoft Support"
+            },
+            {
+                "id": "bbeb76e1-33ba-abe9-79c1-2acc8b1cc313",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-switch-users-accounts-in-windows-660d4dcd-fa8d-7467-10b3-fee0e70e11d4",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "How to switch users (accounts) in Windows - Microsoft Support"
+            },
+            {
+                "id": "a3df3ff7-6882-56fe-1bc0-af85c0db4889",
+                "source": "https://support.microsoft.com/en-us/topic/september-26-2023-windows-configuration-update-542780c2-594c-46cb-979d-11116fe164ba",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "September 26, 2023\u2014Windows configuration update - Microsoft Support"
+            },
+            {
+                "id": "0c7e1ef7-6a44-17a5-7af3-bcb6101ff11a",
+                "source": "https://support.microsoft.com/en-us/windows/switch-from-a-local-account-to-a-microsoft-account-395203bf-9f1b-eb24-b042-5b8dae6c1d20",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Switch from a local account to a Microsoft account - Microsoft Support"
+            },
+            {
+                "id": "3987e5c2-00bd-1168-30f4-13cf8ff53191",
+                "source": "https://support.microsoft.com/en-us/windows/change-your-account-picture-3645cdc7-acab-49d2-76a9-4ce7e5e10939",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Change your account picture - Microsoft Support"
+            },
+            {
+                "id": "d38a38c7-2f36-6468-545b-4b0236c5cfa7",
+                "source": "https://support.microsoft.com/en-us/windows/sign-out-of-windows-346925bb-024c-cd86-7a53-9066242a9ed3",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Sign out of Windows - Microsoft Support"
+            },
+            {
+                "id": "2b5eff05-df1d-2d93-1307-9b6d946647a6",
+                "source": "https://support.microsoft.com/en-us/windows/record-a-game-clip-on-your-pc-with-game-bar-2f477001-54d4-1276-9144-b0416a307f3c",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Record a game clip on your PC with Game Bar - Microsoft Support"
+            },
+            {
+                "id": "269828b1-a076-ad93-25ab-7d35a1070b33",
+                "source": "https://support.microsoft.com/en-us/windows/finding-items-in-the-file-explorer-context-menu-2c458eb5-d27a-4b69-9301-60df221caaa0",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Finding items in the File Explorer context menu - Microsoft Support"
+            },
+            {
+                "id": "8b4e0962-1146-1d7c-e2f1-9dfd6b8cc6b4",
+                "source": "https://support.microsoft.com/en-us/windows/troubleshoot-problems-signing-in-to-windows-298cfd5f-df1f-c66b-36ad-f2a61a73baad",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Troubleshoot problems signing in to Windows - Microsoft Support"
+            },
+            {
+                "id": "6da445d2-9487-77f8-a8c8-044c0f4fca49",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-local-user-or-administrator-account-in-windows-20de74e0-ac7f-3502-a866-32915af2a34d",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Create a local user or administrator account in Windows - Microsoft Support"
+            },
+            {
+                "id": "9e10b1e8-0bcc-68f4-9f4e-8f4808cd5f47",
+                "source": "https://support.microsoft.com/en-us/windows/windows-error-message-we-can-t-sign-in-to-your-account-18d55f00-a6e7-9106-29ee-54fa223c0ca8",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Windows error message: \"We can't sign in to your account\" - Microsoft Support"
+            },
+            {
+                "id": "577e8fa4-b1f0-6ac5-337c-3400775e7f1f",
+                "source": "https://support.microsoft.com/en-us/windows/add-or-remove-accounts-on-your-pc-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32",
+                "collection": "windows_11",
+                "published": "2023-09-28",
+                "title": "Add or remove accounts on your PC - Microsoft Support"
+            },
+            {
+                "id": "da66b0e5-72e3-6a2c-2c93-1c9d8ba474a8",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-b-narrator-keyboard-commands-and-touch-gestures-8bdab3f4-b3e9-4554-7f28-8b15bd37410a",
+                "collection": "windows_11",
+                "published": "2023-09-27",
+                "title": "Appendix B: Narrator keyboard commands and touch gestures - Microsoft Support"
+            },
+            {
+                "id": "7ee25acb-a0ba-0247-68ff-cf4e7a6dac72",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-c-supported-braille-displays-65c40265-8aa6-9b53-9bc8-8a7a87e5dd8a",
+                "collection": "windows_11",
+                "published": "2023-09-27",
+                "title": "Appendix C: Supported braille displays - Microsoft Support"
+            },
+            {
+                "id": "7691dd8e-fbbb-e877-787d-53a0749257f0",
+                "source": "https://support.microsoft.com/en-us/topic/kb5031274-out-of-box-experience-update-for-windows-11-version-22h2-september-26-2023-e1a2749f-ed3b-4411-8ee8-306443cc982f",
+                "collection": "windows_11",
+                "published": "2023-09-26",
+                "title": "KB5031274: Out of Box Experience update for Windows 11, version 22H2: September 26, 2023 - Microsoft Support"
+            },
+            {
+                "id": "5e47aa8c-514a-8299-5404-b5dfe1696b13",
+                "source": "https://support.microsoft.com/en-us/topic/kb5030323-out-of-box-experience-update-for-windows-11-version-22h2-september-26-2023-4549e400-054c-48a9-992c-93d68a92d49e",
+                "collection": "windows_11",
+                "published": "2023-09-26",
+                "title": "KB5030323: Out of Box Experience update for Windows 11, version 22H2: September 26, 2023 - Microsoft Support"
+            },
+            {
+                "id": "14a7c8bd-beaa-a5c0-7419-57b20b15cd50",
+                "source": "https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc",
+                "collection": "windows_11",
+                "published": "2023-09-26",
+                "title": "Zip and unzip files - Microsoft Support"
+            },
+            {
+                "id": "3ca4699c-8481-3fbb-5129-5f050c500ba7",
+                "source": "https://support.microsoft.com/en-us/windows/edit-photos-and-videos-in-windows-a3a6e711-1b70-250a-93fa-ef99048a2c86",
+                "collection": "windows_11",
+                "published": "2023-09-26",
+                "title": "Edit photos and videos in Windows - Microsoft Support"
+            },
+            {
+                "id": "b77d4507-fea7-93a5-f286-51830d8a6a97",
+                "source": "https://support.microsoft.com/en-us/windows/set-your-data-limit-031dcc15-fa0f-ad39-8e60-634500585630",
+                "collection": "windows_11",
+                "published": "2023-09-26",
+                "title": "Set your data limit - Microsoft Support"
+            },
+            {
+                "id": "72b6f87f-8566-ccb4-506d-c0dbc2b69489",
+                "source": "https://support.microsoft.com/en-us/topic/kb5013438-recovery-discs-created-by-using-the-backup-and-restore-windows-7-app-in-control-panel-are-unable-to-start-78e6d004-39df-4446-bcf8-20a45ffe8b70",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "KB5013438: Recovery discs created by using the \"Backup and Restore (Windows 7)\u201d app in Control Panel are unable to start - Microsoft Support"
+            },
+            {
+                "id": "68ac144c-5952-2696-8bf4-c6af4e74593e",
+                "source": "https://support.microsoft.com/en-us/windows/create-a-recovery-drive-abb4691b-5324-6d4a-8766-73fab304c246",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "Create a recovery drive - Microsoft Support"
+            },
+            {
+                "id": "102e8a1b-518d-a4db-09a9-12db81c2d93f",
+                "source": "https://support.microsoft.com/en-us/windows/getting-the-most-out-of-your-pc-backup-71839239-55bf-40b5-a523-8a8486bd3dea",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "Getting the most out of your PC backup - Microsoft Support"
+            },
+            {
+                "id": "2df45f47-6b7b-9f5a-dcc0-faac5e3541d4",
+                "source": "https://support.microsoft.com/en-us/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "Recovery options in Windows - Microsoft Support"
+            },
+            {
+                "id": "7e84fd80-893f-1ee8-57a2-379c94d1256f",
+                "source": "https://support.microsoft.com/en-us/windows/what-s-new-in-recent-windows-updates-2df971e0-341a-68b1-3bf8-bc3e3ff8c3a5",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "What's new in recent Windows updates - Microsoft Support"
+            },
+            {
+                "id": "e968698c-fff7-cafc-4aa1-59712fbffdbd",
+                "source": "https://support.microsoft.com/en-us/windows/troubleshoot-problems-updating-windows-188c2b0f-10a7-d72f-65b8-32d177eb136c",
+                "collection": "windows_11",
+                "published": "2023-09-25",
+                "title": "Troubleshoot problems updating Windows - Microsoft Support"
+            },
+            {
+                "id": "27db04fe-6a0e-742a-cf92-e849385c3d57",
+                "source": "https://support.microsoft.com/en-us/account-billing/how-to-sign-in-to-a-microsoft-account-2ffedaca-6e1b-bc18-f28c-58539e1cb6d3",
+                "collection": "windows_11",
+                "published": "2023-09-22",
+                "title": "How to sign in to a Microsoft account - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

@@ -261,7 +261,6 @@
             color: #131269;}
         
         li {
-            list-style-type: none;
             margin-bottom: 8px;
         }
         .image-wrapper {
@@ -341,129 +340,11 @@
             <div class='section' id='section_1'>
                 <h2 class="text-3xl mb-1">MSRC Posts</h2>
                 <div class='metadata-container'>
-                    <div class='metadata-item'><span class="label">Total CVEs:</span> 15</div>
-                    <div class='metadata-item'><span class="label">New CVEs:</span> 12</div>
-                    <div class='metadata-item'><span class="label">Updated CVEs:</span> 3</div>
+                    <div class='metadata-item'><span class="label">Total CVEs:</span> 10</div>
+                    <div class='metadata-item'><span class="label">New CVEs:</span> 10</div>
+                    <div class='metadata-item'><span class="label">Updated CVEs:</span> 0</div>
                 </div>
                 <div class='data-container'>
-                    
-                        <div class='data-item'>
-                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36019' class='data-item-link' id='0c6e162a-8b2c-75d6-f946-58664ecd6050' target='_blank'>CVE-2023-36019 Microsoft Power Platform Connector Spoofing Vulnerability</a></h3>
-                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
-                                <div class='data-item-property' style="margin-right: 6px;">
-                                    <span class="label">Revision:</span> 1.2
-                                    
-                                </div>
-                                <div class='data-item-property'>
-                                    <span class="label">Published:</span> 16-02-2024
-                                </div>
-                                <div class='data-item-property flex items-center'>
-                                    <span class="label mr-1">Official Fix:</span>
-                                    
-                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
-                                        <span class="ml-1">Information update only</span>
-                                    
-                                </div>
-                            </div>
-                            <!-- Windows Info -->
-                            <div class='data-item-property expandable-core_products' id="product-family-info-0c6e162a-8b2c-75d6-f946-58664ecd6050">
-                                <span class="label">Product family info:</span> 
-                            </div>
-                            <div style="display: flex; justify-content: flex-end; width: auto;">
-                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-0c6e162a-8b2c-75d6-f946-58664ecd6050", this)'>Show More</a>
-                            </div>
-                            <div class="flex flex-wrap -mx-2">
-                                <!-- Build numbers card -->
-                                <div class="w-full px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-build-numbers mb-1'>
-                                            <span class="label mb-1 block">Build numbers:</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- KB Articles card -->
-                                
-                            
-                                <!-- Package pairs card -->
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-package-pairs'>
-                                            <span class="label mb-1 block">Update Packages:</span>
-                                            <ul class="list-none">
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class='data-item-summary' id='summary-0c6e162a-8b2c-75d6-f946-58664ecd6050'><span class="label">Summary:</span> Microsoft Power Platform Connector is impacted by a critical spoofing vulnerability, CVE-2023-36019, with a CVSS score of 9.6. The vulnerability allows an attacker to manipulate a malicious link, application, or file to disguise it as legitimate, tricking the victim. It requires user interaction, where the user must click on a specially crafted URL to be compromised. Successful exploitation could lead to a scope change, with malicious scripts executing in the victim’s browser. Microsoft has provided a mitigation by requiring custom connectors using OAuth 2.0 to use a per-connector redirect URI, with a deadline of March 29, 2024. After this date, users will no longer be able to create connections to or use existing OAuth 2.0 custom connectors that have not been updated. Affected customers were notified via the Microsoft 365 Admin Center and Service Health in the Azure Portal. System administrators are advised to validate and update their custom connectors to mitigate the risk of exploitation. </div>
-                            <div style="display: flex;
-                            justify-content: flex-end;width: auto;">
-                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-0c6e162a-8b2c-75d6-f946-58664ecd6050")'>Show More</a></div>
-                        </div>
-                    
-                        <div class='data-item'>
-                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21315' class='data-item-link' id='ba930fad-3758-26e9-5daa-9bd2ca7284b7' target='_blank'>CVE-2024-21315 Microsoft Defender for Endpoint Protection Elevation of Privilege Vulnerability</a></h3>
-                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
-                                <div class='data-item-property' style="margin-right: 6px;">
-                                    <span class="label">Revision:</span> 1.0
-                                     <span class="text-green-600">(NEW)</span>
-                                </div>
-                                <div class='data-item-property'>
-                                    <span class="label">Published:</span> 20-02-2024
-                                </div>
-                                <div class='data-item-property flex items-center'>
-                                    <span class="label mr-1">Official Fix:</span>
-                                    
-                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
-                                        <span class="ml-1">Information update only</span>
-                                    
-                                </div>
-                            </div>
-                            <!-- Windows Info -->
-                            <div class='data-item-property expandable-core_products' id="product-family-info-ba930fad-3758-26e9-5daa-9bd2ca7284b7">
-                                <span class="label">Product family info:</span> 
-                            </div>
-                            <div style="display: flex; justify-content: flex-end; width: auto;">
-                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-ba930fad-3758-26e9-5daa-9bd2ca7284b7", this)'>Show More</a>
-                            </div>
-                            <div class="flex flex-wrap -mx-2">
-                                <!-- Build numbers card -->
-                                <div class="w-full px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-build-numbers mb-1'>
-                                            <span class="label mb-1 block">Build numbers:</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- KB Articles card -->
-                                
-                            
-                                <!-- Package pairs card -->
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-package-pairs'>
-                                            <span class="label mb-1 block">Update Packages:</span>
-                                            <ul class="list-none">
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class='data-item-summary' id='summary-ba930fad-3758-26e9-5daa-9bd2ca7284b7'><span class="label">Summary:</span> Microsoft Defender for Endpoint Protection is affected by an elevation of privilege vulnerability identified as CVE-2024-21315, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It was addressed by updates released in November 2023, but inadvertently omitted from the November 2023 Security Updates. Microsoft strongly recommends installing the November 2023 updates to mitigate this vulnerability. Various Windows versions and editions, including Windows Server and Windows 10, are impacted. Security updates with build numbers 5032202, 5032189, 5032190, 5034819, 5032197, 5034830, and others are available to address this issue. The impact of exploitation includes high confidentiality, integrity, and availability risks. The attack vector is local, with low attack complexity and privileges required. No user interaction is needed for exploitation. A complete vendor solution is available, and no exploit code is currently available, making exploitation less likely. System administrators are strongly advised to install the recommended updates to protect affected systems from this elevation of privilege vulnerability. </div>
-                            <div style="display: flex;
-                            justify-content: flex-end;width: auto;">
-                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-ba930fad-3758-26e9-5daa-9bd2ca7284b7")'>Show More</a></div>
-                        </div>
                     
                         <div class='data-item'>
                             <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26192' class='data-item-link' id='b1f9aa62-9c95-ff4e-d62f-61edc68c700c' target='_blank'>CVE-2024-26192 Microsoft Edge (Chromium-based) Information Disclosure Vulnerability</a></h3>
@@ -515,7 +396,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -532,7 +413,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -547,65 +428,6 @@
                             <div style="display: flex;
                             justify-content: flex-end;width: auto;">
                             <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-b1f9aa62-9c95-ff4e-d62f-61edc68c700c")'>Show More</a></div>
-                        </div>
-                    
-                        <div class='data-item'>
-                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-26188' class='data-item-link' id='c9afb5fa-103b-54a4-f749-79d347784d06' target='_blank'>CVE-2024-26188 Microsoft Edge (Chromium-based) Spoofing Vulnerability</a></h3>
-                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
-                                <div class='data-item-property' style="margin-right: 6px;">
-                                    <span class="label">Revision:</span> 1.0
-                                     <span class="text-green-600">(NEW)</span>
-                                </div>
-                                <div class='data-item-property'>
-                                    <span class="label">Published:</span> 23-02-2024
-                                </div>
-                                <div class='data-item-property flex items-center'>
-                                    <span class="label mr-1">Official Fix:</span>
-                                    
-                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
-                                        <span class="ml-1">Information update only</span>
-                                    
-                                </div>
-                            </div>
-                            <!-- Windows Info -->
-                            <div class='data-item-property expandable-core_products' id="product-family-info-c9afb5fa-103b-54a4-f749-79d347784d06">
-                                <span class="label">Product family info:</span> 
-                            </div>
-                            <div style="display: flex; justify-content: flex-end; width: auto;">
-                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-c9afb5fa-103b-54a4-f749-79d347784d06", this)'>Show More</a>
-                            </div>
-                            <div class="flex flex-wrap -mx-2">
-                                <!-- Build numbers card -->
-                                <div class="w-full px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-build-numbers mb-1'>
-                                            <span class="label mb-1 block">Build numbers:</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- KB Articles card -->
-                                
-                            
-                                <!-- Package pairs card -->
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-package-pairs'>
-                                            <span class="label mb-1 block">Update Packages:</span>
-                                            <ul class="list-none">
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class='data-item-summary' id='summary-c9afb5fa-103b-54a4-f749-79d347784d06'><span class="label">Summary:</span> Microsoft Edge (Chromium-based) is affected by a low severity spoofing vulnerability, identified as CVE-2024-26188. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to some loss of integrity, allowing the attacker to cover and spoof elements of the UI, with the modified information being only visual. The vulnerability has a low attack complexity and does not require any privileges or specialized access conditions. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 122.0.2365.52 to address this vulnerability. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Response Center page. </div>
-                            <div style="display: flex;
-                            justify-content: flex-end;width: auto;">
-                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-c9afb5fa-103b-54a4-f749-79d347784d06")'>Show More</a></div>
                         </div>
                     
                         <div class='data-item'>
@@ -658,7 +480,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -675,7 +497,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -690,175 +512,6 @@
                             <div style="display: flex;
                             justify-content: flex-end;width: auto;">
                             <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-81130d3b-7a9c-d043-63be-767339d30288")'>Show More</a></div>
-                        </div>
-                    
-                        <div class='data-item'>
-                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21307' class='data-item-link' id='fb470399-6f69-3e0b-7202-71c666081627' target='_blank'>CVE-2024-21307 Remote Desktop Client Remote Code Execution Vulnerability</a></h3>
-                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
-                                <div class='data-item-property' style="margin-right: 6px;">
-                                    <span class="label">Revision:</span> 2.1
-                                    
-                                </div>
-                                <div class='data-item-property'>
-                                    <span class="label">Published:</span> 23-02-2024
-                                </div>
-                                <div class='data-item-property flex items-center'>
-                                    <span class="label mr-1">Official Fix:</span>
-                                    
-                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
-                                        <span class="ml-1">Information update only</span>
-                                    
-                                </div>
-                            </div>
-                            <!-- Windows Info -->
-                            <div class='data-item-property expandable-core_products' id="product-family-info-fb470399-6f69-3e0b-7202-71c666081627">
-                                <span class="label">Product family info:</span> 
-                            </div>
-                            <div style="display: flex; justify-content: flex-end; width: auto;">
-                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-fb470399-6f69-3e0b-7202-71c666081627", this)'>Show More</a>
-                            </div>
-                            <div class="flex flex-wrap -mx-2">
-                                <!-- Build numbers card -->
-                                <div class="w-full px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-build-numbers mb-1'>
-                                            <span class="label mb-1 block">Build numbers:</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- KB Articles card -->
-                                
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-kb-articles'>
-                                            <span class="label mb-1 block">KB Articles:</span>
-                                            <ul class="list-none">
-                                                
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
-                                                        <a href="https://support.microsoft.com/help/5034134#january-09-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5034134</a>
-                                                    </li>
-                                                
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
-                                                        <a href="https://support.microsoft.com/help/5034123#january-09-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5034123</a>
-                                                    </li>
-                                                
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
-                                                        <a href="https://support.microsoft.com/help/5034122#january-09-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5034122</a>
-                                                    </li>
-                                                
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
-                                                        <a href="https://support.microsoft.com/help/5034121#january-09-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">kb5034121</a>
-                                                    </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            
-                                <!-- Package pairs card -->
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-package-pairs'>
-                                            <span class="label mb-1 block">Update Packages:</span>
-                                            <ul class="list-none">
-                                                
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
-                                                        
-                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5034134)</a>
-                                                        
-                                                    </li>
-                                                
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
-                                                        
-                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5034123)</a>
-                                                        
-                                                    </li>
-                                                
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
-                                                        
-                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5034122)</a>
-                                                        
-                                                    </li>
-                                                
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
-                                                        
-                                                            <a href="https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size:12.5px;">Security Update (KB5034121)</a>
-                                                        
-                                                    </li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class='data-item-summary' id='summary-fb470399-6f69-3e0b-7202-71c666081627'><span class="label">Summary:</span> The CVE-2024-21307 vulnerability affects the Remote Desktop client for Windows Desktop, Windows Server, and various Windows versions, leading to remote code execution. The vulnerability has a base score of 7.5 and a temporal score of 6.5, indicating high severity. It is remotely exploitable, requires no privileges, and demands user interaction. Successful exploitation could result in total loss of confidentiality, integrity, and availability. Microsoft has provided a security update for the affected products, with build numbers ranging from 1.2.5105.0 to 10.0.14393.6614. System administrators are advised to ensure that the mentioned versions or higher are installed to mitigate the risk of exploitation. The attack complexity is high, requiring an attacker to win a race condition, and an unauthorized attacker must wait for a user to initiate a connection. This is an informational change only, with no substantive updates beyond the previous revision. </div>
-                            <div style="display: flex;
-                            justify-content: flex-end;width: auto;">
-                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-fb470399-6f69-3e0b-7202-71c666081627")'>Show More</a></div>
-                        </div>
-                    
-                        <div class='data-item'>
-                            <h3 class="text-blue-900 underline  mb-2"><a href='https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20677' class='data-item-link' id='eb6d8df7-4877-a25c-13b4-f84066849667' target='_blank'>CVE-2024-20677 Microsoft Office Remote Code Execution Vulnerability</a></h3>
-                            <div class='data-item-info' style='display: flex; align-items: center; flex-wrap: nowrap; gap: 8px;'>
-                                <div class='data-item-property' style="margin-right: 6px;">
-                                    <span class="label">Revision:</span> 2.1
-                                    
-                                </div>
-                                <div class='data-item-property'>
-                                    <span class="label">Published:</span> 23-02-2024
-                                </div>
-                                <div class='data-item-property flex items-center'>
-                                    <span class="label mr-1">Official Fix:</span>
-                                    
-                                        <div class="bg-green-500 border-green-700 w-3 h-3 rounded-full border-2 inline-block"></div>
-                                        <span class="ml-1">Information update only</span>
-                                    
-                                </div>
-                            </div>
-                            <!-- Windows Info -->
-                            <div class='data-item-property expandable-core_products' id="product-family-info-eb6d8df7-4877-a25c-13b4-f84066849667">
-                                <span class="label">Product family info:</span> 
-                            </div>
-                            <div style="display: flex; justify-content: flex-end; width: auto;">
-                                <a href='javascript:void(0);' class='button' onclick='toggleCoreProducts("product-family-info-eb6d8df7-4877-a25c-13b4-f84066849667", this)'>Show More</a>
-                            </div>
-                            <div class="flex flex-wrap -mx-2">
-                                <!-- Build numbers card -->
-                                <div class="w-full px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-build-numbers mb-1'>
-                                            <span class="label mb-1 block">Build numbers:</span>
-                                            <div class="flex flex-wrap gap-2">
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                                <!-- KB Articles card -->
-                                
-                            
-                                <!-- Package pairs card -->
-                                <div class="w-1/2 px-2 card">
-                                    <div class="rounded overflow-hidden p-1 bg-white">
-                                        <div class='data-item-package-pairs'>
-                                            <span class="label mb-1 block">Update Packages:</span>
-                                            <ul class="list-none">
-                                                
-                                            </ul>
-                                        </div>
-                                    </div> 
-                                </div>
-                            </div>
-                            <div class='data-item-summary' id='summary-eb6d8df7-4877-a25c-13b4-f84066849667'><span class="label">Summary:</span> A remote code execution vulnerability, CVE-2024-20677, affects Microsoft Office, including Office 2019, Office 2021, Office LTSC for Mac 2021, and Microsoft 365. The vulnerability exists in FBX, leading to remote code execution, and has a CVSS base score of 7.8. The attack vector is local, requiring user interaction, and successful exploitation could result in total loss of confidentiality, integrity, and availability. To mitigate this, the ability to insert FBX files has been disabled in Word, Excel, PowerPoint, Outlook, and 3D Viewer. The change is effective as of the January 9, 2024 security update. Microsoft has provided security updates for affected products, and affected customers can get the update from the Microsoft Store or through their organizations. Additionally, PowerShell command 'Get-AppxPackage -Name Microsoft.Microsoft3DViewer' can be used to check if the update is installed. The security update for Microsoft Office 2021 for Mac is not immediately available, and affected customers will be notified when it is released. </div>
-                            <div style="display: flex;
-                            justify-content: flex-end;width: auto;">
-                            <a href='javascript:void(0);' class='button' onclick='toggleSummary("summary-eb6d8df7-4877-a25c-13b4-f84066849667")'>Show More</a></div>
                         </div>
                     
                         <div class='data-item'>
@@ -911,7 +564,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -928,7 +581,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -995,7 +648,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1012,7 +665,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1079,7 +732,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1096,7 +749,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1163,7 +816,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1180,7 +833,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1247,7 +900,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1264,7 +917,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1331,7 +984,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1348,7 +1001,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1415,7 +1068,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1432,7 +1085,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1499,7 +1152,7 @@
                                             <span class="label mb-1 block">KB Articles:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline  after:mr-1 last:after:content-['']" >
+                                                    <li style="list-style-type: none;" class="inline  after:mr-1 last:after:content-['']" >
                                                         <a href="https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#february-23-2024" target="_blank" class="text-blue-500 hover:text-blue-600" style="font-size: 12.5px;line-height:12.5px;">Release Note (23-02-2024)</a>
                                                     </li>
                                                 
@@ -1516,7 +1169,7 @@
                                             <span class="label mb-1 block">Update Packages:</span>
                                             <ul class="list-none">
                                                 
-                                                    <li class="inline after:mr-1 last:after:content-[''] text-sm">
+                                                    <li style="list-style-type: none;" class="inline after:mr-1 last:after:content-[''] text-sm">
                                                         
                                                             Edge Update
                                                         
@@ -1535,6 +1188,33 @@
                     
                 </div>
             </div>
+            <div class='section' id='section_4'>
+                <h2 class="text-xl mb-1">Appendix</h2>
+                
+                    
+                    
+                        <h3 style="margin:8px 0px">Edge Security update notes</h3>
+                    
+                    <ul class="list-disc list-inside" style="list-style-type: disc;">
+                        
+                            <li><a href="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#february-23-2024" class="data-item-link text-blue-500 hover:text-blue-600" id="b09d2093-3ea1-6815-dcab-56834dbe364c" target="_blank">February 23, 2024</a></li>
+                        
+                    </ul>
+                
+                    
+                    
+                        <h3 style="margin:8px 0px">Edge Stable channel notes</h3>
+                    
+                    <ul class="list-disc list-inside" style="list-style-type: disc;">
+                        
+                            <li><a href="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1220236552-february-23-2024" class="data-item-link text-blue-500 hover:text-blue-600" id="99eeb2dd-1fcb-d84e-0205-096bc36ee57b" target="_blank">Version 122.0.2365.52: February 23, 2024</a></li>
+                        
+                            <li><a href="https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12002210181-february-20-2024" class="data-item-link text-blue-500 hover:text-blue-600" id="e0817fc7-f53b-e263-cfa2-c1668ccc0386" target="_blank">Version 120.0.2210.181: February 20, 2024</a></li>
+                        
+                    </ul>
+                
+            </div>
+           
         </div>
         <div class="flex-1 bg-white p-2 flex flex-row justify-center">
             <div class='image-wrapper'>

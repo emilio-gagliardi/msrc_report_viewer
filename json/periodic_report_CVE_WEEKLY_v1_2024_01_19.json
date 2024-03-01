@@ -6,7 +6,7 @@
     "report_month_end": "January",
     "report_year_end": "2024",
     "report_end_date": "2024_01_19",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,253 +14,10 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
-        {
-            "id": "cc4a84ec-303b-66e9-821d-4edc59699e27",
-            "post_id": "CVE-2024-20666",
-            "published": "12-01-2024",
-            "revision": "1.2",
-            "post_type": "Information only",
-            "title": "CVE-2024-20666 BitLocker Security Feature Bypass Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20666",
-            "summary": "The post provides updated FAQ information for the BitLocker Security Feature Bypass Vulnerability identified as CVE-2024-20666. This is an informational change only, indicating no substantive updates beyond the previous revision. System administrators are advised to review the updated FAQ for any additional technical details or links for further research.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.19044.3930",
-                "10.0.19045.3930",
-                "10.0.22000.2713",
-                "10.0.22631.3007",
-                "10.0.10240.20402",
-                "10.0.22621.3007"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5034134",
-                    "kb_link": "https://support.microsoft.com/help/5034134#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034123",
-                    "kb_link": "https://support.microsoft.com/help/5034123#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034122",
-                    "kb_link": "https://support.microsoft.com/help/5034122#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034121",
-                    "kb_link": "https://support.microsoft.com/help/5034121#january-09-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5034134)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134"
-                },
-                {
-                    "package_type": "Security Update (KB5034123)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123"
-                },
-                {
-                    "package_type": "Security Update (KB5034122)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122"
-                },
-                {
-                    "package_type": "Security Update (KB5034121)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "feab99b7-f815-c954-be7a-3b13a796ee2c",
-            "post_id": "CVE-2024-20658",
-            "published": "12-01-2024",
-            "revision": "1.1",
-            "post_type": "Information only",
-            "title": "CVE-2024-20658 Microsoft Virtual Hard Disk Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20658",
-            "summary": "Microsoft Virtual Hard Disk is impacted by an elevation of privilege vulnerability, identified as CVE-2024-20658 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, potentially leading to a complete loss of integrity and availability. The attack vector is local, with low complexity and no user interaction required. Microsoft has provided security updates for various Windows versions, including Windows Server and Windows 10, addressing the elevation of privilege vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The availability of an official fix reduces the urgency of remediation, and no specific workaround or mitigation is mentioned. The post is an informational change only, providing updated FAQ information without substantive changes beyond the previous revision.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.19044.3930",
-                "10.0.19045.3930",
-                "10.0.22000.2713",
-                "10.0.22631.3007",
-                "10.0.10240.20402",
-                "10.0.22621.3007"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5034134",
-                    "kb_link": "https://support.microsoft.com/help/5034134#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034123",
-                    "kb_link": "https://support.microsoft.com/help/5034123#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034122",
-                    "kb_link": "https://support.microsoft.com/help/5034122#january-09-2024"
-                },
-                {
-                    "kb_id": "kb5034121",
-                    "kb_link": "https://support.microsoft.com/help/5034121#january-09-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5034134)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134"
-                },
-                {
-                    "package_type": "Security Update (KB5034123)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123"
-                },
-                {
-                    "package_type": "Security Update (KB5034122)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122"
-                },
-                {
-                    "package_type": "Security Update (KB5034121)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "Microsoft Virtual Hard Disk",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "69872f9e-2f51-9902-8f3e-de3113bb893c",
-            "post_id": "CVE-2024-0519",
-            "published": "17-01-2024",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2024-0519 Out of bounds memory access in V8",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0519",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-0519, an out of bounds memory access vulnerability in V8, assigned by Chrome. This vulnerability is addressed by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Google is aware of reports of an exploit for this CVE existing in the wild. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 120.0.2210.144. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "120.0.2210.144"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (17-01-2024)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "071211aa-fb82-3c77-cb61-2d1eb2f5a358",
-            "post_id": "CVE-2024-0518",
-            "published": "17-01-2024",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2024-0518 Type Confusion in V8",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0518",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a type confusion vulnerability in V8, identified as CVE-2024-0518, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. Microsoft recognizes the efforts of the security community in coordinated vulnerability disclosure. The latest stable version of Microsoft Edge (Chromium-based) with the fix is 120.0.2210.144, released on 17-01-2024.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "120.0.2210.144"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (17-01-2024)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "e1af4124-225f-285d-c6bb-a1a3aebf83ed",
-            "post_id": "CVE-2024-0517",
-            "published": "17-01-2024",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2024-0517 Out of bounds write in V8",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0517",
-            "summary": "Microsoft Edge (Chromium-based) is affected by an out of bounds write vulnerability in V8, identified as CVE-2024-0517. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 120.0.2210.144 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 120.0.2210.144. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "120.0.2210.144"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (17-01-2024)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
         {
             "id": "25230ff6-c68d-c5da-1162-12c37fd39c57",
             "post_id": "CVE-2024-21337",
@@ -561,6 +318,250 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
+        },
+        {
+            "id": "69872f9e-2f51-9902-8f3e-de3113bb893c",
+            "post_id": "CVE-2024-0519",
+            "published": "17-01-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-0519 Out of bounds memory access in V8",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0519",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2024-0519, an out of bounds memory access vulnerability in V8, assigned by Chrome. This vulnerability is addressed by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code. Google is aware of reports of an exploit for this CVE existing in the wild. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 120.0.2210.144. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2024) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "120.0.2210.144"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (17-01-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "071211aa-fb82-3c77-cb61-2d1eb2f5a358",
+            "post_id": "CVE-2024-0518",
+            "published": "17-01-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-0518 Type Confusion in V8",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0518",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a type confusion vulnerability in V8, identified as CVE-2024-0518, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure that their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. Microsoft recognizes the efforts of the security community in coordinated vulnerability disclosure. The latest stable version of Microsoft Edge (Chromium-based) with the fix is 120.0.2210.144, released on 17-01-2024.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "120.0.2210.144"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (17-01-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e1af4124-225f-285d-c6bb-a1a3aebf83ed",
+            "post_id": "CVE-2024-0517",
+            "published": "17-01-2024",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2024-0517 Out of bounds write in V8",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-0517",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an out of bounds write vulnerability in V8, identified as CVE-2024-0517. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) with build number 120.0.2210.144 is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 120.0.2210.144. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "120.0.2210.144"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (17-01-2024)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#january-17-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "cc4a84ec-303b-66e9-821d-4edc59699e27",
+            "post_id": "CVE-2024-20666",
+            "published": "12-01-2024",
+            "revision": "1.2",
+            "post_type": "Information only",
+            "title": "CVE-2024-20666 BitLocker Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20666",
+            "summary": "The post provides updated FAQ information for the BitLocker Security Feature Bypass Vulnerability identified as CVE-2024-20666. This is an informational change only, indicating no substantive updates beyond the previous revision. System administrators are advised to review the updated FAQ for any additional technical details or links for further research.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19044.3930",
+                "10.0.19045.3930",
+                "10.0.22000.2713",
+                "10.0.22631.3007",
+                "10.0.10240.20402",
+                "10.0.22621.3007"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5034134",
+                    "kb_link": "https://support.microsoft.com/help/5034134#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034123",
+                    "kb_link": "https://support.microsoft.com/help/5034123#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034122",
+                    "kb_link": "https://support.microsoft.com/help/5034122#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034121",
+                    "kb_link": "https://support.microsoft.com/help/5034121#january-09-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5034134)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134"
+                },
+                {
+                    "package_type": "Security Update (KB5034123)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123"
+                },
+                {
+                    "package_type": "Security Update (KB5034122)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122"
+                },
+                {
+                    "package_type": "Security Update (KB5034121)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "feab99b7-f815-c954-be7a-3b13a796ee2c",
+            "post_id": "CVE-2024-20658",
+            "published": "12-01-2024",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2024-20658 Microsoft Virtual Hard Disk Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-20658",
+            "summary": "Microsoft Virtual Hard Disk is impacted by an elevation of privilege vulnerability, identified as CVE-2024-20658 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, potentially leading to a complete loss of integrity and availability. The attack vector is local, with low complexity and no user interaction required. Microsoft has provided security updates for various Windows versions, including Windows Server and Windows 10, addressing the elevation of privilege vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The availability of an official fix reduces the urgency of remediation, and no specific workaround or mitigation is mentioned. The post is an informational change only, providing updated FAQ information without substantive changes beyond the previous revision.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19044.3930",
+                "10.0.19045.3930",
+                "10.0.22000.2713",
+                "10.0.22631.3007",
+                "10.0.10240.20402",
+                "10.0.22621.3007"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5034134",
+                    "kb_link": "https://support.microsoft.com/help/5034134#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034123",
+                    "kb_link": "https://support.microsoft.com/help/5034123#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034122",
+                    "kb_link": "https://support.microsoft.com/help/5034122#january-09-2024"
+                },
+                {
+                    "kb_id": "kb5034121",
+                    "kb_link": "https://support.microsoft.com/help/5034121#january-09-2024"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5034134)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034134"
+                },
+                {
+                    "package_type": "Security Update (KB5034123)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034123"
+                },
+                {
+                    "package_type": "Security Update (KB5034122)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034122"
+                },
+                {
+                    "package_type": "Security Update (KB5034121)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5034121"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Microsoft Virtual Hard Disk",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -583,5 +584,72 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "77384f64-f6fb-092a-a371-504cedd65f77",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#january-17-2024",
+                "collection": "security_update_notes",
+                "published": "2024-01-17",
+                "title": "January 17, 2024"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "f271f2b9-7b6d-9a44-ed5e-f92c34b1df17",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12002210144-january-17-2024",
+                "collection": "stable_channel_notes",
+                "published": "2024-01-17",
+                "title": "Version 120.0.2210.144: January 17, 2024"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "8d5936c7-2cff-0037-2d26-2b31b5d126b8",
+                "source": "https://support.microsoft.com/en-us/topic/kb5034441-windows-recovery-environment-update-for-windows-10-version-21h2-and-22h2-january-9-2024-62c04204-aaa5-4fee-a02a-2fdea17075a8",
+                "collection": "windows_10",
+                "published": "2024-01-12",
+                "title": "KB5034441: Windows Recovery Environment update for Windows 10, version 21H2 and 22H2: January 9, 2024 - Microsoft Support"
+            },
+            {
+                "id": "e5fe1cf8-1558-5b39-9bee-de3a35e7cf2e",
+                "source": "https://support.microsoft.com/en-us/topic/kb5034232-compatibility-update-for-installing-and-recovering-windows-10-version-21h2-and-22h2-january-9-2024-93af23bb-0d5f-4f19-8a36-401443b53ad9",
+                "collection": "windows_10",
+                "published": "2024-01-12",
+                "title": "KB5034232: Compatibility update for installing and recovering Windows 10, version 21H2 and 22H2: January 9, 2024 - Microsoft Support"
+            },
+            {
+                "id": "18ba8ed4-9aa6-cce6-9247-e809d26429a7",
+                "source": "https://support.microsoft.com/en-us/surface/surface-touchpad-use-and-settings-6c32fd32-23f4-c2d3-a3f9-cfc70feff233",
+                "collection": "windows_10",
+                "published": "2024-01-12",
+                "title": "Surface touchpad use and settings - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "607c3eb3-8477-57cd-6481-c6d5965e4545",
+                "source": "https://support.microsoft.com/en-us/topic/kb5034440-windows-recovery-environment-update-for-windows-11-version-21h2-january-9-2024-1e07724a-3547-40f5-99ff-862cc48fd523",
+                "collection": "windows_11",
+                "published": "2024-01-12",
+                "title": "KB5034440: Windows Recovery Environment update for Windows 11, version 21H2: January 9, 2024 - Microsoft Support"
+            },
+            {
+                "id": "cf621b45-3d87-6e77-c817-6493ce0662e6",
+                "source": "https://support.microsoft.com/en-us/topic/kb5034236-compatibility-update-for-installing-and-recovering-windows-11-version-21h2-january-9-2024-6e8b91af-7166-4854-8cdf-43a635e94536",
+                "collection": "windows_11",
+                "published": "2024-01-12",
+                "title": "KB5034236: Compatibility update for installing and recovering Windows 11, version 21H2: January 9, 2024 - Microsoft Support"
+            },
+            {
+                "id": "506ef53e-d467-1e3f-5482-a0a5328e4554",
+                "source": "https://support.microsoft.com/en-us/surface/surface-touchpad-use-and-settings-6c32fd32-23f4-c2d3-a3f9-cfc70feff233",
+                "collection": "windows_11",
+                "published": "2024-01-12",
+                "title": "Surface touchpad use and settings - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

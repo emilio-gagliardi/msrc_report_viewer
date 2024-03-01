@@ -6,7 +6,7 @@
     "report_month_end": "September",
     "report_year_end": "2023",
     "report_end_date": "2023_09_22",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,9 +14,81 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
+        {
+            "id": "e145de53-27a3-b0a6-7783-98151cf1588f",
+            "post_id": "CVE-2023-36805",
+            "published": "22-09-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36805 Windows MSHTML Platform Security Feature Bypass Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36805",
+            "summary": "Windows MSHTML Platform Security Feature Bypass Vulnerability, identified as CVE-2023-36805, impacts all supported versions of Microsoft Windows. The vulnerability allows for remote code execution with a base score of 7.0 and a temporal score of 6.1. It is caused by a flaw in the MSHTML platform, which could lead to high privilege access for an attacker. Successful exploitation could result in a major loss of confidentiality, integrity, and availability. Microsoft recommends installing the September 2023 updates to be fully protected. Customers who install the Security Only updates for affected Windows Server versions should also install the IE Cumulative update. Automatic update configurations do not need further action. The vulnerability affects Windows Server 2008 R2, Windows Server 2012, and other Windows versions. The underlying MSHTML, EdgeHTML, and scripting platforms are still supported despite the retirement of Internet Explorer 11 and deprecation of Microsoft Edge Legacy. The IE Cumulative updates include changes to address vulnerabilities in the MSHTML platform and scripting engine. System administrators should prioritize the installation of the recommended updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Windows Server",
+            "symptoms": "The vulnerability allows for a security feature bypass in the MSHTML platform.",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
         {
             "id": "f161954c-4360-d96d-0d43-8209878cd557",
             "post_id": "CVE-2023-4909",
@@ -484,77 +556,6 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
-        },
-        {
-            "id": "e145de53-27a3-b0a6-7783-98151cf1588f",
-            "post_id": "CVE-2023-36805",
-            "published": "22-09-2023",
-            "revision": "2.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36805 Windows MSHTML Platform Security Feature Bypass Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36805",
-            "summary": "Windows MSHTML Platform Security Feature Bypass Vulnerability, identified as CVE-2023-36805, impacts all supported versions of Microsoft Windows. The vulnerability allows for remote code execution with a base score of 7.0 and a temporal score of 6.1. It is caused by a flaw in the MSHTML platform, which could lead to high privilege access for an attacker. Successful exploitation could result in a major loss of confidentiality, integrity, and availability. Microsoft recommends installing the September 2023 updates to be fully protected. Customers who install the Security Only updates for affected Windows Server versions should also install the IE Cumulative update. Automatic update configurations do not need further action. The vulnerability affects Windows Server 2008 R2, Windows Server 2012, and other Windows versions. The underlying MSHTML, EdgeHTML, and scripting platforms are still supported despite the retirement of Internet Explorer 11 and deprecation of Microsoft Edge Legacy. The IE Cumulative updates include changes to address vulnerabilities in the MSHTML platform and scripting engine. System administrators should prioritize the installation of the recommended updates to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "Windows Server",
-            "symptoms": "The vulnerability allows for a security feature bypass in the MSHTML platform.",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -598,5 +599,709 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "848c4b71-a65a-6988-6b0d-b87045d28898",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#see-also",
+                "collection": "security_update_notes",
+                "published": "2023-09-20",
+                "title": "See also"
+            },
+            {
+                "id": "2cfc3f5e-d204-6a3d-3dcc-76201ce39240",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15, 2023"
+            },
+            {
+                "id": "11e848ce-1116-202f-605c-1d574ffb7f42",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15th-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15th, 2023"
+            },
+            {
+                "id": "58610eb6-6c17-dac5-7c94-c40157874fc1",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15th-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15th, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "6afe562c-e876-7394-c87d-516709f44556",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204540-september-22-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-22",
+                "title": "Version 117.0.2045.40: September 22, 2023"
+            },
+            {
+                "id": "9268e663-5247-eaf1-9741-cd1c756cd5aa",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#see-also",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-20",
+                "title": "See also"
+            },
+            {
+                "id": "2ae84823-b8f0-8d18-fcfe-23cf2132ac14",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204536-september-19-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-19",
+                "title": "Version 117.0.2045.36: September 19, 2023"
+            },
+            {
+                "id": "6db64e64-1536-dda9-bbf5-dd2948f346a0",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204535-september-19-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-19",
+                "title": "Version 117.0.2045.35: September 19, 2023"
+            },
+            {
+                "id": "a28affa2-df70-1ded-060a-7f8d05fced1b",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-10901518140-september-15-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-15",
+                "title": "Version 109.0.1518.140: September 15, 2023"
+            },
+            {
+                "id": "8c9a81d9-2cb7-3630-bb45-2b68994caa6f",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204531-september-15-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-15",
+                "title": "Version: 117.0.2045.31: September 15, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "d5cdce54-5614-8bab-e247-2cb0d68e2a97",
+                "source": "https://support.microsoft.com/en-us/topic/august-9-2022-kb5016616-os-builds-19042-1889-19043-1889-and-19044-1889-67412989-3b5f-4443-89b4-f743382ab970",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "August 9, 2022\u2014KB5016616 (OS Builds 19042.1889, 19043.1889, and 19044.1889) - Microsoft Support"
+            },
+            {
+                "id": "dcb98061-773d-9112-5488-30fa127aa877",
+                "source": "https://support.microsoft.com/en-us/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "May 10, 2022\u2014KB5013942 (OS Builds 19042.1706, 19043.1706, and 19044.1706) - Microsoft Support"
+            },
+            {
+                "id": "d43207f8-da65-e0d7-125c-b401f8ece3aa",
+                "source": "https://support.microsoft.com/en-us/account-billing/how-to-sign-in-to-a-microsoft-account-2ffedaca-6e1b-bc18-f28c-58539e1cb6d3",
+                "collection": "windows_10",
+                "published": "2023-09-22",
+                "title": "How to sign in to a Microsoft account - Microsoft Support"
+            },
+            {
+                "id": "a7bffa7b-7963-b704-266f-a30fed014cc0",
+                "source": "https://support.microsoft.com/en-us/topic/march-14-2023-kb5023696-os-builds-19042-2728-19044-2728-and-19045-2728-9a6dafce-d387-410d-a1bc-9ff5a9cafdc1",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "March 14, 2023\u2014KB5023696 (OS Builds 19042.2728, 19044.2728, and 19045.2728) - Microsoft Support"
+            },
+            {
+                "id": "7f8e94db-bb3d-82e9-4955-7ca8d4767694",
+                "source": "https://support.microsoft.com/en-us/topic/february-14-2023-kb5022834-os-builds-19042-2604-19044-2604-and-19045-2604-ffb56254-3fee-44f1-9574-b8a0c19bde77",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "February 14, 2023\u2014KB5022834 (OS Builds 19042.2604, 19044.2604, and 19045.2604) - Microsoft Support"
+            },
+            {
+                "id": "83e3d4fd-50e3-1a66-f340-0179ddfab399",
+                "source": "https://support.microsoft.com/en-us/topic/january-10-2023-kb5022282-os-builds-19042-2486-19044-2486-and-19045-2486-9587e4e3-c2d7-48a6-86e2-8cd9146b47fd",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "January 10, 2023\u2014KB5022282 (OS Builds 19042.2486, 19044.2486, and 19045.2486) - Microsoft Support"
+            },
+            {
+                "id": "3b31a5ee-3be2-d3e2-5dd0-d306e5f93b27",
+                "source": "https://support.microsoft.com/en-us/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "December 13, 2022\u2014KB5021233 (OS Builds 19042.2364, 19043.2364, 19044.2364, and 19045.2364) - Microsoft Support"
+            },
+            {
+                "id": "2970ae7f-2a92-7511-ffd1-c06c77fafecd",
+                "source": "https://support.microsoft.com/en-us/topic/november-8-2022-kb5019959-os-builds-19042-2251-19043-2251-19044-2251-and-19045-2251-f65e0600-2135-4efd-a979-08d1df34dce8",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "November 8, 2022\u2014KB5019959  (OS Builds 19042.2251, 19043.2251, 19044.2251, and 19045.2251) - Microsoft Support"
+            },
+            {
+                "id": "671ce3b4-2119-acaf-018e-7045f1feea0f",
+                "source": "https://support.microsoft.com/en-us/topic/october-11-2022-kb5018410-os-builds-19042-2130-19043-2130-and-19044-2130-6390f057-28ca-43d3-92ce-f4b79a8378fd",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "October 11, 2022\u2014KB5018410 (OS Builds 19042.2130, 19043.2130, and 19044.2130) - Microsoft Support"
+            },
+            {
+                "id": "cff52f7f-e0bf-968d-ffdf-a65b568e9019",
+                "source": "https://support.microsoft.com/en-us/topic/september-13-2022-kb5017308-os-builds-19042-2006-19043-2006-and-19044-2006-e4ea187e-28e8-4d4b-808b-2794babdce4c",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "September 13, 2022\u2014KB5017308 (OS Builds 19042.2006, 19043.2006, and 19044.2006) - Microsoft Support"
+            },
+            {
+                "id": "1ede06fe-8847-200c-01fd-9f8fc6e229d1",
+                "source": "https://support.microsoft.com/en-us/topic/august-9-2022-kb5016639-os-build-10240-19387-expired-e91da780-e973-4388-97af-04f456f20a68",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "August 9, 2022\u2014KB5016639 (OS Build 10240.19387) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "89dd3ce8-6b2b-3739-2049-702fa592a63e",
+                "source": "https://support.microsoft.com/en-us/topic/june-20-2022-kb5016139-os-builds-19042-1767-19043-1767-and-19044-1767-out-of-band-f23f8abf-fa86-4e9c-8dad-6aadec51d51c",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 20, 2022\u2014KB5016139  (OS Builds 19042.1767, 19043.1767, and 19044.1767) Out-of-band - Microsoft Support"
+            },
+            {
+                "id": "4aeee668-6db7-7771-d324-dc69ea39f243",
+                "source": "https://support.microsoft.com/en-us/topic/july-12-2022-kb5015832-os-build-10240-19360-expired-80ed3963-176e-425e-b81c-fd44d5b007d4",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 12, 2022\u2014KB5015832 (OS Build 10240.19360) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "6913e278-a5bf-22e8-c1c4-2e19557e048c",
+                "source": "https://support.microsoft.com/en-us/topic/july-12-2022-kb5015807-os-builds-19042-1826-19043-1826-and-19044-1826-8c8ea8fe-ec83-467d-86fb-a2f48a85eb41",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 12, 2022\u2014KB5015807 (OS Builds 19042.1826, 19043.1826, and 19044.1826) - Microsoft Support"
+            },
+            {
+                "id": "8d975640-0b09-d68b-c0ce-b8cabb0b538e",
+                "source": "https://support.microsoft.com/en-us/topic/june-14-2022-kb5014710-os-build-10240-19325-expired-4e04a4e1-f560-4131-b676-0238c28f5e5a",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 14, 2022\u2014KB5014710 (OS Build 10240.19325) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "7768c27b-d243-14dc-fbcf-86d69cd59444",
+                "source": "https://support.microsoft.com/en-us/topic/june-14-2022-kb5014699-os-builds-19042-1766-19043-1766-and-19044-1766-5c81d49d-0b6e-4808-9485-1f54e5d1bb15",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 14, 2022\u2014KB5014699 (OS Builds 19042.1766, 19043.1766, and 19044.1766) - Microsoft Support"
+            },
+            {
+                "id": "45e4091f-0fd9-d424-dbcb-93380fda4b11",
+                "source": "https://support.microsoft.com/en-us/topic/may-10-2022-kb5013963-os-build-10240-19297-expired-5a090ec6-9852-4ca1-b3a6-b2539dfc1eeb",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "May 10, 2022\u2014KB5013963 (OS Build 10240.19297) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "79b91da2-ba3d-171c-1164-94bf44f4742d",
+                "source": "https://support.microsoft.com/en-us/topic/may-10-2022-kb5013945-os-build-18363-2274-2b351461-a751-42a1-940a-6057d504137e",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "May 10, 2022\u2014KB5013945 (OS Build 18363.2274) - Microsoft Support"
+            },
+            {
+                "id": "f9143cf6-fb55-7c42-e3fe-e314b8a11326",
+                "source": "https://support.microsoft.com/en-us/topic/april-12-2022-kb5012653-os-build-10240-19265-expired-935b794b-840b-47b6-b905-3b41f1990de8",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "April 12, 2022\u2014KB5012653 (OS Build 10240.19265) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "be39d00d-3685-402b-48d0-b1a13dedd3a7",
+                "source": "https://support.microsoft.com/en-us/topic/april-12-2022-kb5012599-os-builds-19042-1645-19043-1645-and-19044-1645-548cc67c-7f12-46fd-878e-589ba81ac2f5",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "April 12, 2022\u2014KB5012599 (OS Builds 19042.1645, 19043.1645, and 19044.1645) - Microsoft Support"
+            },
+            {
+                "id": "ddf97e6d-bd05-26bf-edf4-a71e4e1b370b",
+                "source": "https://support.microsoft.com/en-us/topic/april-12-2022-kb5012591-os-build-18363-2212-bdef80dc-6550-4e63-8f10-a34787d898e7",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "April 12, 2022\u2014KB5012591 (OS Build 18363.2212) - Microsoft Support"
+            },
+            {
+                "id": "9e9b1589-dda0-be2a-0bd5-c8dc95aaf1f6",
+                "source": "https://support.microsoft.com/en-us/topic/march-8-2022-kb5011491-os-build-10240-19235-expired-57d6683f-fdbb-4e7d-a0f0-e28e85fb85f5",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "March 8, 2022\u2014KB5011491 (OS Build 10240.19235) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "95a17411-30c5-122d-64c1-64a0d3d2067c",
+                "source": "https://support.microsoft.com/en-us/topic/march-8-2022-kb5011487-os-builds-19042-1586-19043-1586-and-19044-1586-8297eadb-3b8b-4ca5-9083-ca41a91c1c56",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "March 8, 2022\u2014KB5011487 (OS Builds 19042.1586, 19043.1586, and 19044.1586) - Microsoft Support"
+            },
+            {
+                "id": "51037569-d895-50b1-3a68-bcd78b54fda2",
+                "source": "https://support.microsoft.com/en-us/topic/february-8-2022-kb5010358-os-build-10240-19204-expired-7879b7ce-2c01-4a84-9784-28c4f0e34950",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "February 8, 2022\u2014KB5010358 (OS Build 10240.19204) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "3250a806-ea73-6763-d2ee-38c2e1568083",
+                "source": "https://support.microsoft.com/en-us/topic/february-8-2022-kb5010342-os-builds-19042-1526-19043-1526-and-19044-1526-bd5c4434-bec4-42e9-991d-5810d4ec52d9",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "February 8, 2022\u2014KB5010342 (OS Builds 19042.1526, 19043.1526, and 19044.1526) - Microsoft Support"
+            },
+            {
+                "id": "f82c07c7-fa59-e7dc-1143-22a6ac6df2a2",
+                "source": "https://support.microsoft.com/en-us/topic/january-11-2022-kb5009585-os-build-10240-19177-expired-c56dd31a-42be-4214-b661-10faaa3f24a8",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "January 11, 2022\u2014KB5009585 (OS Build 10240.19177) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "ae0c09dd-7f75-0a24-2c1c-68503d9a6485",
+                "source": "https://support.microsoft.com/en-us/topic/january-11-2022-kb5009543-os-builds-19042-1466-19043-1466-and-19044-1466-b763552f-73bd-435a-b220-fc3e0bc9765b",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "January 11, 2022\u2014KB5009543 (OS Builds 19042.1466, 19043.1466, and 19044.1466) - Microsoft Support"
+            },
+            {
+                "id": "14e204f8-d974-d58a-f610-c4084953305e",
+                "source": "https://support.microsoft.com/en-us/topic/december-14-2021-kb5008230-os-build-10240-19145-expired-b2a0c6e2-fc24-4242-aab7-4f97f95cbdaa",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "December 14, 2021\u2014KB5008230 (OS Build 10240.19145) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "e7769668-e06d-a1b8-aaa6-1cbfa4188c1a",
+                "source": "https://support.microsoft.com/en-us/topic/december-14-2021-kb5008212-os-builds-19041-1415-19042-1415-19043-1415-and-19044-1415-b46200db-74c3-450e-b200-51013957312a",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "December 14, 2021\u2014KB5008212 (OS Builds 19041.1415, 19042.1415, 19043.1415, and 19044.1415) - Microsoft Support"
+            },
+            {
+                "id": "4e55461f-1e24-407f-37ae-8e357f47afc2",
+                "source": "https://support.microsoft.com/en-us/topic/november-9-2021-kb5007207-os-build-10240-19119-expired-a4f38fc0-4824-43b4-a50f-2ac57963b25b",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "November 9, 2021\u2014KB5007207 (OS Build 10240.19119) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "a7d537a4-c695-f0b5-eefb-e02a6099c4b8",
+                "source": "https://support.microsoft.com/en-us/topic/november-9-2021-kb5007189-os-build-18363-1916-91b4647c-9979-4d84-8e64-efc8674e8c1f",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "November 9, 2021\u2014KB5007189 (OS Build 18363.1916) - Microsoft Support"
+            },
+            {
+                "id": "166186e0-d53f-01f5-1b53-4d3957281fc3",
+                "source": "https://support.microsoft.com/en-us/topic/november-9-2021-kb5007186-os-builds-19041-1348-19042-1348-and-19043-1348-033ee59c-e9b7-4eaf-8ee7-b3512bb1a0aa",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "November 9, 2021\u2014KB5007186 (OS Builds 19041.1348, 19042.1348, and 19043.1348) - Microsoft Support"
+            },
+            {
+                "id": "9f89b314-40dc-2578-8187-c6c70296b5ed",
+                "source": "https://support.microsoft.com/en-us/topic/october-12-2021-kb5006675-os-build-10240-19086-expired-3940d2b7-139d-4389-be73-1a5ab37a464e",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "October 12, 2021\u2014KB5006675 (OS Build 10240.19086) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "c682a882-e60a-4a75-a0f4-5b9230aa80ce",
+                "source": "https://support.microsoft.com/en-us/topic/october-12-2021-kb5006670-os-builds-19041-1288-19042-1288-and-19043-1288-8902fc49-af79-4b1a-99c4-f74ca886cd95",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "October 12, 2021\u2014KB5006670 (OS Builds 19041.1288, 19042.1288, and 19043.1288) - Microsoft Support"
+            },
+            {
+                "id": "cbf44f5b-e905-f03b-7b25-22f7fcb4bab9",
+                "source": "https://support.microsoft.com/en-us/topic/october-12-2021-kb5006667-os-build-18363-1854-65fdfe31-3790-4e10-ae8d-829754fe5d8f",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "October 12, 2021\u2014KB5006667 (OS Build 18363.1854) - Microsoft Support"
+            },
+            {
+                "id": "4bd82228-26ba-6b33-72ff-d8200a52bc83",
+                "source": "https://support.microsoft.com/en-us/topic/september-14-2021-kb5005569-os-build-10240-19060-expired-0de156d8-d616-49bb-ad8d-3cf352611ca4",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "September 14, 2021\u2014KB5005569 (OS Build 10240.19060) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "dc1fce5e-228d-a68e-9444-6478c3304f36",
+                "source": "https://support.microsoft.com/en-us/topic/september-14-2021-kb5005566-os-build-18363-1801-c2535eb5-9e8a-4127-a923-0c6a643bba1d",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "September 14, 2021\u2014KB5005566 (OS Build 18363.1801) - Microsoft Support"
+            },
+            {
+                "id": "43844378-989f-71cc-b30b-c297230abcef",
+                "source": "https://support.microsoft.com/en-us/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "September 14, 2021\u2014KB5005565 (OS Builds 19041.1237, 19042.1237, and 19043.1237) - Microsoft Support"
+            },
+            {
+                "id": "c0fef12d-c9fe-2382-7490-22f8bb70a5dd",
+                "source": "https://support.microsoft.com/en-us/topic/august-10-2021-kb5005040-os-build-10240-19022-expired-e8bbfa7a-1012-4e18-a2d7-8ae6a8acf8fb",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "August 10, 2021\u2014KB5005040 (OS Build 10240.19022) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "73dfaf07-b922-fecb-d9ac-c565301456cd",
+                "source": "https://support.microsoft.com/en-us/topic/august-10-2021-kb5005033-os-builds-19041-1165-19042-1165-and-19043-1165-b4c77d08-435a-4833-b9f7-e092372079a4",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "August 10, 2021\u2014KB5005033 (OS Builds 19041.1165, 19042.1165, and 19043.1165) - Microsoft Support"
+            },
+            {
+                "id": "5acbf727-0bb4-139b-cb81-a3cabc0c9671",
+                "source": "https://support.microsoft.com/en-us/topic/august-10-2021-kb5005031-os-build-18363-1734-8af726da-a39b-417d-a5fb-670c42d69e78",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "August 10, 2021\u2014KB5005031 (OS Build 18363.1734) - Microsoft Support"
+            },
+            {
+                "id": "9bdebf8c-f7b7-af6f-ab1b-336cccd2f6cc",
+                "source": "https://support.microsoft.com/en-us/topic/july-6-2021-kb5004950-os-build-10240-18969-out-of-band-expired-7f900b36-b3cb-4f5e-8eca-107cc0d91c50",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 6, 2021\u2014KB5004950 (OS Build 10240.18969) Out-of-band - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "af3871f7-2463-7fb3-d1bc-3d5c34e28915",
+                "source": "https://support.microsoft.com/en-us/topic/july-6-2021-kb5004946-os-build-18363-1646-out-of-band-18c5ffac-6015-4b3a-ba53-a73c3d3ed505",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 6, 2021\u2014KB5004946 (OS Build 18363.1646) Out-of-band - Microsoft Support"
+            },
+            {
+                "id": "eb31b2be-9a44-85e6-86b1-aa8d9a484272",
+                "source": "https://support.microsoft.com/en-us/topic/july-6-2021-kb5004945-os-builds-19041-1083-19042-1083-and-19043-1083-out-of-band-44b34928-0a71-4473-aa22-ecf3b83eed0e",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 6, 2021\u2014KB5004945 (OS Builds 19041.1083, 19042.1083, and 19043.1083) Out-of-band - Microsoft Support"
+            },
+            {
+                "id": "7ed5d703-21c6-d9cf-1f74-0fd59e8ee668",
+                "source": "https://support.microsoft.com/en-us/topic/july-13-2021-kb5004249-os-build-10240-19003-expired-bcd2edd4-76bb-4e33-8d30-e231057cb1d1",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 13, 2021\u2014KB5004249 (OS Build 10240.19003) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "094ceef0-2b0e-7e50-239e-7da474c2b946",
+                "source": "https://support.microsoft.com/en-us/topic/july-13-2021-kb5004245-os-build-18363-1679-fe157ce5-49c1-4146-b948-c5aef1f0293b",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 13, 2021\u2014KB5004245 (OS Build 18363.1679) - Microsoft Support"
+            },
+            {
+                "id": "4b9deb19-4e6f-4717-3bc9-52050c11e305",
+                "source": "https://support.microsoft.com/en-us/topic/july-13-2021-kb5004237-os-builds-19041-1110-19042-1110-and-19043-1110-ae798d3c-3de3-4c1f-b9d9-7391b71da889",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "July 13, 2021\u2014KB5004237 (OS Builds 19041.1110, 19042.1110, and 19043.1110) - Microsoft Support"
+            },
+            {
+                "id": "f27c279d-cf31-6b25-f5b4-42c164e33165",
+                "source": "https://support.microsoft.com/en-us/topic/june-8-2021-kb5003687-os-build-10240-18967-expired-890ab8f9-882b-4aca-9166-a5de6c60e987",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 8, 2021\u2014KB5003687 (OS Build 10240.18967) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "bb0074a4-45c8-a680-27d3-661488f53669",
+                "source": "https://support.microsoft.com/en-us/topic/june-8-2021-kb5003637-os-builds-19041-1052-19042-1052-and-19043-1052-fd782405-7736-478e-b8d0-b08f735f7e54",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 8, 2021\u2014KB5003637 (OS Builds 19041.1052, 19042.1052, and 19043.1052)\n - Microsoft Support"
+            },
+            {
+                "id": "f7ed339a-c550-b73a-b5eb-21553e7724d5",
+                "source": "https://support.microsoft.com/en-us/topic/june-8-2021-kb5003635-os-build-18363-1621-2cc248e5-ca5f-4f51-bce4-004d6863e4cd",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "June 8, 2021\u2014KB5003635 (OS Build 18363.1621) - Microsoft Support"
+            },
+            {
+                "id": "307dd279-e097-30b5-c3c7-524f6479e1c0",
+                "source": "https://support.microsoft.com/en-us/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "May 11, 2021\u2014KB5003173 (OS Builds 19041.985, 19042.985, and 19043.985) - Microsoft Support"
+            },
+            {
+                "id": "a778775f-cd87-a943-9402-aa37582463e0",
+                "source": "https://support.microsoft.com/en-us/topic/may-11-2021-kb5003172-os-build-10240-18932-expired-fae14719-b805-40ad-9b90-19b26a65c0b2",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "May 11, 2021\u2014KB5003172 (OS Build 10240.18932) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "fc34f2aa-8e59-a3c7-f72e-042d92af4066",
+                "source": "https://support.microsoft.com/en-us/topic/april-13-2021-kb5001330-os-builds-19041-928-and-19042-928-cead30cd-f284-4115-a42f-d67fec538490",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "April 13, 2021\u2014KB5001330 (OS Builds 19041.928 and 19042.928) - Microsoft Support"
+            },
+            {
+                "id": "aab3d9f7-c50e-be5f-c4de-504f3844d4e4",
+                "source": "https://support.microsoft.com/en-us/topic/february-11-2021-kb5001028-os-build-18363-1379-out-of-band-42c34ace-7ae8-4b66-bdf9-94a5a5589659",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "February 11, 2021\u2014KB5001028 (OS Build 18363.1379) Out-of-band\n - Microsoft Support"
+            },
+            {
+                "id": "baf25aa7-674e-23b8-1477-74aafeb1cc22",
+                "source": "https://support.microsoft.com/en-us/topic/march-9-2021-kb5000808-os-build-18363-1440-6989940a-252d-48f3-a2a7-a42bf19fa2c8",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "March 9, 2021\u2014KB5000808 (OS Build 18363.1440) - Microsoft Support"
+            },
+            {
+                "id": "5559e489-9dc4-ee63-29b6-97edbd78cc19",
+                "source": "https://support.microsoft.com/en-us/topic/march-9-2021-kb5000802-os-builds-19041-867-and-19042-867-63552d64-fe44-4132-8813-ef56d3626e14",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "March 9, 2021\u2014KB5000802 (OS Builds 19041.867 and 19042.867) - Microsoft Support"
+            },
+            {
+                "id": "4c90f85e-4b36-7dc9-4a6f-c2660193f853",
+                "source": "https://support.microsoft.com/en-us/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "February 9, 2021\u2014KB4601319  (OS Builds 19041.804 and 19042.804) - Microsoft Support"
+            },
+            {
+                "id": "b91c8b2f-ed99-07c4-b7d0-91f0893a57ce",
+                "source": "https://support.microsoft.com/en-us/topic/january-12-2021-kb4598242-os-builds-19041-746-and-19042-746-ab18a1a1-d572-598f-4d86-7137aad34056",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "January 12, 2021\u2014KB4598242 (OS Builds 19041.746 and 19042.746) - Microsoft Support"
+            },
+            {
+                "id": "7d87c63d-68f4-dda3-1941-50586a2436b3",
+                "source": "https://support.microsoft.com/en-us/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "Cellular settings in Windows - Microsoft Support"
+            },
+            {
+                "id": "fb73eb60-eb11-336d-1434-b7ccb05a2b4a",
+                "source": "https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b",
+                "collection": "windows_10",
+                "published": "2023-09-21",
+                "title": "Use Snipping Tool to capture screenshots - Microsoft Support"
+            },
+            {
+                "id": "4db2a445-f53c-7408-779a-dad0b699c78f",
+                "source": "https://support.microsoft.com/en-us/topic/march-8-2022-kb5011495-os-build-14393-5006-expired-fd1dddb5-7ec0-4d1c-9f19-2986cadc8eb9",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "March 8, 2022\u2014KB5011495 (OS Build 14393.5006) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "f5b68f6c-af72-56b5-d703-a31a4bb2af3e",
+                "source": "https://support.microsoft.com/en-us/topic/march-8-2022-kb5011485-os-build-18363-2158-ae8accde-7a32-4ca2-a888-54bb7e57fdde",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "March 8, 2022\u2014KB5011485 (OS Build 18363.2158) - Microsoft Support"
+            },
+            {
+                "id": "b500475b-5f7c-4ac3-4d6b-dd9cf123a5a6",
+                "source": "https://support.microsoft.com/en-us/topic/february-8-2022-kb5010359-os-build-14393-4946-expired-e47d743b-9026-4390-bca6-5ad4ddb40ca8",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "February 8, 2022\u2014KB5010359 (OS Build 14393.4946) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "5b05a7c6-1753-3ce6-8d45-c51c9aa3f891",
+                "source": "https://support.microsoft.com/en-us/topic/february-8-2022-kb5010345-os-build-18363-2094-38410b86-990b-4afa-a4bb-adbc35ed14dd",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "February 8, 2022\u2014KB5010345 (OS Build 18363.2094) - Microsoft Support"
+            },
+            {
+                "id": "039db312-2ab8-8eeb-8175-60adb154ce0b",
+                "source": "https://support.microsoft.com/en-us/topic/january-11-2022-kb5009546-os-build-14393-4886-expired-0c2cac57-13b6-42e6-b318-41ca32428f91",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "January 11, 2022\u2014KB5009546 (OS Build 14393.4886) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "7cd1185a-49ed-aad0-550e-f638dfeadbd1",
+                "source": "https://support.microsoft.com/en-us/topic/january-11-2022-kb5009545-os-build-18363-2037-585a5a21-b1a9-43e8-b720-90719d35615e",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "January 11, 2022\u2014KB5009545  (OS Build 18363.2037) - Microsoft Support"
+            },
+            {
+                "id": "711acdac-d07d-1b2d-1202-f07ded57efcc",
+                "source": "https://support.microsoft.com/en-us/topic/december-14-2021-kb5008207-os-build-14393-4825-expired-35421e45-96b3-4585-9faa-02576d813e7a",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "December 14, 2021\u2014KB5008207 (OS Build 14393.4825) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "13d8f3f7-cd91-9c39-0dd3-32a1951f542e",
+                "source": "https://support.microsoft.com/en-us/topic/december-14-2021-kb5008206-os-build-18363-1977-e54dfc3e-7d16-4d88-a4a3-59efbf0633f1",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "December 14, 2021\u2014KB5008206 (OS Build 18363.1977) - Microsoft Support"
+            },
+            {
+                "id": "b96e920e-58d8-66ce-6acd-55b87eb98375",
+                "source": "https://support.microsoft.com/en-us/topic/november-9-2021-kb5007192-os-build-14393-4770-expired-f534a33a-ed00-4bd2-8248-9424c53e9bde",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "November 9, 2021\u2014KB5007192 (OS Build 14393.4770) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "dc6a281a-81da-e656-1b0b-d3398b67146f",
+                "source": "https://support.microsoft.com/en-us/topic/october-12-2021-kb5006669-os-build-14393-4704-expired-bcc95546-0768-49ae-bec9-240cc59df384",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "October 12, 2021\u2014KB5006669 (OS Build 14393.4704) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "a3ed88d6-861d-e0e5-8962-315026afd8c6",
+                "source": "https://support.microsoft.com/en-us/topic/september-14-2021-kb5005573-os-build-14393-4651-expired-48853795-3857-4485-a2bf-f15b39464b41",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "September 14, 2021\u2014KB5005573 (OS Build 14393.4651) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "4185d812-67d6-8bf0-e031-ee397138ce54",
+                "source": "https://support.microsoft.com/en-us/topic/august-10-2021-kb5005043-os-build-14393-4583-expired-709d481e-b02a-4eb9-80d9-75c4b8170240",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "August 10, 2021\u2014KB5005043 (OS Build 14393.4583) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "e92cb4c4-8695-9278-cc24-e10e878890a0",
+                "source": "https://support.microsoft.com/en-us/topic/july-7-2021-kb5004948-os-build-14393-4470-out-of-band-expired-fb676642-a3fe-4304-a79c-9d651d2f6550",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "July 7, 2021\u2014KB5004948 (OS Build 14393.4470) Out-of-band - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "e581cd2f-4299-a7df-a0c5-180b88ffd5d7",
+                "source": "https://support.microsoft.com/en-us/topic/july-13-2021-kb5004238-os-build-14393-4530-expired-69c72ccc-299a-412a-b219-b78c2fd37021",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "July 13, 2021\u2014KB5004238 (OS Build 14393.4530) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "e896db88-9afc-10f6-dbb3-7f29e6f26b24",
+                "source": "https://support.microsoft.com/en-us/topic/may-11-2021-kb5003197-os-build-14393-4402-expired-672e4557-b496-4ec7-bf26-3268aaf16697",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "May 11, 2021\u2014KB5003197  (OS Build 14393.4402) - EXPIRED\n - Microsoft Support"
+            },
+            {
+                "id": "bf421678-046a-50a7-7f4f-9686ed33fee4",
+                "source": "https://support.microsoft.com/en-us/topic/april-13-2021-kb5001347-os-build-14393-4350-expired-ee0e6301-3428-4a14-8e67-d69c5b31c66a",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "April 13, 2021\u2014KB5001347 (OS Build 14393.4350) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "0411c817-7377-f4f2-4e3e-9de70cbed916",
+                "source": "https://support.microsoft.com/en-us/topic/march-9-2021-kb5000803-os-build-14393-4283-expired-711d10dd-adcb-490b-a640-aaa25009cfed",
+                "collection": "windows_10",
+                "published": "2023-09-20",
+                "title": "March 9, 2021\u2014KB5000803 (OS Build 14393.4283) - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "724230e6-6f8e-f887-bccb-3adf72a70125",
+                "source": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09",
+                "collection": "windows_10",
+                "published": "2023-09-15",
+                "title": "Delete cookies in Microsoft Edge - Microsoft Support"
+            },
+            {
+                "id": "485fcc6b-542e-5274-d2d2-ce711622b36a",
+                "source": "https://support.microsoft.com/en-us/windows/resolving-blue-screen-errors-in-windows-60b01860-58f2-be66-7516-5c45a66ae3c6",
+                "collection": "windows_10",
+                "published": "2023-09-15",
+                "title": "Resolving Blue Screen errors in Windows - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "27db04fe-6a0e-742a-cf92-e849385c3d57",
+                "source": "https://support.microsoft.com/en-us/account-billing/how-to-sign-in-to-a-microsoft-account-2ffedaca-6e1b-bc18-f28c-58539e1cb6d3",
+                "collection": "windows_11",
+                "published": "2023-09-22",
+                "title": "How to sign in to a Microsoft account - Microsoft Support"
+            },
+            {
+                "id": "a2c9987a-9f91-fa16-9d4b-f9d1f933ec72",
+                "source": "https://support.microsoft.com/en-us/windows/cellular-settings-in-windows-905568ff-7f31-3013-efc7-3f396ac92cd7",
+                "collection": "windows_11",
+                "published": "2023-09-21",
+                "title": "Cellular settings in Windows - Microsoft Support"
+            },
+            {
+                "id": "1b01c670-8596-4d2a-ee9d-18d58766c214",
+                "source": "https://support.microsoft.com/en-us/windows/passkeys-in-windows-301c8944-5ea2-452b-9886-97e4d2ef4422",
+                "collection": "windows_11",
+                "published": "2023-09-21",
+                "title": "Passkeys in Windows - Microsoft Support"
+            },
+            {
+                "id": "6e86467b-8b65-4e60-c3b8-74630004d78b",
+                "source": "https://support.microsoft.com/en-us/windows/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b",
+                "collection": "windows_11",
+                "published": "2023-09-21",
+                "title": "Use Snipping Tool to capture screenshots - Microsoft Support"
+            },
+            {
+                "id": "5c6ac794-d8c6-0bab-b051-a81bfcd8a651",
+                "source": "https://support.microsoft.com/en-us/windows/why-do-incompatible-drivers-and-services-prevent-using-kernel-mode-hardware-enforced-stack-protection-5657173d-a98d-437e-afb9-e8ee5ae4ca6f",
+                "collection": "windows_11",
+                "published": "2023-09-20",
+                "title": "Why do incompatible drivers and services prevent using Kernel-mode Hardware-enforced Stack Protection? - Microsoft Support"
+            },
+            {
+                "id": "db01b9eb-2b56-7fdc-e984-1d536f0be992",
+                "source": "https://support.microsoft.com/en-us/topic/april-25-2022-kb5012643-os-build-22000-652-preview-expired-43a75ee7-d857-4943-a2b9-f961538bd2b0",
+                "collection": "windows_11",
+                "published": "2023-09-19",
+                "title": "April 25, 2022\u2014KB5012643 (OS Build 22000.652) Preview - EXPIRED - Microsoft Support"
+            },
+            {
+                "id": "51cab179-20f4-ee2d-e01d-7ce28b8bc552",
+                "source": "https://support.microsoft.com/en-us/windows/microsoft-software-license-terms-microsoft-windows-subsystem-for-android-cf8dfb03-ba62-4daa-b7f3-e2cb18f968ad",
+                "collection": "windows_11",
+                "published": "2023-09-19",
+                "title": "Microsoft Software License Terms Microsoft Windows Subsystem for Android\u2122 - Microsoft Support"
+            },
+            {
+                "id": "403079ea-2176-ccaf-7622-38cf79118982",
+                "source": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Delete cookies in Microsoft Edge - Microsoft Support"
+            },
+            {
+                "id": "b8495f3c-90de-3e07-8875-2a26dc92353f",
+                "source": "https://support.microsoft.com/en-us/windows/resolving-blue-screen-errors-in-windows-60b01860-58f2-be66-7516-5c45a66ae3c6",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Resolving Blue Screen errors in Windows - Microsoft Support"
+            },
+            {
+                "id": "e5cf3874-f7e0-c032-0556-4d9d78926324",
+                "source": "https://support.microsoft.com/en-us/windows/search-photos-and-videos-by-location-in-windows-photos-27b3e790-05d6-4d86-8b69-7a0ffbf72d84",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Search photos and videos by location in Windows Photos - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

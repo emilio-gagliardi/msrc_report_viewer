@@ -6,7 +6,7 @@
     "report_month_end": "December",
     "report_year_end": "2023",
     "report_end_date": "2023_12_22",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,7 +14,8 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
         {
@@ -59,5 +60,149 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "81a81d3d-beb3-8f62-f3d6-9becb7d275c8",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#december-21-2023",
+                "collection": "security_update_notes",
+                "published": "2023-12-21",
+                "title": "December 21, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "ef9d9e97-0892-c168-785c-8586869b6be7",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1200221091-december-21-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-12-21",
+                "title": "Version 120.0.2210.91: December 21, 2023"
+            },
+            {
+                "id": "57be3be6-de42-a048-e09b-8808a4551235",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1200221089-december-20-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-12-20",
+                "title": "Version 120.0.2210.89: December 20, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "53e9484d-9e08-b36e-70b5-e6ba1eb4792d",
+                "source": "https://support.microsoft.com/en-us/windows/chapter-1-introducing-narrator-7fe8fd72-541f-4536-7658-bfc37ddaf9c6",
+                "collection": "windows_10",
+                "published": "2023-12-22",
+                "title": "Chapter 1: Introducing Narrator - Microsoft Support"
+            },
+            {
+                "id": "2071bd95-af56-6238-5ed8-040f5f51785a",
+                "source": "https://support.microsoft.com/en-us/account-billing/get-apps-from-microsoft-store-on-your-windows-pc-f69412b3-3e5c-9122-1e87-820bd718058a",
+                "collection": "windows_10",
+                "published": "2023-12-21",
+                "title": "Get apps from Microsoft Store on your Windows PC - Microsoft Support"
+            },
+            {
+                "id": "af17e624-d8f8-e842-734a-397a47b24d78",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-turn-on-spatial-sound-in-windows-10-ca2700a0-6519-448d-5434-56f499d59c96",
+                "collection": "windows_10",
+                "published": "2023-12-20",
+                "title": "How to turn on spatial sound in Windows 10 - Microsoft Support"
+            },
+            {
+                "id": "a883a823-174e-80f8-34fa-52e099da44e6",
+                "source": "https://support.microsoft.com/en-us/windows/fix-problems-with-game-bar-on-windows-74a718a1-2fbf-2ce3-5fbe-e959be352277",
+                "collection": "windows_10",
+                "published": "2023-12-20",
+                "title": "Fix problems with Game Bar on Windows - Microsoft Support"
+            },
+            {
+                "id": "135fa6bf-9536-d9ee-1dd3-2c0159c3c0e8",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-open-msconfig-in-windows-10-a9509199-ae06-ee0d-e351-254b43071034",
+                "collection": "windows_10",
+                "published": "2023-12-19",
+                "title": "How to open MSConfig in Windows 10 - Microsoft Support"
+            },
+            {
+                "id": "60057453-2516-3f38-d214-9d8fabd7015b",
+                "source": "https://support.microsoft.com/en-us/windows/which-version-of-directx-is-on-your-pc-3c688307-6c44-2ff5-9df7-d90d92bf5239",
+                "collection": "windows_10",
+                "published": "2023-12-19",
+                "title": "Which version of DirectX is on your PC? - Microsoft Support"
+            },
+            {
+                "id": "197da824-59fe-219c-c8f7-eee5d6d23488",
+                "source": "https://support.microsoft.com/en-us/account-billing/make-an-in-app-purchase-in-microsoft-store-1de1279a-be0e-6ad0-1d01-fbe59e90dc47",
+                "collection": "windows_10",
+                "published": "2023-12-19",
+                "title": "Make an in-app purchase in Microsoft Store - Microsoft Support"
+            },
+            {
+                "id": "fedc3049-3b66-eaea-bfa9-185f4223004c",
+                "source": "https://support.microsoft.com/en-us/windows/what-to-try-if-your-touchscreen-doesn-t-work-f159b366-b3ef-99ad-24a4-31a4c62ab46d",
+                "collection": "windows_10",
+                "published": "2023-12-18",
+                "title": "What to try if your touchscreen doesn't work - Microsoft Support"
+            },
+            {
+                "id": "6f1535ef-a951-9cdc-5dbc-5cb65676c5ea",
+                "source": "https://support.microsoft.com/en-us/windows/how-to-play-mp4-files-in-windows-10-e0c8d4ae-84bf-85d6-2e0c-686a80f54207",
+                "collection": "windows_10",
+                "published": "2023-12-18",
+                "title": "How to play MP4 files in Windows 10 - Microsoft Support"
+            },
+            {
+                "id": "a382d55a-b3ad-29c9-a56a-bfc5fbf49ada",
+                "source": "https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d",
+                "collection": "windows_10",
+                "published": "2023-12-16",
+                "title": "KB5025885: How to manage the Windows Boot Manager revocations for Secure Boot changes associated with CVE-2023-24932 - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "4cce449a-5234-4d97-ba53-d507856b1931",
+                "source": "https://support.microsoft.com/en-us/account-billing/get-apps-from-microsoft-store-on-your-windows-pc-f69412b3-3e5c-9122-1e87-820bd718058a",
+                "collection": "windows_11",
+                "published": "2023-12-21",
+                "title": "Get apps from Microsoft Store on your Windows PC - Microsoft Support"
+            },
+            {
+                "id": "4f48cd02-8778-ad99-7fd6-9284f709656a",
+                "source": "https://support.microsoft.com/en-us/windows/getting-ready-for-the-windows-11-upgrade-eb50813f-c7da-4cf8-89a3-6ba0d33b2773",
+                "collection": "windows_11",
+                "published": "2023-12-21",
+                "title": "Getting ready for the Windows 11 upgrade - Microsoft Support"
+            },
+            {
+                "id": "d2f65673-eb8f-ff2e-9188-fccaf5eae960",
+                "source": "https://support.microsoft.com/en-us/topic/december-4-2023-kb5032288-os-builds-22621-2792-and-22631-2792-preview-538fbe4a-e9de-4312-85cd-d870444341d0",
+                "collection": "windows_11",
+                "published": "2023-12-20",
+                "title": "December 4, 2023\u2014KB5032288 (OS Builds 22621.2792 and 22631.2792) Preview - Microsoft Support"
+            },
+            {
+                "id": "fe39b1b3-4b8b-c8d6-d52b-087a588b996f",
+                "source": "https://support.microsoft.com/en-us/windows/fix-problems-with-game-bar-on-windows-74a718a1-2fbf-2ce3-5fbe-e959be352277",
+                "collection": "windows_11",
+                "published": "2023-12-20",
+                "title": "Fix problems with Game Bar on Windows - Microsoft Support"
+            },
+            {
+                "id": "c6f881e8-e90a-2e6b-96de-56e7fd1bb5ee",
+                "source": "https://support.microsoft.com/en-us/account-billing/make-an-in-app-purchase-in-microsoft-store-1de1279a-be0e-6ad0-1d01-fbe59e90dc47",
+                "collection": "windows_11",
+                "published": "2023-12-19",
+                "title": "Make an in-app purchase in Microsoft Store - Microsoft Support"
+            },
+            {
+                "id": "34b959e9-985a-0291-9d5a-62f51274f325",
+                "source": "https://support.microsoft.com/en-us/topic/kb5025885-how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d",
+                "collection": "windows_11",
+                "published": "2023-12-16",
+                "title": "KB5025885: How to manage the Windows Boot Manager revocations for Secure Boot changes associated with CVE-2023-24932 - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

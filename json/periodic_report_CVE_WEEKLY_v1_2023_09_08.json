@@ -6,7 +6,7 @@
     "report_month_end": "September",
     "report_year_end": "2023",
     "report_end_date": "2023_09_08",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,83 +14,10 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
-        {
-            "id": "9db4c9f2-96f6-6d27-d026-626674e32c91",
-            "post_id": "CVE-2023-24872",
-            "published": "03-09-2023",
-            "revision": "1.1",
-            "post_type": "Information only",
-            "title": "CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-24872",
-            "summary": "Microsoft has updated the links to the Windows Update Catalog for the CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability. This is an informational change only. The vulnerability allows remote code execution and has a CVSS score of 8.8. An authenticated attacker with normal privileges could send a modified XPS file to a shared printer, resulting in remote code execution. The attack vector is network-based, with low attack complexity and no user interaction required. The impact includes high confidentiality, integrity, and availability. Microsoft has provided security updates for various Windows versions, including Windows 10, Windows 11, and Windows Server, addressing the vulnerability with build numbers 10.0.22621.1413, 10.0.19044.2728, 10.0.20348.1607, and others. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Support Lifecycle and the Windows Update Catalog.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.19805",
-                "10.0.19042.2728",
-                "10.0.22000.1696",
-                "10.0.22621.1413",
-                "10.0.19044.2728",
-                "10.0.19045.2728"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5023713",
-                    "kb_link": "https://support.microsoft.com/help/5023713#march-14-2023"
-                },
-                {
-                    "kb_id": "kb5023706",
-                    "kb_link": "https://support.microsoft.com/help/5023706#march-14-2023"
-                },
-                {
-                    "kb_id": "kb5023698",
-                    "kb_link": "https://support.microsoft.com/help/5023698#march-14-2023"
-                },
-                {
-                    "kb_id": "kb5023696",
-                    "kb_link": "https://support.microsoft.com/help/5023696#march-14-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5023713)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023713"
-                },
-                {
-                    "package_type": "Security Update (KB5023706)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023706"
-                },
-                {
-                    "package_type": "Security Update (KB5023698)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023698"
-                },
-                {
-                    "package_type": "Security Update (KB5023696)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023696"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 20H2 32-bit_systems",
-                "windows 10 20H2 x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "Microsoft PostScript and PCL6 Class Printer Driver",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
         {
             "id": "b0ffb799-ca0d-6d87-55c8-3229b0f9fff7",
             "post_id": "CVE-2023-4764",
@@ -234,6 +161,80 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
+        },
+        {
+            "id": "9db4c9f2-96f6-6d27-d026-626674e32c91",
+            "post_id": "CVE-2023-24872",
+            "published": "03-09-2023",
+            "revision": "1.1",
+            "post_type": "Information only",
+            "title": "CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-24872",
+            "summary": "Microsoft has updated the links to the Windows Update Catalog for the CVE-2023-24872 Microsoft PostScript and PCL6 Class Printer Driver Remote Code Execution Vulnerability. This is an informational change only. The vulnerability allows remote code execution and has a CVSS score of 8.8. An authenticated attacker with normal privileges could send a modified XPS file to a shared printer, resulting in remote code execution. The attack vector is network-based, with low attack complexity and no user interaction required. The impact includes high confidentiality, integrity, and availability. Microsoft has provided security updates for various Windows versions, including Windows 10, Windows 11, and Windows Server, addressing the vulnerability with build numbers 10.0.22621.1413, 10.0.19044.2728, 10.0.20348.1607, and others. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Support Lifecycle and the Windows Update Catalog.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.19805",
+                "10.0.19042.2728",
+                "10.0.22000.1696",
+                "10.0.22621.1413",
+                "10.0.19044.2728",
+                "10.0.19045.2728"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5023713",
+                    "kb_link": "https://support.microsoft.com/help/5023713#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023706",
+                    "kb_link": "https://support.microsoft.com/help/5023706#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023698",
+                    "kb_link": "https://support.microsoft.com/help/5023698#march-14-2023"
+                },
+                {
+                    "kb_id": "kb5023696",
+                    "kb_link": "https://support.microsoft.com/help/5023696#march-14-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5023713)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023713"
+                },
+                {
+                    "package_type": "Security Update (KB5023706)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023706"
+                },
+                {
+                    "package_type": "Security Update (KB5023698)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023698"
+                },
+                {
+                    "package_type": "Security Update (KB5023696)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5023696"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 20H2 32-bit_systems",
+                "windows 10 20H2 x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "Microsoft PostScript and PCL6 Class Printer Driver",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -263,5 +264,65 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "0a9c6c71-fa74-78c2-3834-baaee40dd433",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-7-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-07",
+                "title": "September 7, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "1fb22c0c-9dd1-1a88-f7a7-172720bce056",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1160193876-september-7-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-07",
+                "title": "Version 116.0.1938.76: September 7, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "205d63dd-ff0b-2853-6359-7e8d82e12a02",
+                "source": "https://support.microsoft.com/en-us/windows/join-the-windows-insider-program-and-manage-insider-settings-ef20bb3d-40f4-20cc-ba3c-a72c844b563c",
+                "collection": "windows_10",
+                "published": "2023-09-07",
+                "title": "Join the Windows Insider Program and manage Insider settings - Microsoft Support"
+            },
+            {
+                "id": "f65f352e-2742-a041-34a9-68efd2cd728f",
+                "source": "https://support.microsoft.com/en-us/windows/what-is-photos-legacy-61255007-a189-4a02-8193-6ba18e5f96d3",
+                "collection": "windows_10",
+                "published": "2023-09-04",
+                "title": "What is Photos Legacy? - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "8d0a621c-77c9-bbbd-3ad7-673f9d9104e9",
+                "source": "https://support.microsoft.com/en-us/windows/join-the-windows-insider-program-and-manage-insider-settings-ef20bb3d-40f4-20cc-ba3c-a72c844b563c",
+                "collection": "windows_11",
+                "published": "2023-09-07",
+                "title": "Join the Windows Insider Program and manage Insider settings - Microsoft Support"
+            },
+            {
+                "id": "f9b7ef29-84c7-86be-f6a7-9b2add771e14",
+                "source": "https://support.microsoft.com/en-us/topic/kb5028997-instructions-to-manually-resize-your-partition-to-install-the-winre-update-400faa27-9343-461c-ada9-24c8229763bf",
+                "collection": "windows_11",
+                "published": "2023-09-05",
+                "title": "KB5028997: Instructions to manually resize your partition to install the WinRE update - Microsoft Support"
+            },
+            {
+                "id": "38b82795-05b0-1c0d-383d-28d9ffd5a14e",
+                "source": "https://support.microsoft.com/en-us/windows/what-is-photos-legacy-61255007-a189-4a02-8193-6ba18e5f96d3",
+                "collection": "windows_11",
+                "published": "2023-09-04",
+                "title": "What is Photos Legacy? - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

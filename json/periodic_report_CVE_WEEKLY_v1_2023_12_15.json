@@ -6,7 +6,7 @@
     "report_month_end": "December",
     "report_year_end": "2023",
     "report_end_date": "2023_12_15",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,20 +14,22 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
         {
-            "id": "738168f3-a60e-7543-5676-747c4ca2cf4b",
-            "post_id": "CVE-2023-36696",
-            "published": "12-12-2023",
-            "revision": "1.0",
+            "id": "6f592506-96d8-8ac0-0ce5-a4976f565f99",
+            "post_id": "CVE-2023-35641",
+            "published": "13-12-2023",
+            "revision": "1.1",
             "post_type": "Solution provided",
-            "title": "CVE-2023-36696 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36696",
-            "summary": "Windows Cloud Files Mini Filter Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-36696. The vulnerability has a base score of 7.8 and a temporal score of 6.8, indicating a high severity. It is caused by a flaw in the Windows Cloud Files Mini Filter Driver, allowing an attacker to gain SYSTEM privileges. The attack vector is local, with low attack complexity and no user interaction required. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server 2019/2022, addressing the vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Security Update Guide.",
+            "title": "CVE-2023-35641 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35641",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, assigned as CVE-2023-35641. The vulnerability allows an attacker to execute arbitrary code without user interaction, with a CVSS score of 8.8/7.7. The attack vector is adjacent, limiting exploitation to systems connected to the same network segment. Exploitation requires sending a maliciously crafted DHCP message to a server running ICS. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server and Windows 10/11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The availability of an official fix indicates the urgency of applying the updates to prevent potential remote code execution attacks. The post_type 'Solution provided' signifies the availability of actionable remedies, emphasizing the importance of prompt patch management to secure affected systems.",
             "related_posts": "[]",
             "build_number_str": [
+                "10.0.10240.20345",
                 "10.0.22000.2652",
                 "10.0.19045.3803",
                 "10.0.22631.2861",
@@ -35,6 +37,10 @@
                 "10.0.22621.2861"
             ],
             "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
                 {
                     "kb_id": "kb5033375",
                     "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
@@ -50,6 +56,10 @@
             ],
             "package_pairs": [
                 {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
                     "package_type": "Security Update (KB5033375)",
                     "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
                 },
@@ -63,6 +73,8 @@
                 }
             ],
             "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
                 "windows 10 21H2 32-bit_systems",
                 "windows 10 21H2 x64-based_systems",
                 "windows 10 22H2 32-bit_systems",
@@ -116,992 +128,14 @@
             "pm_tools": []
         },
         {
-            "id": "b23cd5cd-ed03-6526-8685-1a4c4e38dec1",
-            "post_id": "CVE-2023-36011",
+            "id": "8b4ca313-2515-0934-0929-c49e9ed56d7b",
+            "post_id": "CVE-2023-20588",
             "published": "12-12-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-36011 Win32k Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36011",
-            "summary": "A Win32k Elevation of Privilege Vulnerability, identified as CVE-2023-36011, has been reported by Microsoft with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, potentially leading to unauthorized access and control over affected systems. The attack vector is local, with low complexity and no user interaction required, making it easier for an attacker to exploit. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server, Windows 10, Windows 11, and Windows Server 2022. System administrators are strongly advised to apply the relevant security updates to mitigate the risk of exploitation and protect their systems from potential unauthorized access and privilege escalation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "3ace2626-f40c-276f-0371-cb85ece0a855",
-            "post_id": "CVE-2023-36006",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36006 Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36006",
-            "summary": "Microsoft WDAC OLE DB provider for SQL Server is affected by a remote code execution vulnerability, identified as CVE-2023-36006, with a CVSS score of 8.8/7.7. The vulnerability allows an attacker to execute arbitrary code remotely by tricking an authenticated user into connecting to a malicious SQL server via OLEDB, resulting in the server receiving a malicious networking packet. This impacts various Windows Server and Windows client versions. Microsoft has provided a solution by releasing security updates for the affected systems. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and specific build numbers, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "8cd51182-1db7-cfd5-a277-edf64fab0c10",
-            "post_id": "CVE-2023-36005",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36005 Windows Telephony Server Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36005",
-            "summary": "Windows Telephony Server is affected by an Elevation of Privilege vulnerability, identified as CVE-2023-36005, with a CVSS score of 7.5. The vulnerability allows an attacker to execute code in the security context of the 'NT AUTHORITY\\Network Service' account. It has a high attack complexity, low privileges required, and can be exploited without user interaction. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided security updates for various affected Windows Server and Windows client versions, including Windows Server 2008, 2012, 2016, and Windows 10, to address this vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to determine the support lifecycle for the software, refer to the Microsoft Support Lifecycle page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "25fba2f1-89c0-19a7-1921-bc8d4982f700",
-            "post_id": "CVE-2023-36004",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36004 Windows DPAPI (Data Protection Application Programming Interface) Spoofing Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36004",
-            "summary": "Windows DPAPI (Data Protection Application Programming Interface) Spoofing Vulnerability, identified as CVE-2023-36004, has been classified as 'Important' with a CVSS score of 7.5. The vulnerability requires a high attack complexity and user interaction, but no privileges are required. To exploit it, an attacker would need to launch a man-in-the-middle (MiTM) attack against the traffic passing between a domain controller and the target machine. This could lead to a total loss of confidentiality, integrity, and availability. Microsoft has provided a solution by releasing security updates for affected Windows Server and Windows client versions. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. For more information and specific build numbers, refer to the Microsoft Security Update Guide at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36004.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "3dbecfe6-60c2-11a2-d3a2-537fdaab04a4",
-            "post_id": "CVE-2023-36003",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36003 XAML Diagnostics Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36003",
-            "summary": "A critical elevation of privilege vulnerability, CVE-2023-36003, affects XAML Diagnostics in various Windows versions. The vulnerability allows an attacker with low privileges to gain SYSTEM privileges by injecting a malicious file and convincing a user to execute a UWP application. The attack vector is local, requiring user interaction, and has a high attack complexity. Successful exploitation results in a total loss of confidentiality, integrity, and availability. Microsoft has provided a security update for affected Windows versions, including Windows 10, 11, and Server editions. System administrators are advised to apply the security update to mitigate the risk of exploitation. The CVSS base score for this vulnerability is 6.7, and a complete vendor solution is available. For more information, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "e364869b-ee64-c303-8c91-e8c778c6376c",
-            "post_id": "CVE-2023-35644",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35644 Windows Sysmain Service Elevation of Privilege",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35644",
-            "summary": "Windows Sysmain Service is affected by an Elevation of Privilege vulnerability, identified as CVE-2023-35644, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, impacting Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, and Windows 10 Version 1809. The attack complexity is low, and no user interaction is required. Microsoft has released security updates for the affected systems, providing a complete vendor solution to mitigate the risk. System administrators are advised to apply the relevant security updates to address this vulnerability and protect their systems from potential exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "be8d33d8-b089-d7a5-3532-5f7602b13272",
-            "post_id": "CVE-2023-35642",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35642 Internet Connection Sharing (ICS) Denial of Service Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35642",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Denial of Service (DoS) vulnerability, assigned as CVE-2023-35642, with a CVSS score of 6.5/5.7. The vulnerability allows an attacker to cause a total loss of availability on impacted systems without requiring user interaction. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. Microsoft has provided an official fix for this vulnerability through security updates for various Windows Server and Windows client versions, including Windows 10 and Windows 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The exploit code maturity is unproven, and the remediation level is an official fix, indicating the availability of a complete vendor solution. The attack complexity is low, and the attacker does not require any privileges or user interaction to exploit the vulnerability. For more information, refer to the Microsoft Security Update Guide for specific build numbers and update details.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "e0e2b3f9-2e55-c665-182d-9aef8d8da900",
-            "post_id": "CVE-2023-35641",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35641 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35641",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35641. The vulnerability allows an attacker to send a maliciously crafted DHCP message to a server running the ICS service, leading to remote code execution. The attack vector is adjacent, limiting the attack to systems connected to the same network segment as the attacker. Microsoft has provided a solution by releasing security updates for various affected products, including Windows Server and Windows 10/11 versions. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. Exploitation of this vulnerability requires that ICS is enabled, and there are no mitigating factors beyond this. The availability, integrity, and confidentiality of impacted components are rated as high, emphasizing the severity of the vulnerability. The temporal score metrics indicate that an official fix is available, reducing the urgency for interim remediation. For more information on affected products and specific build numbers for the security updates, refer to the Microsoft Security Updates page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "35c9e0b3-03a6-fcf2-4a65-641acbd59f59",
-            "post_id": "CVE-2023-35639",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35639 Microsoft ODBC Driver Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35639",
-            "summary": "Microsoft ODBC Driver is affected by a Remote Code Execution vulnerability, identified as CVE-2023-35639, with a CVSS score of 8.8. The vulnerability allows an attacker to execute arbitrary code remotely on the client by tricking an authenticated user into connecting to a malicious SQL server via OLEDB. This requires user interaction and has a low attack complexity. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided a complete vendor solution, and security updates are available for various Windows Server and Windows client versions. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "70027a0b-c7db-df0a-8ab3-66dec2607d57",
-            "post_id": "CVE-2023-35635",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35635 Windows Kernel Denial of Service Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35635",
-            "summary": "Windows Kernel is affected by a Denial of Service (DoS) vulnerability, identified as CVE-2023-35635, with a base score of 5.5 and a temporal score of 4.8. The vulnerability could be exploited if an authenticated user opens a specially crafted file locally or on a network share, causing a crash of the operating system. The attack vector is local, with low attack complexity and no privileges required. User interaction is necessary for successful exploitation. The impact is a total loss of availability, allowing the attacker to fully deny access to resources in the impacted component. Microsoft has provided a security update for Windows 11 Version 23H2 and 22H2 for x64-based and ARM64-based systems, with build numbers 10.0.22631.2861 and 10.0.22621.2861, respectively. System administrators are advised to apply the security update to mitigate the risk of exploitation. For further details, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22631.2861",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                }
-            ],
-            "core_products": [
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "Windows Kernel",
-            "symptoms": "The vulnerability allows an attacker to cause a total loss of availability in the Windows Kernel, resulting in the attacker being able to fully deny access to resources.",
-            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their systems with the latest patch to mitigate this vulnerability.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "0c17402e-9f8d-299f-3155-e8ad51a70924",
-            "post_id": "CVE-2023-35634",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35634 Windows Bluetooth Driver Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35634",
-            "summary": "Windows Bluetooth Driver is affected by a Remote Code Execution vulnerability (CVE-2023-35634) with a CVSS score of 8.0/7.0. The attack vector is adjacent, requiring the attacker to be within proximity to the target system to send and receive radio transmissions. Exploiting this vulnerability does not require user interaction and can lead to total loss of confidentiality, integrity, and availability. Microsoft has released security updates (e.g., 5033375) for Windows 11 versions 23H2, 22H2, and 21H2, addressing the Remote Code Execution vulnerability. System administrators are advised to apply the provided security updates to mitigate the risk of exploitation. The attacker could exploit this vulnerability by programmatically running certain functions that could lead to remote code execution on the Bluetooth component. Microsoft acknowledges the efforts of the security community and provides detailed information on the Microsoft Support Lifecycle for software.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22631.2861",
-                "10.0.22621.2861",
-                "10.0.22000.2652"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "Windows Bluetooth Driver",
-            "symptoms": "The vulnerability allows an attacker to execute arbitrary code remotely through the Windows Bluetooth Driver.",
-            "fixes": "Microsoft has released a security update to address this vulnerability. Users are advised to apply the update as soon as possible to protect their systems from potential attacks.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "179d2e08-655b-be56-e948-ddeefc617cf4",
-            "post_id": "CVE-2023-35633",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35633 Windows Kernel Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35633",
-            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-35633, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It has a CVSS base score of 7.8 and a temporal score of 6.8. The attack vector is local, with low attack complexity and low privileges required. The vulnerability can be exploited without user interaction and has a high impact on confidentiality, integrity, and availability. Microsoft has provided an official fix for this vulnerability. Affected products include various Windows Server versions and Windows 10 for both x64-based and 32-bit systems. System administrators are advised to apply the corresponding security updates, such as KB5033433, KB5033424, KB5033420, KB5033429, KB5033422, KB5033427, and KB5033379, to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems"
-            ],
-            "products": "Windows Kernel",
-            "symptoms": "The vulnerability can be exploited locally, without user interaction, leading to information disclosure.",
-            "fixes": "Microsoft has released an official fix to address this vulnerability. Users are advised to apply the security update immediately to protect their systems.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "2863bbdd-355d-a6dd-a15e-5b3f6c16dead",
-            "post_id": "CVE-2023-35632",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35632 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35632",
-            "summary": "Windows Ancillary Function Driver for WinSock is affected by an elevation of privilege vulnerability, identified as CVE-2023-35632 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It is caused by a flaw in the Windows Ancillary Function Driver for WinSock. An attacker could exploit this vulnerability without any user interaction, making it a serious threat. Microsoft has provided a complete vendor solution in the form of security updates for various Windows versions, including Windows Server 2008, 2012, 2016, and 2019, as well as Windows 10 versions 1607, 1809, 21H2, and 22H2. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.19044.3803",
-                "10.0.19045.3803"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "543cd90f-dd43-a169-1b9e-a304ebc496c5",
-            "post_id": "CVE-2023-35631",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35631 Win32k Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35631",
-            "summary": "A Win32k Elevation of Privilege Vulnerability, identified as CVE-2023-35631, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It is characterized by a low attack complexity and requires low privileges, with no user interaction needed. The impact includes high confidentiality, integrity, and availability. Microsoft has released security updates for various Windows versions, including Windows Server 2022, Windows 11 versions 23H2, 22H2, and 21H2 for both x64-based and ARM64-based systems. The official fix is available through these security updates with build numbers 10.0.25398.584, 10.0.22631.2861, 10.0.22621.2861, and 10.0.22000.2652. System administrators are advised to apply these updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22631.2861",
-                "10.0.22621.2861",
-                "10.0.22000.2652"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "62003da4-98eb-9728-7fdf-53b44a513a33",
-            "post_id": "CVE-2023-35630",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35630 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35630",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35630. The vulnerability allows an attacker to execute arbitrary code without requiring user interaction, posing a severe risk to confidentiality, integrity, and availability. The attack vector is limited to systems connected to the same network segment as the attacker, and successful exploitation involves modifying an option->length field in a DHCPv6 DHCPV6_MESSAGE_INFORMATION_REQUEST input message. Microsoft has provided a complete vendor solution, and security updates are available for various affected products including Windows Server 2008, 2012, 2016, and 2022, as well as Windows 10 and 11 versions. System administrators are strongly advised to apply the provided security updates to mitigate the risk of exploitation and protect the affected systems from potential remote code execution attacks.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345",
-                "10.0.22000.2652",
-                "10.0.19045.3803",
-                "10.0.22631.2861",
-                "10.0.19041.3803",
-                "10.0.22621.2861"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033375",
-                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033372",
-                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
-                },
-                {
-                    "kb_id": "kb5033369",
-                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                },
-                {
-                    "package_type": "Security Update (KB5033375)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
-                },
-                {
-                    "package_type": "Security Update (KB5033372)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
-                },
-                {
-                    "package_type": "Security Update (KB5033369)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems",
-                "windows 11 23H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "dedf87f5-8124-e2b7-99c5-29ec955e5b9c",
-            "post_id": "CVE-2023-35629",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35629 Microsoft USBHUB 3.0 Device Driver Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35629",
-            "summary": "Microsoft USBHUB 3.0 Device Driver is affected by a remote code execution vulnerability, identified as CVE-2023-35629, with a CVSS score of 6.8/5.9. The vulnerability allows an attacker to execute arbitrary code without requiring user interaction or privileges. It impacts various Windows Server versions and Windows 10 for both 32-bit and 64-bit systems. The attack vector is physical, with low attack complexity and no privileges required. Microsoft has provided an official fix for this vulnerability through security updates for the affected Windows versions. System administrators are advised to apply the provided security updates to mitigate the risk of remote code execution. For more information and to download the necessary updates, refer to the Microsoft Update Guide page for CVE-2023-35629.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.10240.20345"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5033379",
-                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5033379)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "022c448c-2082-2b86-8eb4-ce287272b325",
-            "post_id": "CVE-2023-35628",
-            "published": "12-12-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35628 Windows MSHTML Platform Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35628",
-            "summary": "Windows MSHTML Platform is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35628. The vulnerability allows an attacker to execute remote code on the victim's machine by sending a specially crafted email or convincing the user to click a malicious link. Successful exploitation relies on complex memory shaping techniques. The impact includes total loss of confidentiality, integrity, and availability. Microsoft has provided a complete vendor solution, and security updates are available for various Windows versions including Windows Server 2008, 2012, 2016, 2019, 2022, Windows 10, and Windows 11. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For further details and specific build numbers, refer to the Microsoft Support Lifecycle page.",
+            "title": "CVE-2023-20588 AMD: CVE-2023-20588 AMD Speculative Leaks Security Notice",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-20588",
+            "summary": "AMD processors are affected by a security vulnerability, CVE-2023-20588, leading to information disclosure. The vulnerability impacts certain processor models offered by AMD and requires a Windows update for mitigation. Microsoft has released security updates for various Windows versions to enable the mitigation and provide protection against the vulnerability. The affected products include Windows Server 2008, 2012, 2016, and 2022, as well as Windows 10 and 11 versions. The severity of the vulnerability is rated as Important. System administrators are advised to apply the relevant security updates to protect their systems from potential exploitation. No specific workaround or mitigation beyond the provided security updates is mentioned in the post.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.10240.20345",
@@ -1240,14 +274,14 @@
             "pm_tools": []
         },
         {
-            "id": "8b4ca313-2515-0934-0929-c49e9ed56d7b",
-            "post_id": "CVE-2023-20588",
+            "id": "022c448c-2082-2b86-8eb4-ce287272b325",
+            "post_id": "CVE-2023-35628",
             "published": "12-12-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-20588 AMD: CVE-2023-20588 AMD Speculative Leaks Security Notice",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-20588",
-            "summary": "AMD processors are affected by a security vulnerability, CVE-2023-20588, leading to information disclosure. The vulnerability impacts certain processor models offered by AMD and requires a Windows update for mitigation. Microsoft has released security updates for various Windows versions to enable the mitigation and provide protection against the vulnerability. The affected products include Windows Server 2008, 2012, 2016, and 2022, as well as Windows 10 and 11 versions. The severity of the vulnerability is rated as Important. System administrators are advised to apply the relevant security updates to protect their systems from potential exploitation. No specific workaround or mitigation beyond the provided security updates is mentioned in the post.",
+            "title": "CVE-2023-35628 Windows MSHTML Platform Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35628",
+            "summary": "Windows MSHTML Platform is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35628. The vulnerability allows an attacker to execute remote code on the victim's machine by sending a specially crafted email or convincing the user to click a malicious link. Successful exploitation relies on complex memory shaping techniques. The impact includes total loss of confidentiality, integrity, and availability. Microsoft has provided a complete vendor solution, and security updates are available for various Windows versions including Windows Server 2008, 2012, 2016, 2019, 2022, Windows 10, and Windows 11. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For further details and specific build numbers, refer to the Microsoft Support Lifecycle page.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.10240.20345",
@@ -1313,14 +347,51 @@
             "pm_tools": []
         },
         {
-            "id": "6f592506-96d8-8ac0-0ce5-a4976f565f99",
-            "post_id": "CVE-2023-35641",
-            "published": "13-12-2023",
-            "revision": "1.1",
+            "id": "dedf87f5-8124-e2b7-99c5-29ec955e5b9c",
+            "post_id": "CVE-2023-35629",
+            "published": "12-12-2023",
+            "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-35641 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35641",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, assigned as CVE-2023-35641. The vulnerability allows an attacker to execute arbitrary code without user interaction, with a CVSS score of 8.8/7.7. The attack vector is adjacent, limiting exploitation to systems connected to the same network segment. Exploitation requires sending a maliciously crafted DHCP message to a server running ICS. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server and Windows 10/11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The availability of an official fix indicates the urgency of applying the updates to prevent potential remote code execution attacks. The post_type 'Solution provided' signifies the availability of actionable remedies, emphasizing the importance of prompt patch management to secure affected systems.",
+            "title": "CVE-2023-35629 Microsoft USBHUB 3.0 Device Driver Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35629",
+            "summary": "Microsoft USBHUB 3.0 Device Driver is affected by a remote code execution vulnerability, identified as CVE-2023-35629, with a CVSS score of 6.8/5.9. The vulnerability allows an attacker to execute arbitrary code without requiring user interaction or privileges. It impacts various Windows Server versions and Windows 10 for both 32-bit and 64-bit systems. The attack vector is physical, with low attack complexity and no privileges required. Microsoft has provided an official fix for this vulnerability through security updates for the affected Windows versions. System administrators are advised to apply the provided security updates to mitigate the risk of remote code execution. For more information and to download the necessary updates, refer to the Microsoft Update Guide page for CVE-2023-35629.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "62003da4-98eb-9728-7fdf-53b44a513a33",
+            "post_id": "CVE-2023-35630",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35630 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35630",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35630. The vulnerability allows an attacker to execute arbitrary code without requiring user interaction, posing a severe risk to confidentiality, integrity, and availability. The attack vector is limited to systems connected to the same network segment as the attacker, and successful exploitation involves modifying an option->length field in a DHCPv6 DHCPV6_MESSAGE_INFORMATION_REQUEST input message. Microsoft has provided a complete vendor solution, and security updates are available for various affected products including Windows Server 2008, 2012, 2016, and 2022, as well as Windows 10 and 11 versions. System administrators are strongly advised to apply the provided security updates to mitigate the risk of exploitation and protect the affected systems from potential remote code execution attacks.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.10240.20345",
@@ -1380,6 +451,936 @@
             "products": "",
             "symptoms": "",
             "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "543cd90f-dd43-a169-1b9e-a304ebc496c5",
+            "post_id": "CVE-2023-35631",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35631 Win32k Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35631",
+            "summary": "A Win32k Elevation of Privilege Vulnerability, identified as CVE-2023-35631, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It is characterized by a low attack complexity and requires low privileges, with no user interaction needed. The impact includes high confidentiality, integrity, and availability. Microsoft has released security updates for various Windows versions, including Windows Server 2022, Windows 11 versions 23H2, 22H2, and 21H2 for both x64-based and ARM64-based systems. The official fix is available through these security updates with build numbers 10.0.25398.584, 10.0.22631.2861, 10.0.22621.2861, and 10.0.22000.2652. System administrators are advised to apply these updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2861",
+                "10.0.22621.2861",
+                "10.0.22000.2652"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "2863bbdd-355d-a6dd-a15e-5b3f6c16dead",
+            "post_id": "CVE-2023-35632",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35632 Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35632",
+            "summary": "Windows Ancillary Function Driver for WinSock is affected by an elevation of privilege vulnerability, identified as CVE-2023-35632 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It is caused by a flaw in the Windows Ancillary Function Driver for WinSock. An attacker could exploit this vulnerability without any user interaction, making it a serious threat. Microsoft has provided a complete vendor solution in the form of security updates for various Windows versions, including Windows Server 2008, 2012, 2016, and 2019, as well as Windows 10 versions 1607, 1809, 21H2, and 22H2. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.19044.3803",
+                "10.0.19045.3803"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "179d2e08-655b-be56-e948-ddeefc617cf4",
+            "post_id": "CVE-2023-35633",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35633 Windows Kernel Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35633",
+            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-35633, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It has a CVSS base score of 7.8 and a temporal score of 6.8. The attack vector is local, with low attack complexity and low privileges required. The vulnerability can be exploited without user interaction and has a high impact on confidentiality, integrity, and availability. Microsoft has provided an official fix for this vulnerability. Affected products include various Windows Server versions and Windows 10 for both x64-based and 32-bit systems. System administrators are advised to apply the corresponding security updates, such as KB5033433, KB5033424, KB5033420, KB5033429, KB5033422, KB5033427, and KB5033379, to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems"
+            ],
+            "products": "Windows Kernel",
+            "symptoms": "The vulnerability can be exploited locally, without user interaction, leading to information disclosure.",
+            "fixes": "Microsoft has released an official fix to address this vulnerability. Users are advised to apply the security update immediately to protect their systems.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0c17402e-9f8d-299f-3155-e8ad51a70924",
+            "post_id": "CVE-2023-35634",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35634 Windows Bluetooth Driver Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35634",
+            "summary": "Windows Bluetooth Driver is affected by a Remote Code Execution vulnerability (CVE-2023-35634) with a CVSS score of 8.0/7.0. The attack vector is adjacent, requiring the attacker to be within proximity to the target system to send and receive radio transmissions. Exploiting this vulnerability does not require user interaction and can lead to total loss of confidentiality, integrity, and availability. Microsoft has released security updates (e.g., 5033375) for Windows 11 versions 23H2, 22H2, and 21H2, addressing the Remote Code Execution vulnerability. System administrators are advised to apply the provided security updates to mitigate the risk of exploitation. The attacker could exploit this vulnerability by programmatically running certain functions that could lead to remote code execution on the Bluetooth component. Microsoft acknowledges the efforts of the security community and provides detailed information on the Microsoft Support Lifecycle for software.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2861",
+                "10.0.22621.2861",
+                "10.0.22000.2652"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Windows Bluetooth Driver",
+            "symptoms": "The vulnerability allows an attacker to execute arbitrary code remotely through the Windows Bluetooth Driver.",
+            "fixes": "Microsoft has released a security update to address this vulnerability. Users are advised to apply the update as soon as possible to protect their systems from potential attacks.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "738168f3-a60e-7543-5676-747c4ca2cf4b",
+            "post_id": "CVE-2023-36696",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36696 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36696",
+            "summary": "Windows Cloud Files Mini Filter Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-36696. The vulnerability has a base score of 7.8 and a temporal score of 6.8, indicating a high severity. It is caused by a flaw in the Windows Cloud Files Mini Filter Driver, allowing an attacker to gain SYSTEM privileges. The attack vector is local, with low attack complexity and no user interaction required. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server 2019/2022, addressing the vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "35c9e0b3-03a6-fcf2-4a65-641acbd59f59",
+            "post_id": "CVE-2023-35639",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35639 Microsoft ODBC Driver Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35639",
+            "summary": "Microsoft ODBC Driver is affected by a Remote Code Execution vulnerability, identified as CVE-2023-35639, with a CVSS score of 8.8. The vulnerability allows an attacker to execute arbitrary code remotely on the client by tricking an authenticated user into connecting to a malicious SQL server via OLEDB. This requires user interaction and has a low attack complexity. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided a complete vendor solution, and security updates are available for various Windows Server and Windows client versions. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e0e2b3f9-2e55-c665-182d-9aef8d8da900",
+            "post_id": "CVE-2023-35641",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35641 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35641",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, identified as CVE-2023-35641. The vulnerability allows an attacker to send a maliciously crafted DHCP message to a server running the ICS service, leading to remote code execution. The attack vector is adjacent, limiting the attack to systems connected to the same network segment as the attacker. Microsoft has provided a solution by releasing security updates for various affected products, including Windows Server and Windows 10/11 versions. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. Exploitation of this vulnerability requires that ICS is enabled, and there are no mitigating factors beyond this. The availability, integrity, and confidentiality of impacted components are rated as high, emphasizing the severity of the vulnerability. The temporal score metrics indicate that an official fix is available, reducing the urgency for interim remediation. For more information on affected products and specific build numbers for the security updates, refer to the Microsoft Security Updates page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "be8d33d8-b089-d7a5-3532-5f7602b13272",
+            "post_id": "CVE-2023-35642",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35642 Internet Connection Sharing (ICS) Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35642",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Denial of Service (DoS) vulnerability, assigned as CVE-2023-35642, with a CVSS score of 6.5/5.7. The vulnerability allows an attacker to cause a total loss of availability on impacted systems without requiring user interaction. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. Microsoft has provided an official fix for this vulnerability through security updates for various Windows Server and Windows client versions, including Windows 10 and Windows 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The exploit code maturity is unproven, and the remediation level is an official fix, indicating the availability of a complete vendor solution. The attack complexity is low, and the attacker does not require any privileges or user interaction to exploit the vulnerability. For more information, refer to the Microsoft Security Update Guide for specific build numbers and update details.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "e364869b-ee64-c303-8c91-e8c778c6376c",
+            "post_id": "CVE-2023-35644",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35644 Windows Sysmain Service Elevation of Privilege",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35644",
+            "summary": "Windows Sysmain Service is affected by an Elevation of Privilege vulnerability, identified as CVE-2023-35644, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, impacting Windows Server 2022, Windows 11, Windows 10, Windows Server 2019, and Windows 10 Version 1809. The attack complexity is low, and no user interaction is required. Microsoft has released security updates for the affected systems, providing a complete vendor solution to mitigate the risk. System administrators are advised to apply the relevant security updates to address this vulnerability and protect their systems from potential exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "3dbecfe6-60c2-11a2-d3a2-537fdaab04a4",
+            "post_id": "CVE-2023-36003",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36003 XAML Diagnostics Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36003",
+            "summary": "A critical elevation of privilege vulnerability, CVE-2023-36003, affects XAML Diagnostics in various Windows versions. The vulnerability allows an attacker with low privileges to gain SYSTEM privileges by injecting a malicious file and convincing a user to execute a UWP application. The attack vector is local, requiring user interaction, and has a high attack complexity. Successful exploitation results in a total loss of confidentiality, integrity, and availability. Microsoft has provided a security update for affected Windows versions, including Windows 10, 11, and Server editions. System administrators are advised to apply the security update to mitigate the risk of exploitation. The CVSS base score for this vulnerability is 6.7, and a complete vendor solution is available. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "25fba2f1-89c0-19a7-1921-bc8d4982f700",
+            "post_id": "CVE-2023-36004",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36004 Windows DPAPI (Data Protection Application Programming Interface) Spoofing Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36004",
+            "summary": "Windows DPAPI (Data Protection Application Programming Interface) Spoofing Vulnerability, identified as CVE-2023-36004, has been classified as 'Important' with a CVSS score of 7.5. The vulnerability requires a high attack complexity and user interaction, but no privileges are required. To exploit it, an attacker would need to launch a man-in-the-middle (MiTM) attack against the traffic passing between a domain controller and the target machine. This could lead to a total loss of confidentiality, integrity, and availability. Microsoft has provided a solution by releasing security updates for affected Windows Server and Windows client versions. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. For more information and specific build numbers, refer to the Microsoft Security Update Guide at https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36004.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "8cd51182-1db7-cfd5-a277-edf64fab0c10",
+            "post_id": "CVE-2023-36005",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36005 Windows Telephony Server Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36005",
+            "summary": "Windows Telephony Server is affected by an Elevation of Privilege vulnerability, identified as CVE-2023-36005, with a CVSS score of 7.5. The vulnerability allows an attacker to execute code in the security context of the 'NT AUTHORITY\\Network Service' account. It has a high attack complexity, low privileges required, and can be exploited without user interaction. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided security updates for various affected Windows Server and Windows client versions, including Windows Server 2008, 2012, 2016, and Windows 10, to address this vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and to determine the support lifecycle for the software, refer to the Microsoft Support Lifecycle page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "3ace2626-f40c-276f-0371-cb85ece0a855",
+            "post_id": "CVE-2023-36006",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36006 Microsoft WDAC OLE DB provider for SQL Server Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36006",
+            "summary": "Microsoft WDAC OLE DB provider for SQL Server is affected by a remote code execution vulnerability, identified as CVE-2023-36006, with a CVSS score of 8.8/7.7. The vulnerability allows an attacker to execute arbitrary code remotely by tricking an authenticated user into connecting to a malicious SQL server via OLEDB, resulting in the server receiving a malicious networking packet. This impacts various Windows Server and Windows client versions. Microsoft has provided a solution by releasing security updates for the affected systems. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. For more information and specific build numbers, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "b23cd5cd-ed03-6526-8685-1a4c4e38dec1",
+            "post_id": "CVE-2023-36011",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36011 Win32k Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36011",
+            "summary": "A Win32k Elevation of Privilege Vulnerability, identified as CVE-2023-36011, has been reported by Microsoft with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, potentially leading to unauthorized access and control over affected systems. The attack vector is local, with low complexity and no user interaction required, making it easier for an attacker to exploit. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server, Windows 10, Windows 11, and Windows Server 2022. System administrators are strongly advised to apply the relevant security updates to mitigate the risk of exploitation and protect their systems from potential unauthorized access and privilege escalation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.10240.20345",
+                "10.0.22000.2652",
+                "10.0.19045.3803",
+                "10.0.22631.2861",
+                "10.0.19041.3803",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033379",
+                    "kb_link": "https://support.microsoft.com/help/5033379#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033372",
+                    "kb_link": "https://support.microsoft.com/help/5033372#december-12-2023"
+                },
+                {
+                    "kb_id": "kb5033369",
+                    "kb_link": "https://support.microsoft.com/help/5033369#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033379)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033379"
+                },
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                },
+                {
+                    "package_type": "Security Update (KB5033372)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033372"
+                },
+                {
+                    "package_type": "Security Update (KB5033369)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033369"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "70027a0b-c7db-df0a-8ab3-66dec2607d57",
+            "post_id": "CVE-2023-35635",
+            "published": "12-12-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35635 Windows Kernel Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35635",
+            "summary": "Windows Kernel is affected by a Denial of Service (DoS) vulnerability, identified as CVE-2023-35635, with a base score of 5.5 and a temporal score of 4.8. The vulnerability could be exploited if an authenticated user opens a specially crafted file locally or on a network share, causing a crash of the operating system. The attack vector is local, with low attack complexity and no privileges required. User interaction is necessary for successful exploitation. The impact is a total loss of availability, allowing the attacker to fully deny access to resources in the impacted component. Microsoft has provided a security update for Windows 11 Version 23H2 and 22H2 for x64-based and ARM64-based systems, with build numbers 10.0.22631.2861 and 10.0.22621.2861, respectively. System administrators are advised to apply the security update to mitigate the risk of exploitation. For further details, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22631.2861",
+                "10.0.22621.2861"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5033375",
+                    "kb_link": "https://support.microsoft.com/help/5033375#december-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5033375)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5033375"
+                }
+            ],
+            "core_products": [
+                "windows 11 22H2 x64-based_systems",
+                "windows 11 23H2 x64-based_systems"
+            ],
+            "products": "Windows Kernel",
+            "symptoms": "The vulnerability allows an attacker to cause a total loss of availability in the Windows Kernel, resulting in the attacker being able to fully deny access to resources.",
+            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their systems with the latest patch to mitigate this vulnerability.",
             "conversation_links": [],
             "receivedDateTimes": [],
             "pm_fixes": [],
@@ -1413,5 +1414,156 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "b4d16ed6-3e20-0eec-094d-1454cb1f3f5a",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#december-14-2023",
+                "collection": "security_update_notes",
+                "published": "2023-12-14",
+                "title": "December 14, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "87de3361-7bff-b320-a988-29cf37a14580",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1200221077-december-14-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-12-14",
+                "title": "Version 120.0.2210.77: December 14, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "5b20a7d4-1f13-aaaf-f74b-8a1154750238",
+                "source": "https://support.microsoft.com/en-us/windows/record-a-game-clip-on-your-pc-with-game-bar-2f477001-54d4-1276-9144-b0416a307f3c",
+                "collection": "windows_10",
+                "published": "2023-12-14",
+                "title": "Record a game clip on your PC with Game Bar - Microsoft Support"
+            },
+            {
+                "id": "4637c3d4-4a11-f06c-fee5-615e7f77bce7",
+                "source": "https://support.microsoft.com/en-us/topic/november-14-2023-kb5032196-os-build-17763-5122-f613961d-cb3e-400a-a83f-024566260eaf",
+                "collection": "windows_10",
+                "published": "2023-12-13",
+                "title": "November 14, 2023\u2014KB5032196 (OS Build 17763.5122) - Microsoft Support"
+            },
+            {
+                "id": "34eb7358-201b-e635-a31d-6e2feb7e43de",
+                "source": "https://support.microsoft.com/en-us/windows/clear-the-delivery-optimization-cache-c0e93802-5800-5554-7380-594014a6089b",
+                "collection": "windows_10",
+                "published": "2023-12-13",
+                "title": "Clear the Delivery Optimization cache - Microsoft Support"
+            },
+            {
+                "id": "47fb47a9-a2c2-96f6-2b1e-b3c65e5fbf2c",
+                "source": "https://support.microsoft.com/en-us/windows/turn-on-automatic-app-updates-70634d32-4657-dc76-632b-66048978e51b",
+                "collection": "windows_10",
+                "published": "2023-12-13",
+                "title": "Turn on automatic app updates - Microsoft Support"
+            },
+            {
+                "id": "39a60b1d-755b-3cf2-008b-a447a23a191a",
+                "source": "https://support.microsoft.com/en-us/windows/make-start-full-screen-13bc1e29-65dd-ba38-e3ec-7959b8d770dc",
+                "collection": "windows_10",
+                "published": "2023-12-13",
+                "title": "Make Start full screen - Microsoft Support"
+            },
+            {
+                "id": "9b8e7275-6b4a-bf30-adcf-e5e7364226ec",
+                "source": "https://support.microsoft.com/en-us/topic/december-12-2023-kb5033379-os-build-10240-20345-03a11f29-fc6c-47ca-8143-af8e2641033f",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "December 12, 2023\u2014KB5033379 (OS Build 10240.20345) - Microsoft Support"
+            },
+            {
+                "id": "47b443d8-9d68-e12c-bd1a-bcd13d6dfbf2",
+                "source": "https://support.microsoft.com/en-us/topic/december-12-2023-kb5033373-os-build-14393-6529-29226794-12f4-45c5-a92e-ac1ab570e41d",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "December 12, 2023\u2014KB5033373 (OS Build 14393.6529) - Microsoft Support"
+            },
+            {
+                "id": "9a2c925b-70d5-d2f2-1c53-236a58db17f2",
+                "source": "https://support.microsoft.com/en-us/topic/december-12-2023-kb5033372-os-builds-19044-3803-and-19045-3803-9cea61c6-072b-41f1-8cf2-7c7bfdd12d5c",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "December 12, 2023\u2014KB5033372 (OS Builds 19044.3803 and 19045.3803) - Microsoft Support"
+            },
+            {
+                "id": "a69dbbff-8e86-2da1-d9a0-542087981535",
+                "source": "https://support.microsoft.com/en-us/topic/december-12-2023-kb5033371-os-build-17763-5206-aeb26a0a-536b-4bf8-9f5a-2749f4ba71fc",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "December 12, 2023\u2014KB5033371 (OS Build 17763.5206) - Microsoft Support"
+            },
+            {
+                "id": "b58f42f5-579b-86be-4bbe-ef05d2643cc7",
+                "source": "https://support.microsoft.com/en-us/windows/switch-your-windows-10-device-to-a-local-account-eb7e78a9-88ee-9bc3-8f06-831b56e339fd",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "Switch your Windows 10 device to a local account - Microsoft Support"
+            },
+            {
+                "id": "bc1849b0-c815-a260-361b-bb083a525b72",
+                "source": "https://support.microsoft.com/en-us/windows/dvd-playback-options-for-windows-927ebe85-7837-4149-4323-f55a9e3c4e36",
+                "collection": "windows_10",
+                "published": "2023-12-12",
+                "title": "DVD playback options for Windows - Microsoft Support"
+            },
+            {
+                "id": "8bcc2333-94ff-4cf8-ce93-0d30faa07d59",
+                "source": "https://support.microsoft.com/en-us/windows/microsoft-basic-display-adapter-on-windows-10-fd1c777c-d4d5-f05a-edb1-0dc7031fd677",
+                "collection": "windows_10",
+                "published": "2023-12-08",
+                "title": "Microsoft Basic Display Adapter on Windows 10 - Microsoft Support"
+            },
+            {
+                "id": "35dc3200-4d3c-fed8-8338-924a51b04e9a",
+                "source": "https://support.microsoft.com/en-us/windows/what-bluetooth-version-is-on-my-pc-f5d4cff7-c00d-337b-a642-d2d23b082793",
+                "collection": "windows_10",
+                "published": "2023-12-08",
+                "title": "What Bluetooth version is on my PC? - Microsoft Support"
+            },
+            {
+                "id": "f764580d-6ea3-981e-100a-0c5a30d9116b",
+                "source": "https://support.microsoft.com/en-us/windows/fix-graphics-device-problems-with-error-code-43-6f6ae1ec-0bbe-a848-142e-0c6190502842",
+                "collection": "windows_10",
+                "published": "2023-12-08",
+                "title": "Fix graphics device problems with error code 43 - Microsoft Support"
+            },
+            {
+                "id": "01233afb-1d8b-7ac8-924e-0c71c0964bfb",
+                "source": "https://support.microsoft.com/en-us/windows/restart-reboot-your-pc-110262aa-fc79-1c33-7b00-c140ae3a6dac",
+                "collection": "windows_10",
+                "published": "2023-12-08",
+                "title": "Restart (reboot) your PC - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "272cf8e4-b3dd-b33f-c04d-7b5c11aa1165",
+                "source": "https://support.microsoft.com/en-us/windows/record-a-game-clip-on-your-pc-with-game-bar-2f477001-54d4-1276-9144-b0416a307f3c",
+                "collection": "windows_11",
+                "published": "2023-12-14",
+                "title": "Record a game clip on your PC with Game Bar - Microsoft Support"
+            },
+            {
+                "id": "4c4b8d5a-fc94-807f-6091-ac8a4d8e08e4",
+                "source": "https://support.microsoft.com/en-us/topic/december-12-2023-kb5033369-os-build-22000-2652-b69fad53-d61b-4ed6-898e-1ae6a17dfd13",
+                "collection": "windows_11",
+                "published": "2023-12-12",
+                "title": "December 12, 2023\u2014KB5033369 (OS Build 22000.2652) - Microsoft Support"
+            },
+            {
+                "id": "bb20a495-bbc3-a889-b3ca-ecec62ca90d2",
+                "source": "https://support.microsoft.com/en-us/windows/use-smart-charging-in-windows-2ac1b4ba-6027-410a-b80e-f6767d867002",
+                "collection": "windows_11",
+                "published": "2023-12-12",
+                "title": "Use Smart charging in Windows - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

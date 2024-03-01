@@ -6,7 +6,7 @@
     "report_month_end": "August",
     "report_year_end": "2023",
     "report_end_date": "2023_08_18",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,137 +14,10 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
-        {
-            "id": "53288108-8c8f-170d-df73-a7ac3ab978bb",
-            "post_id": "CVE-2023-36900",
-            "published": "11-08-2023",
-            "revision": "1.1",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36900 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36900",
-            "summary": "The Windows Common Log File System Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-36900, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a low attack complexity and requires no user interaction. This vulnerability impacts various Windows Server versions, including 2008, 2012, and 2016, as well as Windows 10 and 11. Microsoft has provided an official fix for this vulnerability through security updates for the affected platforms. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The exploitability assessment indicates that no exploit code is available, and the remediation level is marked as 'Official Fix,' suggesting that a complete vendor solution is available. For more information and to download the security updates, refer to the Microsoft Support Lifecycle page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2134",
-                "10.0.19044.3324",
-                "10.0.19045.3324",
-                "10.0.10240.20107",
-                "10.0.22000.2295"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5029263",
-                    "kb_link": "https://support.microsoft.com/help/5029263#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029259",
-                    "kb_link": "https://support.microsoft.com/help/5029259#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029253",
-                    "kb_link": "https://support.microsoft.com/help/5029253#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029244",
-                    "kb_link": "https://support.microsoft.com/help/5029244#august-08-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5029263)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029263"
-                },
-                {
-                    "package_type": "Security Update (KB5029259)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029259"
-                },
-                {
-                    "package_type": "Security Update (KB5029253)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029253"
-                },
-                {
-                    "package_type": "Security Update (KB5029244)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029244"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ]
-        },
-        {
-            "id": "426e5cbf-b185-2338-f858-05b328652a12",
-            "post_id": "CVE-2023-35387",
-            "published": "11-08-2023",
-            "revision": "1.1",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35387 Windows Bluetooth A2DP driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35387",
-            "summary": "Windows Bluetooth A2DP driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-35387. The vulnerability allows an authorized attacker to programmatically run certain functions, leading to elevation of privilege on the Bluetooth component, potentially gaining SYSTEM privileges. Successful exploitation requires the victim to pair with the attacker's Bluetooth device. The attack vector is adjacent, requiring the attacker to gain access to the restricted network before running an attack. The vulnerability affects various Windows versions, including Windows 10, 11, and Windows Server 2012, 2016, and 2019. Microsoft has provided a security update to address this vulnerability, and system administrators are advised to apply the relevant security updates to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2134",
-                "10.0.19044.3324",
-                "10.0.19045.3324",
-                "10.0.10240.20107",
-                "10.0.22000.2295"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5029263",
-                    "kb_link": "https://support.microsoft.com/help/5029263#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029259",
-                    "kb_link": "https://support.microsoft.com/help/5029259#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029253",
-                    "kb_link": "https://support.microsoft.com/help/5029253#august-08-2023"
-                },
-                {
-                    "kb_id": "kb5029244",
-                    "kb_link": "https://support.microsoft.com/help/5029244#august-08-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5029263)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029263"
-                },
-                {
-                    "package_type": "Security Update (KB5029259)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029259"
-                },
-                {
-                    "package_type": "Security Update (KB5029253)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029253"
-                },
-                {
-                    "package_type": "Security Update (KB5029244)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029244"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ]
-        },
         {
             "id": "c8e18b67-bc60-7d2f-99f0-46879753f211",
             "post_id": "CVE-2023-35323",
@@ -301,6 +174,134 @@
                 "windows 11 21H2 x64-based_systems",
                 "windows 11 22H2 x64-based_systems"
             ]
+        },
+        {
+            "id": "53288108-8c8f-170d-df73-a7ac3ab978bb",
+            "post_id": "CVE-2023-36900",
+            "published": "11-08-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36900 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36900",
+            "summary": "The Windows Common Log File System Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-36900, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a low attack complexity and requires no user interaction. This vulnerability impacts various Windows Server versions, including 2008, 2012, and 2016, as well as Windows 10 and 11. Microsoft has provided an official fix for this vulnerability through security updates for the affected platforms. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The exploitability assessment indicates that no exploit code is available, and the remediation level is marked as 'Official Fix,' suggesting that a complete vendor solution is available. For more information and to download the security updates, refer to the Microsoft Support Lifecycle page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2134",
+                "10.0.19044.3324",
+                "10.0.19045.3324",
+                "10.0.10240.20107",
+                "10.0.22000.2295"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5029263",
+                    "kb_link": "https://support.microsoft.com/help/5029263#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029259",
+                    "kb_link": "https://support.microsoft.com/help/5029259#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029253",
+                    "kb_link": "https://support.microsoft.com/help/5029253#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029244",
+                    "kb_link": "https://support.microsoft.com/help/5029244#august-08-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5029263)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029263"
+                },
+                {
+                    "package_type": "Security Update (KB5029259)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029259"
+                },
+                {
+                    "package_type": "Security Update (KB5029253)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029253"
+                },
+                {
+                    "package_type": "Security Update (KB5029244)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029244"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ]
+        },
+        {
+            "id": "426e5cbf-b185-2338-f858-05b328652a12",
+            "post_id": "CVE-2023-35387",
+            "published": "11-08-2023",
+            "revision": "1.1",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-35387 Windows Bluetooth A2DP driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35387",
+            "summary": "Windows Bluetooth A2DP driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-35387. The vulnerability allows an authorized attacker to programmatically run certain functions, leading to elevation of privilege on the Bluetooth component, potentially gaining SYSTEM privileges. Successful exploitation requires the victim to pair with the attacker's Bluetooth device. The attack vector is adjacent, requiring the attacker to gain access to the restricted network before running an attack. The vulnerability affects various Windows versions, including Windows 10, 11, and Windows Server 2012, 2016, and 2019. Microsoft has provided a security update to address this vulnerability, and system administrators are advised to apply the relevant security updates to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2134",
+                "10.0.19044.3324",
+                "10.0.19045.3324",
+                "10.0.10240.20107",
+                "10.0.22000.2295"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5029263",
+                    "kb_link": "https://support.microsoft.com/help/5029263#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029259",
+                    "kb_link": "https://support.microsoft.com/help/5029259#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029253",
+                    "kb_link": "https://support.microsoft.com/help/5029253#august-08-2023"
+                },
+                {
+                    "kb_id": "kb5029244",
+                    "kb_link": "https://support.microsoft.com/help/5029244#august-08-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5029263)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029263"
+                },
+                {
+                    "package_type": "Security Update (KB5029259)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029259"
+                },
+                {
+                    "package_type": "Security Update (KB5029253)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029253"
+                },
+                {
+                    "package_type": "Security Update (KB5029244)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5029244"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ]
         }
     ],
     "section_1_metadata": {
@@ -315,5 +316,166 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "windows_10": [
+            {
+                "id": "5b56d28a-f7d8-0c5b-281c-ac9838800649",
+                "source": "https://support.microsoft.com/en-us/windows/manage-devices-used-with-your-microsoft-account-d4044995-81db-b24b-757e-1102d148f441",
+                "collection": "windows_10",
+                "published": "2023-08-16",
+                "title": "Manage devices used with your Microsoft account - Microsoft Support"
+            },
+            {
+                "id": "06aa0099-5840-cfe0-da28-373070f29a18",
+                "source": "https://support.microsoft.com/en-us/topic/windows-10-and-windows-server-2019-update-history-725fc2e1-4443-6831-a5ca-51ff5cbcb059",
+                "collection": "windows_10",
+                "published": "2023-08-16",
+                "title": "Windows 10 and Windows Server 2019 update history - Microsoft Support"
+            },
+            {
+                "id": "91adbede-c31e-b868-a48c-55a42ef95579",
+                "source": "https://support.microsoft.com/en-us/topic/what-is-cortana-953e648d-5668-e017-1341-7f26f7d0f825",
+                "collection": "windows_10",
+                "published": "2023-08-15",
+                "title": "What is Cortana? - Microsoft Support"
+            },
+            {
+                "id": "59c2b728-0fd3-e5f6-23c1-869350e80206",
+                "source": "https://support.microsoft.com/en-us/topic/cortana-can-t-hear-me-4320735b-c9b0-d2e6-4759-900ad63f3c18",
+                "collection": "windows_10",
+                "published": "2023-08-15",
+                "title": "Cortana can't hear me - Microsoft Support"
+            },
+            {
+                "id": "9e992fcb-a495-ed5e-4b9f-5b068f44d0fc",
+                "source": "https://support.microsoft.com/en-us/topic/july-11-2023-kb5028169-os-build-14393-6085-fa5b6c30-1ac8-4b99-b58b-9c434d8a8b98",
+                "collection": "windows_10",
+                "published": "2023-08-11",
+                "title": "July 11, 2023\u2014KB5028169 (OS Build 14393.6085) - Microsoft Support"
+            },
+            {
+                "id": "3bde99de-fe55-006f-58c9-9075c9de2315",
+                "source": "https://support.microsoft.com/en-us/topic/may-24-2022-kb5014022-os-build-17763-2989-preview-08f88943-2fc8-4fdb-a13b-ba89af313d06",
+                "collection": "windows_10",
+                "published": "2023-08-11",
+                "title": "May 24, 2022\u2014KB5014022 (OS Build 17763.2989) Preview - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "9a809c39-d2ff-b960-c1bd-5a14e0cc45f6",
+                "source": "https://support.microsoft.com/en-us/windows/troubleshooting-and-faq-for-mobile-apps-on-windows-d6062afd-98a1-4018-a7c8-6b3b680a2ea5",
+                "collection": "windows_11",
+                "published": "2023-08-18",
+                "title": "Troubleshooting and FAQ for mobile apps on Windows - Microsoft Support"
+            },
+            {
+                "id": "f2005e29-de8f-7f2e-e318-d59da4f26896",
+                "source": "https://support.microsoft.com/en-us/topic/june-27-2023-kb5027303-os-build-22621-1928-preview-1ada2c0a-fa85-43f8-91c4-6ee13fdf278b",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "June 27, 2023\u2014KB5027303 (OS Build 22621.1928) Preview - Microsoft Support"
+            },
+            {
+                "id": "4a6876c7-7601-7b18-cb42-2e45f62470ce",
+                "source": "https://support.microsoft.com/en-us/topic/june-13-2023-kb5027231-os-build-22621-1848-8f903600-1293-4431-9c6b-736a4049666c",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "June 13, 2023\u2014KB5027231 (OS Build 22621.1848) - Microsoft Support"
+            },
+            {
+                "id": "4601e6ce-4998-741a-7577-a764b4ccd842",
+                "source": "https://support.microsoft.com/en-us/topic/may-24-2023-kb5026446-os-build-22621-1778-preview-3c547100-7a73-4ae6-bb7d-ebd02e87dc04",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "May 24, 2023\u2014KB5026446 (OS Build 22621.1778) Preview - Microsoft Support"
+            },
+            {
+                "id": "91f7141f-6663-1100-7780-4c1edc851473",
+                "source": "https://support.microsoft.com/en-us/topic/may-9-2023-kb5026372-os-build-22621-1702-ce93c18e-e819-458f-abcf-dc7154ce7e40",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "May 9, 2023\u2014KB5026372 (OS Build 22621.1702) - Microsoft Support"
+            },
+            {
+                "id": "209e606d-5047-4e6d-2e41-18bef7de74dd",
+                "source": "https://support.microsoft.com/en-us/topic/april-25-2023-kb5025305-os-build-22621-1635-preview-2482528b-7e8e-4179-b255-808f484b9c0c",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "April 25, 2023\u2014KB5025305 (OS Build 22621.1635) Preview - Microsoft Support"
+            },
+            {
+                "id": "481b1886-edac-d29a-2eda-e7a22d7eff13",
+                "source": "https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "April 11, 2023\u2014KB5025239 (OS Build 22621.1555) - Microsoft Support"
+            },
+            {
+                "id": "d9359833-0a57-d3af-fd84-a1ad442f67fd",
+                "source": "https://support.microsoft.com/en-us/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "March 28, 2023\u2014KB5023778 (OS Build 22621.1485) Preview - Microsoft Support"
+            },
+            {
+                "id": "b9899de2-04be-6d62-abe8-e2c574fc8b02",
+                "source": "https://support.microsoft.com/en-us/topic/march-14-2023-kb5023706-os-build-22621-1413-9d3f2de5-08e7-4462-8fba-d944201f4ae1",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "March 14, 2023\u2014KB5023706 (OS Build 22621.1413) - Microsoft Support"
+            },
+            {
+                "id": "6a377a4f-374c-6701-7418-9a104b452388",
+                "source": "https://support.microsoft.com/en-us/topic/february-28-2023-kb5022913-os-build-22621-1344-preview-3e38c0d9-924d-4f3f-b0b6-3bd49b2657b9",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "February 28, 2023\u2014KB5022913 (OS Build 22621.1344) Preview - Microsoft Support"
+            },
+            {
+                "id": "b3dcbb4c-e457-ec87-3a79-e5a992fa4179",
+                "source": "https://support.microsoft.com/en-us/topic/february-14-2023-kb5022845-os-build-22621-1265-90a807f4-d2e8-486e-8a43-d09e66319f38",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "February 14, 2023\u2014KB5022845 (OS Build 22621.1265) - Microsoft Support"
+            },
+            {
+                "id": "706e57a8-937d-9bd0-7a9b-f30950002b14",
+                "source": "https://support.microsoft.com/en-us/topic/january-26-2023-kb5022360-os-build-22621-1194-preview-f6973dbe-bcc4-402a-8b9a-0541b0959403",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "January 26, 2023\u2014KB5022360 (OS Build 22621.1194) Preview - Microsoft Support"
+            },
+            {
+                "id": "bf48c52e-81bf-cab7-5dca-90364eb5b3cb",
+                "source": "https://support.microsoft.com/en-us/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "January 10, 2023\u2014KB5022303 (OS Build 22621.1105) - Microsoft Support"
+            },
+            {
+                "id": "095901dd-75ad-ad08-65e3-392df1cd1497",
+                "source": "https://support.microsoft.com/en-us/topic/december-13-2022-kb5021255-os-build-22621-963-8286ffb4-d1a6-4510-b637-5414e64d7da3",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "December 13, 2022\u2014KB5021255 (OS Build 22621.963) - Microsoft Support"
+            },
+            {
+                "id": "800c5944-20c9-23af-103c-a8e7f9942e82",
+                "source": "https://support.microsoft.com/en-us/topic/november-29-2022-kb5020044-os-build-22621-900-preview-43f0bdf9-0b75-4110-bab3-3bd2433d84b3",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "November 29, 2022\u2014KB5020044 (OS Build 22621.900) Preview - Microsoft Support"
+            },
+            {
+                "id": "557264e0-668f-c0e3-a4d6-c6b9aa592485",
+                "source": "https://support.microsoft.com/en-us/windows/manage-devices-used-with-your-microsoft-account-d4044995-81db-b24b-757e-1102d148f441",
+                "collection": "windows_11",
+                "published": "2023-08-16",
+                "title": "Manage devices used with your Microsoft account - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

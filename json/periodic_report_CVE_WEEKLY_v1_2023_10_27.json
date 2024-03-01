@@ -6,7 +6,7 @@
     "report_month_end": "October",
     "report_year_end": "2023",
     "report_end_date": "2023_10_27",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,9 +14,178 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
+        {
+            "id": "08fe0e15-0f00-9566-6e35-18e4a98ccbb6",
+            "post_id": "CVE-2023-5472",
+            "published": "27-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-5472: Use after free in Profiles",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5472",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Profiles, identified as CVE-2023-5472. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (27-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability allows for a use-after-free condition in the Profiles feature of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a9198d51-6c41-1d7e-c415-bbb561df0c8a",
+            "post_id": "CVE-2023-44323",
+            "published": "27-10-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-44323 Adobe: CVE-2023-44323 Adobe PDF Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44323",
+            "summary": "Microsoft Edge (Chromium-based) is affected by the Adobe PDF Remote Code Execution Vulnerability, identified as CVE-2023-44323. This vulnerability allows remote code execution and is considered to have a moderate severity. The vulnerability is in Adobe software consumed by Microsoft Edge, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.76 is no longer vulnerable. An attacker could exploit this vulnerability to execute arbitrary code on the victim's system. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) to address this vulnerability. System administrators are advised to update their Microsoft Edge installations to the latest version (118.0.2088.76) to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "118.0.2088.76"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (27-10-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Adobe PDF, Microsoft Edge (Chromium-based)",
+            "symptoms": "A vulnerability in Adobe software used by Microsoft Edge allows for remote code execution.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "43cd0f48-1d3b-1e2c-7711-4a53ea021b7d",
+            "post_id": "CVE-2023-38171",
+            "published": "26-10-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38171 Microsoft QUIC Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38171",
+            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-38171, impacting PowerShell 7.3 and various Windows and Visual Studio versions. The vulnerability has a base score of 7.5 and a temporal score of 6.5, indicating a high impact on availability. It is remotely exploitable with low attack complexity and requires no user interaction, making it a serious threat. The exploit code maturity is unproven, but an official fix is available, reducing the urgency for remediation. System administrators are advised to apply the security updates for affected products, including PowerShell 7.3, .NET 7.0, Windows 11, Windows Server 2022, and Microsoft Visual Studio 2022. The revised Security Updates table now includes PowerShell 7.3 as an affected version, providing additional information for administrators to prioritize remediation efforts. For more details, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle for software support information.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2538",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "PowerShell",
+            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
+            "fixes": "The fix for this vulnerability involves updating to the latest version of PowerShell 7.3, which contains a patch for this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "997a2599-f326-9b3a-1b43-4552deea3e56",
+            "post_id": "CVE-2023-36435",
+            "published": "26-10-2023",
+            "revision": "2.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36435 Microsoft QUIC Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36435",
+            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-36435, impacting PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. The vulnerability is rated as important with a CVSS score of 7.5. It is caused by a flaw in the Microsoft QUIC protocol, allowing an attacker to exploit it remotely without user interaction. The vulnerability results in a total loss of availability, enabling the attacker to fully deny access to resources. Microsoft has provided an official fix for this vulnerability through security updates for the affected products, including PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2538",
+                "10.0.22621.2428"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5031358",
+                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
+                },
+                {
+                    "kb_id": "kb5031354",
+                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5031358)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
+                },
+                {
+                    "package_type": "Security Update (KB5031354)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "PowerShell",
+            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
+            "fixes": "The fix involves updating to the latest version of PowerShell 7.3 which contains a patch for this vulnerability.",
+            "tools": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
         {
             "id": "c3386492-fca1-2f06-a6ae-1faef66f85d6",
             "post_id": "CVE-2023-38545",
@@ -179,174 +348,6 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
-        },
-        {
-            "id": "43cd0f48-1d3b-1e2c-7711-4a53ea021b7d",
-            "post_id": "CVE-2023-38171",
-            "published": "26-10-2023",
-            "revision": "2.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38171 Microsoft QUIC Denial of Service Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38171",
-            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-38171, impacting PowerShell 7.3 and various Windows and Visual Studio versions. The vulnerability has a base score of 7.5 and a temporal score of 6.5, indicating a high impact on availability. It is remotely exploitable with low attack complexity and requires no user interaction, making it a serious threat. The exploit code maturity is unproven, but an official fix is available, reducing the urgency for remediation. System administrators are advised to apply the security updates for affected products, including PowerShell 7.3, .NET 7.0, Windows 11, Windows Server 2022, and Microsoft Visual Studio 2022. The revised Security Updates table now includes PowerShell 7.3 as an affected version, providing additional information for administrators to prioritize remediation efforts. For more details, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle for software support information.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22000.2538",
-                "10.0.22621.2428"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5031358",
-                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
-                },
-                {
-                    "kb_id": "kb5031354",
-                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5031358)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
-                },
-                {
-                    "package_type": "Security Update (KB5031354)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
-                }
-            ],
-            "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "PowerShell",
-            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
-            "fixes": "The fix for this vulnerability involves updating to the latest version of PowerShell 7.3, which contains a patch for this vulnerability.",
-            "tools": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "997a2599-f326-9b3a-1b43-4552deea3e56",
-            "post_id": "CVE-2023-36435",
-            "published": "26-10-2023",
-            "revision": "2.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36435 Microsoft QUIC Denial of Service Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36435",
-            "summary": "Microsoft has released a security update to address the Microsoft QUIC Denial of Service Vulnerability, identified as CVE-2023-36435, impacting PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. The vulnerability is rated as important with a CVSS score of 7.5. It is caused by a flaw in the Microsoft QUIC protocol, allowing an attacker to exploit it remotely without user interaction. The vulnerability results in a total loss of availability, enabling the attacker to fully deny access to resources. Microsoft has provided an official fix for this vulnerability through security updates for the affected products, including PowerShell 7.3, .NET 7.0, Windows 11, and Windows Server 2022. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information, refer to the provided GitHub Advisory and the Microsoft Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22000.2538",
-                "10.0.22621.2428"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5031358",
-                    "kb_link": "https://support.microsoft.com/help/5031358#october-10-2023"
-                },
-                {
-                    "kb_id": "kb5031354",
-                    "kb_link": "https://support.microsoft.com/help/5031354#october-10-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5031358)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031358"
-                },
-                {
-                    "package_type": "Security Update (KB5031354)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5031354"
-                }
-            ],
-            "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "PowerShell",
-            "symptoms": "The vulnerability allows an attacker to cause a Denial of Service (DoS) condition in Microsoft QUIC. This results in the attacker being able to fully deny access to resources in the impacted component.",
-            "fixes": "The fix involves updating to the latest version of PowerShell 7.3 which contains a patch for this vulnerability.",
-            "tools": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "08fe0e15-0f00-9566-6e35-18e4a98ccbb6",
-            "post_id": "CVE-2023-5472",
-            "published": "27-10-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-5472: Use after free in Profiles",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-5472",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a use after free vulnerability in Profiles, identified as CVE-2023-5472. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 118.0.2088.76. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "118.0.2088.76"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (27-10-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability allows for a use-after-free condition in the Profiles feature of Chromium, which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
-            "tools": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "a9198d51-6c41-1d7e-c415-bbb561df0c8a",
-            "post_id": "CVE-2023-44323",
-            "published": "27-10-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-44323 Adobe: CVE-2023-44323 Adobe PDF Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-44323",
-            "summary": "Microsoft Edge (Chromium-based) is affected by the Adobe PDF Remote Code Execution Vulnerability, identified as CVE-2023-44323. This vulnerability allows remote code execution and is considered to have a moderate severity. The vulnerability is in Adobe software consumed by Microsoft Edge, and the latest version of Microsoft Edge (Chromium-based) with build number 118.0.2088.76 is no longer vulnerable. An attacker could exploit this vulnerability to execute arbitrary code on the victim's system. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) to address this vulnerability. System administrators are advised to update their Microsoft Edge installations to the latest version (118.0.2088.76) to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "118.0.2088.76"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (27-10-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#october-27-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Adobe PDF, Microsoft Edge (Chromium-based)",
-            "symptoms": "A vulnerability in Adobe software used by Microsoft Edge allows for remote code execution.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
-            "tools": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -407,5 +408,184 @@
     ],
     "section_3_metadata": {
         "total_tools": 1
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "8baa7187-52e8-b60d-9ade-b9282669229a",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#october-27-2023",
+                "collection": "security_update_notes",
+                "published": "2023-10-27",
+                "title": "October 27, 2023"
+            },
+            {
+                "id": "06ed9e82-d80b-0554-3a89-61e823ddde36",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#see-also",
+                "collection": "security_update_notes",
+                "published": "2023-10-25",
+                "title": "See also"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "1d046224-a30a-bbdf-f449-ae10e9e85bb8",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1180208876-october-27-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-10-27",
+                "title": "Version 118.0.2088.76: October 27, 2023"
+            },
+            {
+                "id": "9c3ada0e-ba23-ca1c-c43f-770a961fda1f",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#see-also",
+                "collection": "stable_channel_notes",
+                "published": "2023-10-25",
+                "title": "See also"
+            },
+            {
+                "id": "d4ac303b-0900-a354-929d-437304550c1d",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1180208869-october-24-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-10-24",
+                "title": "Version 118.0.2088.69: October 24, 2023"
+            },
+            {
+                "id": "8e313064-6061-048f-3c76-8e1e1535d861",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1180208861-october-20-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-10-20",
+                "title": "Version 118.0.2088.61: October 20, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "70322397-3d11-9115-e189-6c029696a36e",
+                "source": "https://support.microsoft.com/en-us/topic/kb4457951-windows-guidance-to-protect-against-speculative-execution-side-channel-vulnerabilities-ae9b7bcd-e8e9-7304-2c40-f047a0ab3385",
+                "collection": "windows_10",
+                "published": "2023-10-27",
+                "title": "KB4457951: Windows guidance to protect against speculative execution side-channel vulnerabilities - Microsoft Support"
+            },
+            {
+                "id": "ead44a0a-ca5e-018a-f2f8-b9dd24d297ea",
+                "source": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1",
+                "collection": "windows_10",
+                "published": "2023-10-27",
+                "title": "Complete guide to Narrator - Microsoft Support"
+            },
+            {
+                "id": "08029062-ef14-258c-548d-04fc7f6e7bf4",
+                "source": "https://support.microsoft.com/en-us/topic/october-26-2023-kb5031445-os-build-19045-3636-preview-03f350cb-57f9-45e6-bfd7-438895d3c7fa",
+                "collection": "windows_10",
+                "published": "2023-10-26",
+                "title": "October 26, 2023\u2014KB5031445 (OS Build 19045.3636) Preview - Microsoft Support"
+            },
+            {
+                "id": "d3d42847-2d3b-2018-e59a-226f65e59d83",
+                "source": "https://support.microsoft.com/en-us/topic/kb4023057-update-health-tools-windows-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a",
+                "collection": "windows_10",
+                "published": "2023-10-26",
+                "title": "KB4023057: Update Health Tools\u2014Windows Update Service components - Microsoft Support"
+            },
+            {
+                "id": "9206fd5e-4652-52d1-cd0f-54dec9b0ec80",
+                "source": "https://support.microsoft.com/en-us/windows/appendix-a-supported-languages-and-voices-4486e345-7730-53da-fcfe-55cc64300f01",
+                "collection": "windows_10",
+                "published": "2023-10-26",
+                "title": "Appendix A: Supported languages and voices - Microsoft Support"
+            },
+            {
+                "id": "168681bd-342d-be2a-56f8-8ffdea01781e",
+                "source": "https://support.microsoft.com/en-us/windows/pair-a-bluetooth-device-in-windows-2be7b51f-6ae9-b757-a3b9-95ee40c3e242",
+                "collection": "windows_10",
+                "published": "2023-10-25",
+                "title": "Pair a Bluetooth device in Windows - Microsoft Support"
+            },
+            {
+                "id": "2963bc32-7e79-c804-7708-7019731268be",
+                "source": "https://support.microsoft.com/en-us/topic/2020-and-2023-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a",
+                "collection": "windows_10",
+                "published": "2023-10-20",
+                "title": "2020 and 2023 LDAP channel binding and LDAP signing requirements for Windows (KB4520412) - Microsoft Support"
+            },
+            {
+                "id": "9859bdba-aa4f-9874-4f0c-b7c7b674a140",
+                "source": "https://support.microsoft.com/en-us/topic/file-drag-drop-in-link-to-windows-pre-installed-8ce092c3-a466-25fd-9ef2-de60f8335a52",
+                "collection": "windows_10",
+                "published": "2023-10-20",
+                "title": "File drag & drop in Link to Windows (pre-installed) - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "a4263cff-8735-6ac4-7720-71997b2a2e0c",
+                "source": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1",
+                "collection": "windows_11",
+                "published": "2023-10-27",
+                "title": "Complete guide to Narrator - Microsoft Support"
+            },
+            {
+                "id": "fe908051-bf8b-b5dd-26fc-320853871684",
+                "source": "https://support.microsoft.com/en-us/windows/copilot-in-windows-your-data-and-privacy-3e265e82-fc76-4d0a-afc0-4a0de528b73a",
+                "collection": "windows_11",
+                "published": "2023-10-27",
+                "title": "Copilot in Windows: Your data and privacy - Microsoft Support"
+            },
+            {
+                "id": "e111186c-ae74-b91c-781c-01d188bdd924",
+                "source": "https://support.microsoft.com/en-us/topic/kb5032381-out-of-box-experience-update-for-windows-11-version-22h2-october-26-2023-adfc4dc1-191d-4df3-a427-23486049a6e8",
+                "collection": "windows_11",
+                "published": "2023-10-26",
+                "title": "KB5032381: Out of Box Experience update for Windows 11, version 22H2: October 26, 2023 - Microsoft Support"
+            },
+            {
+                "id": "a292f03a-186a-b752-2755-630b23d2c918",
+                "source": "https://support.microsoft.com/en-us/topic/kb5031894-compatibility-update-for-installing-and-recovering-windows-11-version-22h2-october-26-2023-45dfebf4-34a7-4ca9-a5ba-b2beaf359241",
+                "collection": "windows_11",
+                "published": "2023-10-26",
+                "title": "KB5031894: Compatibility update for installing and recovering Windows 11, version 22H2: October 26, 2023 - Microsoft Support"
+            },
+            {
+                "id": "57850c44-c803-9e84-0261-4d280d11f400",
+                "source": "https://support.microsoft.com/en-us/topic/kb5031656-setup-dynamic-update-for-windows-11-version-22h2-october-26-2023-7703ad02-0a03-4dae-96f8-a687b056da05",
+                "collection": "windows_11",
+                "published": "2023-10-26",
+                "title": "KB5031656: Setup Dynamic Update for Windows 11, version 22H2: October 26, 2023 - Microsoft Support"
+            },
+            {
+                "id": "1c0bf960-f4af-0481-41b1-c6a7b1c85f8f",
+                "source": "https://support.microsoft.com/en-us/topic/kb4023057-update-health-tools-windows-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a",
+                "collection": "windows_11",
+                "published": "2023-10-26",
+                "title": "KB4023057: Update Health Tools\u2014Windows Update Service components - Microsoft Support"
+            },
+            {
+                "id": "4e62f012-e76b-89a1-6c99-6bc9da1b885d",
+                "source": "https://support.microsoft.com/en-us/windows/pair-a-bluetooth-device-in-windows-2be7b51f-6ae9-b757-a3b9-95ee40c3e242",
+                "collection": "windows_11",
+                "published": "2023-10-25",
+                "title": "Pair a Bluetooth device in Windows - Microsoft Support"
+            },
+            {
+                "id": "70592dc7-a68f-4d6c-2fb9-89266c607e3e",
+                "source": "https://support.microsoft.com/en-us/windows/connect-to-a-bluetooth-network-in-windows-0d371763-6297-4eef-9d39-f8c469d181c2",
+                "collection": "windows_11",
+                "published": "2023-10-25",
+                "title": "Connect to a Bluetooth network in Windows - Microsoft Support"
+            },
+            {
+                "id": "a42d1c7c-c695-4453-9c3b-5f13a31a78eb",
+                "source": "https://support.microsoft.com/en-us/windows/enhanced-sign-in-security-in-windows-936c06ed-4024-4521-921f-faa97925a16e",
+                "collection": "windows_11",
+                "published": "2023-10-24",
+                "title": "Enhanced Sign-in Security in Windows - Microsoft Support"
+            },
+            {
+                "id": "245a05af-8d6e-845e-2cc3-4da56f67edd0",
+                "source": "https://support.microsoft.com/en-us/windows/privacy-with-windows-subsystem-for-android-and-amazon-appstore-123fad73-f524-4151-bb42-ad7c8e252dd4",
+                "collection": "windows_11",
+                "published": "2023-10-24",
+                "title": "Privacy with Windows Subsystem for Android\u2122 and Amazon Appstore  - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

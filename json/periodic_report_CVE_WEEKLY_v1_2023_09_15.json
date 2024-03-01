@@ -6,7 +6,7 @@
     "report_month_end": "September",
     "report_year_end": "2023",
     "report_end_date": "2023_09_15",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,26 +14,27 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
         {
-            "id": "e211f004-ebbb-872b-c3c9-9074c77cc467",
-            "post_id": "CVE-2023-4863",
-            "published": "12-09-2023",
+            "id": "f7027487-10c9-f048-7526-37c41a3a470e",
+            "post_id": "CVE-2023-36562",
+            "published": "15-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4863 Heap buffer overflow in WebP",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in WebP, identified as CVE-2023-4863. This vulnerability was assigned by Chrome and is ingested by Microsoft Edge through Chromium, which addresses the issue. An exploit for CVE-2023-4863 exists in the wild, making it crucial for system administrators to take immediate action. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code, posing a severe risk to affected systems. Microsoft has provided a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.81, which system administrators are strongly advised to apply to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. Additionally, affected customers can check if the update is installed using PowerShell command: Get-AppxPackage -Name Microsoft.WebpImageExtension. It's important to note that Microsoft Store will automatically update affected customers, and those in disconnected environments can obtain the update through their organizations using the Microsoft Store for Business and Microsoft Store for Education.",
+            "title": "CVE-2023-36562 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36562",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an elevation of privilege vulnerability, identified as CVE-2023-36562, with a CVSS score of 7.1. The vulnerability requires user interaction, such as opening a specially crafted file, making it exploitable in email or web-based attack scenarios. Successful exploitation could lead to a browser sandbox escape, with potential minor impacts on confidentiality, integrity, and availability. Although the severity is rated as moderate, the CVSS score is higher due to the level of user interaction required. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31 to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation.",
             "related_posts": "[]",
             "build_number_str": [
-                "116.0.1938.81"
+                "117.0.2045.31"
             ],
             "kb_article_pairs": [
                 {
-                    "kb_id": "Release Note (12-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-12-2023"
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
                 }
             ],
             "package_pairs": [
@@ -46,8 +47,440 @@
                 "microsoft edge (chromium-based)  "
             ],
             "products": "",
-            "symptoms": "",
-            "fixes": "",
+            "symptoms": "The vulnerability allows an attacker to elevate their privileges in Microsoft Edge (Chromium-based), gaining unauthorized access and the ability to modify data.",
+            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "720ad5be-ed41-937f-c2be-89a06214f589",
+            "post_id": "CVE-2023-36727",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36727 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36727",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a Spoofing Vulnerability (CVE-2023-36727) with a CVSS score of 6.1/5.3. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to a scope change, causing malicious scripts to execute in the victim\u2019s browser. This could result in some loss of integrity and confidentiality, as limited information from the victim's browser associated with the vulnerable URL can be sent to the attacker by the malicious code. Microsoft has released a security update (build number 117.0.2045.31) to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The system exhibits a spoofing vulnerability in Microsoft Edge (Chromium-based) where an attacker can exploit the vulnerable component through the network. This requires user interaction for successful exploitation.",
+            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a47a6877-6a19-a7b9-f510-ce635cddd6cc",
+            "post_id": "CVE-2023-36735",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-36735 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36735",
+            "summary": "Microsoft Edge (Chromium-based) is affected by an elevation of privilege vulnerability, identified as CVE-2023-36735, with a CVSS score of 9.6/8.3. The vulnerability allows an attacker to gain unauthorized access and execute arbitrary code. It is rated as moderate severity due to the level of user interaction required for exploitation. The attacker needs to convince the user to click a link and open a specially crafted file, typically through email or instant messenger. Successful exploitation could lead to a browser sandbox escape and remote code execution. Microsoft has provided a security update with build number 117.0.2045.31 to address this vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "",
+            "symptoms": "Unsafe default configurations for LDAP channel binding and LDAP signing exist on Active Directory domain controllers that let LDAP clients communicate with them without enforcing LDAP channel binding and LDAP signing. This can open Active Directory domain controllers to an elevation of privilege vulnerability.",
+            "fixes": "Microsoft has released an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "9c9ea64a-6880-e4bd-8f11-01416e37a33d",
+            "post_id": "CVE-2023-4900",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4900 Inappropriate implementation in Custom Tabs",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4900",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4900, an inappropriate implementation vulnerability in Custom Tabs. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium, making the latest version of Microsoft Edge (Chromium-based) no longer vulnerable. The vulnerability is caused by an inappropriate implementation in Custom Tabs, and an attacker could exploit it to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in Custom Tabs of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable as it ingests the fixed version of Chromium.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a6e49087-afcc-cb4e-0395-f9f81762e612",
+            "post_id": "CVE-2023-4901",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4901 Inappropriate implementation in Prompts",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4901",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4901, an inappropriate implementation in Prompts. This vulnerability, assigned by Chrome, is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. No specific workaround or mitigation is provided beyond updating to the latest version of Microsoft Edge (Chromium-based).",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in prompts in Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "a2cf73bd-9223-f145-5fb1-6200a560786b",
+            "post_id": "CVE-2023-4902",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4902 Inappropriate implementation in Input",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4902",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability, CVE-2023-4902, related to inappropriate implementation in Input, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with build number 117.0.2045.31, and the impact severity is not specified. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. It is important to regularly check for security updates and apply them promptly to mitigate the risk of exploitation.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the input of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 117.0.2045.31.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "eefc5f50-0812-b9d9-fd7a-975c583a32d1",
+            "post_id": "CVE-2023-4903",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4903 Inappropriate implementation in Custom Mobile Tabs",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4903",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4903, an inappropriate implementation vulnerability in Custom Mobile Tabs. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with build number 117.0.2045.31, and the release date is September 15, 2023.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the Custom Mobile Tabs of Chromium.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "b2f88088-262e-4665-b242-1f7fa18f12c0",
+            "post_id": "CVE-2023-4904",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4904 Insufficient policy enforcement in Downloads",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4904",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4904, an Insufficient policy enforcement vulnerability in Downloads. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium, making the latest version of Microsoft Edge (Chromium-based) no longer vulnerable. The vulnerability stems from a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability allows for insufficient policy enforcement in downloads in Chromium, affecting Microsoft Edge (Chromium-based).",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "c5563ca4-2df2-db34-452c-bdcf35828214",
+            "post_id": "CVE-2023-4905",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4905 Inappropriate implementation in Prompts",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4905",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4905, an inappropriate implementation vulnerability in Prompts. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in Prompts, which could be exploited by an attacker to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in prompts in Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "641780f8-98e7-3606-eb47-5ab73e8987a6",
+            "post_id": "CVE-2023-4906",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4906 Insufficient policy enforcement in Autofill",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4906",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4906, an Insufficient policy enforcement vulnerability in Autofill, assigned by Chrome. This vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with build number 117.0.2045.31. Microsoft recognizes the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as insufficient policy enforcement in the Autofill feature of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix involves updating to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable to this issue.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "3fed7f2d-7d82-695f-b56c-44d33e3a721c",
+            "post_id": "CVE-2023-4907",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4907 Inappropriate implementation in Intents",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4907",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4907, an inappropriate implementation in Intents, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure. The Microsoft Knowledge Base provides details about the support lifecycle for the software.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability is due to an inappropriate implementation in Intents in Chromium which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "40b8f24a-b31c-e865-177f-428943294489",
+            "post_id": "CVE-2023-4908",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4908 Inappropriate implementation in Picture in Picture",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4908",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4908, an inappropriate implementation in Picture in Picture. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in the Picture in Picture feature. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The vulnerability manifests as an inappropriate implementation in the Picture in Picture feature of Chromium, which is used by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 117.0.2045.31.",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "f161954c-4360-d96d-0d43-8209878cd557",
+            "post_id": "CVE-2023-4909",
+            "published": "15-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "Chromium: CVE-2023-4909 Inappropriate implementation in Interstitials",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4909",
+            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4909, an inappropriate implementation in Interstitials, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with build number 117.0.2045.31. Microsoft has provided a security update to mitigate this vulnerability. It is important for system administrators to stay informed about the support lifecycle for their software by referring to the Microsoft Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "117.0.2045.31"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "Release Note (15-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update",
+                    "package_url": "#"
+                }
+            ],
+            "core_products": [
+                "microsoft edge (chromium-based)  "
+            ],
+            "products": "Microsoft Edge (Chromium-based)",
+            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in interstitials of Chromium, which is consumed by Microsoft Edge.",
+            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable to this issue.",
             "conversation_links": [],
             "receivedDateTimes": [],
             "pm_fixes": [],
@@ -125,202 +558,14 @@
             "pm_tools": []
         },
         {
-            "id": "955ed46d-3b04-df03-cd26-00ec0d5e5fff",
-            "post_id": "CVE-2023-38160",
+            "id": "402abefd-ba7a-0b39-23a9-fb96f8fcfef5",
+            "post_id": "CVE-2023-35355",
             "published": "12-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-38160 Windows TCP/IP Information Disclosure Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38160",
-            "summary": "Windows systems are affected by a Critical Information Disclosure Vulnerability (CVE-2023-38160) in the TCP/IP stack. The vulnerability allows an attacker to potentially read small portions of heap memory, leading to a major loss of confidentiality. The attack vector is local, with low complexity and no user interaction required. The vulnerability does not impact integrity or availability. Microsoft has provided an official fix for this vulnerability through security updates for various Windows versions, including Windows Server 2012, 2016, 2008, and Windows 10 and 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The exploit code maturity is unproven, and the remediation level is an official fix. For more information and specific build numbers, refer to the Microsoft Security Updates page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "f951d0e0-1b9d-7c58-9aa2-88bf3437575e",
-            "post_id": "CVE-2023-38150",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38150 Windows Kernel Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38150",
-            "summary": "Windows Kernel Elevation of Privilege Vulnerability (CVE-2023-38150) has been identified with a base score of 7.8 and a temporal score of 7.0. The vulnerability allows an attacker to gain SYSTEM privileges, impacting Windows 11 versions 21H2 and 22H2 for both x64-based and ARM64-based systems. The attack vector is local, with low complexity and privileges required, and no user interaction. It results in a high impact on confidentiality, integrity, and availability. Microsoft has released security updates (build numbers 10.0.22621.2283 and 10.0.22000.2416) to address this vulnerability. System administrators are advised to apply these security updates to mitigate the risk of exploitation. No workaround or hotfix is provided, and the exploit code maturity is at the proof-of-concept stage. For more information, refer to the Microsoft Security Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22000.2416",
-                "10.0.22621.2283"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                }
-            ],
-            "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "0399e59e-53dc-6143-5555-e58a68855933",
-            "post_id": "CVE-2023-38149",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38149 Windows TCP/IP Denial of Service Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38149",
-            "summary": "A Windows TCP/IP Denial of Service Vulnerability, identified as CVE-2023-38149, has been reported with a maximum severity of 'Important'. The vulnerability affects various Windows versions, including Windows Server and Windows 10, and is caused by a flaw in the TCP/IP stack. It allows an attacker to exploit the network-bound vulnerability remotely, resulting in a total loss of availability. Microsoft has provided an official fix for this vulnerability through security updates for the affected Windows versions. Additionally, a workaround is available by disabling router discovery on the IPv6 interface using PowerShell or netsh commands. System administrators are strongly advised to install the security updates or apply the workaround to mitigate the risk of exploitation. The vulnerability's exploitability assessment indicates that systems are not affected if IPv6 is disabled on the target machine. For more information and specific build numbers for the security updates, refer to the Microsoft Security Updates page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "77af62b2-8c90-ee46-623c-85b1e7554046",
-            "post_id": "CVE-2023-38148",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38148 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38148",
-            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, CVE-2023-38148. The vulnerability allows an unauthorized attacker to send a specially crafted network packet to the ICS service, leading to remote code execution. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. No user interaction or privileges are required for exploitation. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server 2022, addressing the vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. Exploitation of this vulnerability requires that the Internet Connection Sharing (ICS) is enabled, and there are no known mitigating factors beyond this. For more information, refer to the Microsoft Security Update Guide.",
+            "title": "CVE-2023-35355 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35355",
+            "summary": "Windows Cloud Files Mini Filter Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-35355 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It is caused by a flaw in the Windows Cloud Files Mini Filter Driver. An attacker could exploit this vulnerability locally without user interaction. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server, with build numbers 10.0.19045.3448, 10.0.22621.2283, 10.0.19044.3448, 10.0.22000.2416, 10.0.20348.1970, and 10.0.17763.4851. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.22621.2283",
@@ -373,27 +618,22 @@
             "pm_tools": []
         },
         {
-            "id": "7484f355-2ad4-50c7-5422-28570c8d73a5",
-            "post_id": "CVE-2023-38147",
+            "id": "c6cecc6e-0c17-d86f-3d76-4b45f61a84f0",
+            "post_id": "CVE-2023-36802",
             "published": "12-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-38147 Windows Miracast Wireless Display Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38147",
-            "summary": "Windows Miracast Wireless Display is affected by a remote code execution vulnerability, identified as CVE-2023-38147, with a CVSS score of 8.8. The vulnerability allows an unauthenticated attacker within proximity to send and receive radio transmissions to execute arbitrary code on the target system. This requires the vulnerable system to be configured to allow 'Projecting to this PC' and marked as 'Available Everywhere', which is not a default setting. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server, with build numbers 10.0.14393.6252, 10.0.10240.20162, 10.0.19045.3448, 10.0.22621.2283, 10.0.19044.3448, 10.0.22000.2416, 10.0.20348.1970, and 10.0.17763.4851. System administrators are advised to apply the security updates to mitigate the risk of exploitation. The attack vector is adjacent, and the vulnerability can be exploited without user interaction. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure.",
+            "title": "CVE-2023-36802 Microsoft Streaming Service Proxy Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36802",
+            "summary": "Microsoft Streaming Service Proxy is impacted by an elevation of privilege vulnerability, identified as CVE-2023-36802, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, posing a high impact on confidentiality, integrity, and availability. The attack complexity is low, and no user interaction is required. Microsoft has provided security updates for various Windows versions, including Windows 10, Windows 11, and Windows Server, addressing this vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The availability of an official fix indicates the urgency of applying the updates to prevent potential exploitation. For more details and specific build numbers for the security updates, refer to the Microsoft Security Response Center's update guide.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
                 "10.0.19044.3448",
+                "10.0.22000.2416",
                 "10.0.19045.3448"
             ],
             "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
                 {
                     "kb_id": "kb5030219",
                     "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
@@ -409,10 +649,6 @@
             ],
             "package_pairs": [
                 {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
                     "package_type": "Security Update (KB5030219)",
                     "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
                 },
@@ -426,8 +662,6 @@
                 }
             ],
             "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
                 "windows 10 21H2 32-bit_systems",
                 "windows 10 21H2 x64-based_systems",
                 "windows 10 22H2 32-bit_systems",
@@ -444,42 +678,32 @@
             "pm_tools": []
         },
         {
-            "id": "1bb1bbeb-432d-bcdb-210d-8932aaa52a2d",
-            "post_id": "CVE-2023-38146",
+            "id": "e211f004-ebbb-872b-c3c9-9074c77cc467",
+            "post_id": "CVE-2023-4863",
             "published": "12-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-38146 Windows Themes Remote Code Execution Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38146",
-            "summary": "Windows Themes in Windows 11 are affected by a Remote Code Execution vulnerability, identified as CVE-2023-38146, with a CVSS score of 8.8/7.7. The vulnerability allows an attacker to execute arbitrary code by convincing a user to load a Windows Themes file from an attacker-controlled SMB share. It has a high impact on confidentiality, integrity, and availability. The attack vector is network-based, with low attack complexity and no privileges required. Microsoft has released security updates (build numbers 10.0.22621.2283 and 10.0.22000.2416) for Windows 11 Version 22H2 and 21H2, addressing the vulnerability. System administrators are advised to apply the security updates to mitigate the risk of exploitation. No temporary workarounds or mitigations are provided. For further details, refer to the Microsoft Support Lifecycle.",
+            "title": "Chromium: CVE-2023-4863 Heap buffer overflow in WebP",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4863",
+            "summary": "Microsoft Edge (Chromium-based) is affected by a heap buffer overflow vulnerability in WebP, identified as CVE-2023-4863. This vulnerability was assigned by Chrome and is ingested by Microsoft Edge through Chromium, which addresses the issue. An exploit for CVE-2023-4863 exists in the wild, making it crucial for system administrators to take immediate action. The vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code, posing a severe risk to affected systems. Microsoft has provided a security update for Microsoft Edge (Chromium-based) with the build number 116.0.1938.81, which system administrators are strongly advised to apply to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page. Additionally, affected customers can check if the update is installed using PowerShell command: Get-AppxPackage -Name Microsoft.WebpImageExtension. It's important to note that Microsoft Store will automatically update affected customers, and those in disconnected environments can obtain the update through their organizations using the Microsoft Store for Business and Microsoft Store for Education.",
             "related_posts": "[]",
             "build_number_str": [
-                "10.0.22000.2416",
-                "10.0.22621.2283"
+                "116.0.1938.81"
             ],
             "kb_article_pairs": [
                 {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                    "kb_id": "Release Note (12-09-2023)",
+                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-12-2023"
                 }
             ],
             "package_pairs": [
                 {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                    "package_type": "Security Update",
+                    "package_url": "#"
                 }
             ],
             "core_products": [
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
+                "microsoft edge (chromium-based)  "
             ],
             "products": "",
             "symptoms": "",
@@ -490,348 +714,14 @@
             "pm_tools": []
         },
         {
-            "id": "eec52724-a157-849e-458f-07b8040c9724",
-            "post_id": "CVE-2023-38144",
+            "id": "1a989017-d8b9-e802-d76e-3a9324ab2c7f",
+            "post_id": "CVE-2023-36804",
             "published": "12-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-38144 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38144",
-            "summary": "Windows Common Log File System Driver is affected by an elevation of privilege vulnerability identified as CVE-2023-38144. The vulnerability has a base score of 7.8 and a temporal score of 6.8, indicating a significant impact. It is caused by a flaw in the Windows Common Log File System Driver, allowing an attacker to gain SYSTEM privileges. The attack vector is local, with low complexity and no user interaction required, making it exploitable without any user participation. Microsoft has provided a complete vendor solution, with security updates available for various Windows versions including Windows Server 2012, 2016, 2019, Windows 10, and Windows 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The vulnerability's severity underscores the importance of prompt patching to maintain the security of affected systems.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "dd4281ca-4617-5af8-579b-38d05714610a",
-            "post_id": "CVE-2023-38143",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38143 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38143",
-            "summary": "Windows Common Log File System Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-38143, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges without user interaction, impacting confidentiality, integrity, and availability. Any authenticated attacker could trigger this vulnerability without requiring admin or other elevated privileges. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server 2012, 2016, 2019, and 2022, as well as Windows 10 and 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The exploitability assessment indicates that no exploit code is available, and the remediation level is an official fix, signifying the availability of a complete vendor solution. For more information and specific build numbers, refer to the Microsoft Security Updates page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "53e3b8cf-6553-58d6-f8c5-18010ad6f7c1",
-            "post_id": "CVE-2023-38142",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38142 Windows Kernel Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38142",
-            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-38142, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a base score of 7.8 and a temporal score of 6.8. The attack vector is local, with low attack complexity and privileges required. It does not require user interaction and has a high impact on confidentiality, integrity, and availability. Microsoft has provided a security update to address this vulnerability. The affected products include various versions of Windows Server, Windows 10, Windows 11, and Windows Server 2019, with corresponding build numbers for each. System administrators are advised to apply the security updates to mitigate the risk of exploitation and protect the affected systems. For more information and to download the security updates, refer to the Microsoft Security Updates page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "df0673be-68b2-508c-b105-a83dbf71d644",
-            "post_id": "CVE-2023-38141",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38141 Windows Kernel Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38141",
-            "summary": "Windows Kernel Elevation of Privilege Vulnerability (CVE-2023-38141) has been identified with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, posing a significant risk to affected systems. The attack vector is local, with low complexity and no user interaction required, making it exploitable without any user participation. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided an official fix for this vulnerability through security updates for various Windows versions, including Windows Server 2012, 2016, 2019, and 2022, as well as Windows 10 and 11. System administrators are strongly advised to apply the provided security updates to mitigate the risk of exploitation and protect the affected systems from potential privilege escalation attacks.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.22000.2416",
-                "10.0.10240.20162",
-                "10.0.19044.3448",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030220",
-                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030220)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
-                },
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10  32-bit_systems",
-                "windows 10  x64-based_systems",
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "b7c5a4a8-ea4c-d67b-84aa-f1ecbf96c1d4",
-            "post_id": "CVE-2023-38140",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38140 Windows Kernel Information Disclosure Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38140",
-            "summary": "A Windows Kernel Information Disclosure Vulnerability, identified as CVE-2023-38140, has been reported with a maximum severity of 'Important'. The vulnerability allows unauthorized disclosure of uninitialized memory, and it requires low privileges, meaning any authenticated attacker could trigger it without admin or elevated privileges. The attack vector is local, with low complexity and no user interaction required. The impacted Microsoft products include various versions of Windows Server, Windows 10, Windows 11, and Windows Server 2019. Microsoft has provided a security update for the affected products, addressing the vulnerability and preventing information disclosure. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Support Lifecycle page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.19044.3448",
-                "10.0.22000.2416",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "9d3c448a-d7d6-a7c6-2eaa-86e60232637f",
-            "post_id": "CVE-2023-38139",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-38139 Windows Kernel Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38139",
-            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-38139, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It affects various Windows Server versions, Windows 10, and Windows 11. The attack complexity is low, and no user interaction is required. Microsoft has provided a security update to address this vulnerability. System administrators are advised to apply the relevant security updates for their specific Windows versions to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Update Catalog or the Microsoft Security Update Guide.",
+            "title": "CVE-2023-36804 Windows GDI Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36804",
+            "summary": "Windows GDI is affected by an elevation of privilege vulnerability, identified as CVE-2023-36804, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a low attack complexity and requires no user interaction. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided a complete vendor solution, and security updates are available for various Windows versions including Windows Server 2012, 2016, 2019, Windows 10, and Windows 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The vulnerability could be exploited by an attacker to gain elevated privileges, potentially leading to unauthorized access and control over affected systems. For more information and specific build numbers, refer to the Microsoft Security Update Guide.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.22621.2283",
@@ -966,14 +856,713 @@
             "pm_tools": []
         },
         {
-            "id": "1a989017-d8b9-e802-d76e-3a9324ab2c7f",
-            "post_id": "CVE-2023-36804",
+            "id": "9d3c448a-d7d6-a7c6-2eaa-86e60232637f",
+            "post_id": "CVE-2023-38139",
             "published": "12-09-2023",
             "revision": "1.0",
             "post_type": "Solution provided",
-            "title": "CVE-2023-36804 Windows GDI Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36804",
-            "summary": "Windows GDI is affected by an elevation of privilege vulnerability, identified as CVE-2023-36804, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a low attack complexity and requires no user interaction. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided a complete vendor solution, and security updates are available for various Windows versions including Windows Server 2012, 2016, 2019, Windows 10, and Windows 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The vulnerability could be exploited by an attacker to gain elevated privileges, potentially leading to unauthorized access and control over affected systems. For more information and specific build numbers, refer to the Microsoft Security Update Guide.",
+            "title": "CVE-2023-38139 Windows Kernel Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38139",
+            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-38139, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges. It affects various Windows Server versions, Windows 10, and Windows 11. The attack complexity is low, and no user interaction is required. Microsoft has provided a security update to address this vulnerability. System administrators are advised to apply the relevant security updates for their specific Windows versions to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Update Catalog or the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "b7c5a4a8-ea4c-d67b-84aa-f1ecbf96c1d4",
+            "post_id": "CVE-2023-38140",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38140 Windows Kernel Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38140",
+            "summary": "A Windows Kernel Information Disclosure Vulnerability, identified as CVE-2023-38140, has been reported with a maximum severity of 'Important'. The vulnerability allows unauthorized disclosure of uninitialized memory, and it requires low privileges, meaning any authenticated attacker could trigger it without admin or elevated privileges. The attack vector is local, with low complexity and no user interaction required. The impacted Microsoft products include various versions of Windows Server, Windows 10, Windows 11, and Windows Server 2019. Microsoft has provided a security update for the affected products, addressing the vulnerability and preventing information disclosure. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information and to download the security updates, refer to the Microsoft Support Lifecycle page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.19044.3448",
+                "10.0.22000.2416",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "df0673be-68b2-508c-b105-a83dbf71d644",
+            "post_id": "CVE-2023-38141",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38141 Windows Kernel Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38141",
+            "summary": "Windows Kernel Elevation of Privilege Vulnerability (CVE-2023-38141) has been identified with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, posing a significant risk to affected systems. The attack vector is local, with low complexity and no user interaction required, making it exploitable without any user participation. The impact includes high confidentiality, integrity, and availability risks. Microsoft has provided an official fix for this vulnerability through security updates for various Windows versions, including Windows Server 2012, 2016, 2019, and 2022, as well as Windows 10 and 11. System administrators are strongly advised to apply the provided security updates to mitigate the risk of exploitation and protect the affected systems from potential privilege escalation attacks.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "53e3b8cf-6553-58d6-f8c5-18010ad6f7c1",
+            "post_id": "CVE-2023-38142",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38142 Windows Kernel Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38142",
+            "summary": "A Windows Kernel Elevation of Privilege Vulnerability, identified as CVE-2023-38142, has been reported with a maximum severity of 'Important'. The vulnerability allows an attacker to gain SYSTEM privileges, and it has a base score of 7.8 and a temporal score of 6.8. The attack vector is local, with low attack complexity and privileges required. It does not require user interaction and has a high impact on confidentiality, integrity, and availability. Microsoft has provided a security update to address this vulnerability. The affected products include various versions of Windows Server, Windows 10, Windows 11, and Windows Server 2019, with corresponding build numbers for each. System administrators are advised to apply the security updates to mitigate the risk of exploitation and protect the affected systems. For more information and to download the security updates, refer to the Microsoft Security Updates page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "dd4281ca-4617-5af8-579b-38d05714610a",
+            "post_id": "CVE-2023-38143",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38143 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38143",
+            "summary": "Windows Common Log File System Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-38143, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges without user interaction, impacting confidentiality, integrity, and availability. Any authenticated attacker could trigger this vulnerability without requiring admin or other elevated privileges. Microsoft has provided a solution by releasing security updates for various Windows versions, including Windows Server 2012, 2016, 2019, and 2022, as well as Windows 10 and 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The exploitability assessment indicates that no exploit code is available, and the remediation level is an official fix, signifying the availability of a complete vendor solution. For more information and specific build numbers, refer to the Microsoft Security Updates page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "eec52724-a157-849e-458f-07b8040c9724",
+            "post_id": "CVE-2023-38144",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38144 Windows Common Log File System Driver Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38144",
+            "summary": "Windows Common Log File System Driver is affected by an elevation of privilege vulnerability identified as CVE-2023-38144. The vulnerability has a base score of 7.8 and a temporal score of 6.8, indicating a significant impact. It is caused by a flaw in the Windows Common Log File System Driver, allowing an attacker to gain SYSTEM privileges. The attack vector is local, with low complexity and no user interaction required, making it exploitable without any user participation. Microsoft has provided a complete vendor solution, with security updates available for various Windows versions including Windows Server 2012, 2016, 2019, Windows 10, and Windows 11. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The vulnerability's severity underscores the importance of prompt patching to maintain the security of affected systems.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "1bb1bbeb-432d-bcdb-210d-8932aaa52a2d",
+            "post_id": "CVE-2023-38146",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38146 Windows Themes Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38146",
+            "summary": "Windows Themes in Windows 11 are affected by a Remote Code Execution vulnerability, identified as CVE-2023-38146, with a CVSS score of 8.8/7.7. The vulnerability allows an attacker to execute arbitrary code by convincing a user to load a Windows Themes file from an attacker-controlled SMB share. It has a high impact on confidentiality, integrity, and availability. The attack vector is network-based, with low attack complexity and no privileges required. Microsoft has released security updates (build numbers 10.0.22621.2283 and 10.0.22000.2416) for Windows 11 Version 22H2 and 21H2, addressing the vulnerability. System administrators are advised to apply the security updates to mitigate the risk of exploitation. No temporary workarounds or mitigations are provided. For further details, refer to the Microsoft Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2416",
+                "10.0.22621.2283"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "7484f355-2ad4-50c7-5422-28570c8d73a5",
+            "post_id": "CVE-2023-38147",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38147 Windows Miracast Wireless Display Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38147",
+            "summary": "Windows Miracast Wireless Display is affected by a remote code execution vulnerability, identified as CVE-2023-38147, with a CVSS score of 8.8. The vulnerability allows an unauthenticated attacker within proximity to send and receive radio transmissions to execute arbitrary code on the target system. This requires the vulnerable system to be configured to allow 'Projecting to this PC' and marked as 'Available Everywhere', which is not a default setting. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server, with build numbers 10.0.14393.6252, 10.0.10240.20162, 10.0.19045.3448, 10.0.22621.2283, 10.0.19044.3448, 10.0.22000.2416, 10.0.20348.1970, and 10.0.17763.4851. System administrators are advised to apply the security updates to mitigate the risk of exploitation. The attack vector is adjacent, and the vulnerability can be exploited without user interaction. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "77af62b2-8c90-ee46-623c-85b1e7554046",
+            "post_id": "CVE-2023-38148",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38148 Internet Connection Sharing (ICS) Remote Code Execution Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38148",
+            "summary": "Internet Connection Sharing (ICS) is affected by a Critical Remote Code Execution Vulnerability, CVE-2023-38148. The vulnerability allows an unauthorized attacker to send a specially crafted network packet to the ICS service, leading to remote code execution. The attack vector is adjacent, meaning it is limited to systems connected to the same network segment as the attacker. No user interaction or privileges are required for exploitation. The impact includes high confidentiality, integrity, and availability loss. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server 2022, addressing the vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. Exploitation of this vulnerability requires that the Internet Connection Sharing (ICS) is enabled, and there are no known mitigating factors beyond this. For more information, refer to the Microsoft Security Update Guide.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.19044.3448",
+                "10.0.22000.2416",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "0399e59e-53dc-6143-5555-e58a68855933",
+            "post_id": "CVE-2023-38149",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38149 Windows TCP/IP Denial of Service Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38149",
+            "summary": "A Windows TCP/IP Denial of Service Vulnerability, identified as CVE-2023-38149, has been reported with a maximum severity of 'Important'. The vulnerability affects various Windows versions, including Windows Server and Windows 10, and is caused by a flaw in the TCP/IP stack. It allows an attacker to exploit the network-bound vulnerability remotely, resulting in a total loss of availability. Microsoft has provided an official fix for this vulnerability through security updates for the affected Windows versions. Additionally, a workaround is available by disabling router discovery on the IPv6 interface using PowerShell or netsh commands. System administrators are strongly advised to install the security updates or apply the workaround to mitigate the risk of exploitation. The vulnerability's exploitability assessment indicates that systems are not affected if IPv6 is disabled on the target machine. For more information and specific build numbers for the security updates, refer to the Microsoft Security Updates page.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22621.2283",
+                "10.0.22000.2416",
+                "10.0.10240.20162",
+                "10.0.19044.3448",
+                "10.0.19045.3448"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030220",
+                    "kb_link": "https://support.microsoft.com/help/5030220#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030211",
+                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030220)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030220"
+                },
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                },
+                {
+                    "package_type": "Security Update (KB5030211)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
+                }
+            ],
+            "core_products": [
+                "windows 10  32-bit_systems",
+                "windows 10  x64-based_systems",
+                "windows 10 21H2 32-bit_systems",
+                "windows 10 21H2 x64-based_systems",
+                "windows 10 22H2 32-bit_systems",
+                "windows 10 22H2 x64-based_systems",
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "f951d0e0-1b9d-7c58-9aa2-88bf3437575e",
+            "post_id": "CVE-2023-38150",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38150 Windows Kernel Elevation of Privilege Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38150",
+            "summary": "Windows Kernel Elevation of Privilege Vulnerability (CVE-2023-38150) has been identified with a base score of 7.8 and a temporal score of 7.0. The vulnerability allows an attacker to gain SYSTEM privileges, impacting Windows 11 versions 21H2 and 22H2 for both x64-based and ARM64-based systems. The attack vector is local, with low complexity and privileges required, and no user interaction. It results in a high impact on confidentiality, integrity, and availability. Microsoft has released security updates (build numbers 10.0.22621.2283 and 10.0.22000.2416) to address this vulnerability. System administrators are advised to apply these security updates to mitigate the risk of exploitation. No workaround or hotfix is provided, and the exploit code maturity is at the proof-of-concept stage. For more information, refer to the Microsoft Security Support Lifecycle.",
+            "related_posts": "[]",
+            "build_number_str": [
+                "10.0.22000.2416",
+                "10.0.22621.2283"
+            ],
+            "kb_article_pairs": [
+                {
+                    "kb_id": "kb5030219",
+                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
+                },
+                {
+                    "kb_id": "kb5030217",
+                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
+                }
+            ],
+            "package_pairs": [
+                {
+                    "package_type": "Security Update (KB5030219)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
+                },
+                {
+                    "package_type": "Security Update (KB5030217)",
+                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
+                }
+            ],
+            "core_products": [
+                "windows 11 21H2 x64-based_systems",
+                "windows 11 22H2 x64-based_systems"
+            ],
+            "products": "",
+            "symptoms": "",
+            "fixes": "",
+            "conversation_links": [],
+            "receivedDateTimes": [],
+            "pm_fixes": [],
+            "pm_tools": []
+        },
+        {
+            "id": "955ed46d-3b04-df03-cd26-00ec0d5e5fff",
+            "post_id": "CVE-2023-38160",
+            "published": "12-09-2023",
+            "revision": "1.0",
+            "post_type": "Solution provided",
+            "title": "CVE-2023-38160 Windows TCP/IP Information Disclosure Vulnerability",
+            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-38160",
+            "summary": "Windows systems are affected by a Critical Information Disclosure Vulnerability (CVE-2023-38160) in the TCP/IP stack. The vulnerability allows an attacker to potentially read small portions of heap memory, leading to a major loss of confidentiality. The attack vector is local, with low complexity and no user interaction required. The vulnerability does not impact integrity or availability. Microsoft has provided an official fix for this vulnerability through security updates for various Windows versions, including Windows Server 2012, 2016, 2008, and Windows 10 and 11. System administrators are advised to apply the respective security updates to mitigate the risk of exploitation. The exploit code maturity is unproven, and the remediation level is an official fix. For more information and specific build numbers, refer to the Microsoft Security Updates page.",
             "related_posts": "[]",
             "build_number_str": [
                 "10.0.22621.2283",
@@ -1095,594 +1684,6 @@
             "receivedDateTimes": [],
             "pm_fixes": [],
             "pm_tools": []
-        },
-        {
-            "id": "c6cecc6e-0c17-d86f-3d76-4b45f61a84f0",
-            "post_id": "CVE-2023-36802",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36802 Microsoft Streaming Service Proxy Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36802",
-            "summary": "Microsoft Streaming Service Proxy is impacted by an elevation of privilege vulnerability, identified as CVE-2023-36802, with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges, posing a high impact on confidentiality, integrity, and availability. The attack complexity is low, and no user interaction is required. Microsoft has provided security updates for various Windows versions, including Windows 10, Windows 11, and Windows Server, addressing this vulnerability. System administrators are advised to apply the relevant security updates to mitigate the risk of exploitation. The availability of an official fix indicates the urgency of applying the updates to prevent potential exploitation. For more details and specific build numbers for the security updates, refer to the Microsoft Security Response Center's update guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.19044.3448",
-                "10.0.22000.2416",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "402abefd-ba7a-0b39-23a9-fb96f8fcfef5",
-            "post_id": "CVE-2023-35355",
-            "published": "12-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-35355 Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-35355",
-            "summary": "Windows Cloud Files Mini Filter Driver is affected by an elevation of privilege vulnerability, identified as CVE-2023-35355 with a CVSS score of 7.8. The vulnerability allows an attacker to gain SYSTEM privileges. It is caused by a flaw in the Windows Cloud Files Mini Filter Driver. An attacker could exploit this vulnerability locally without user interaction. Microsoft has provided a security update for various Windows versions, including Windows 10, Windows 11, and Windows Server, with build numbers 10.0.19045.3448, 10.0.22621.2283, 10.0.19044.3448, 10.0.22000.2416, 10.0.20348.1970, and 10.0.17763.4851. System administrators are advised to apply the security updates to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Update Guide.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "10.0.22621.2283",
-                "10.0.19044.3448",
-                "10.0.22000.2416",
-                "10.0.19045.3448"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "kb5030219",
-                    "kb_link": "https://support.microsoft.com/help/5030219#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030217",
-                    "kb_link": "https://support.microsoft.com/help/5030217#september-12-2023"
-                },
-                {
-                    "kb_id": "kb5030211",
-                    "kb_link": "https://support.microsoft.com/help/5030211#september-12-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update (KB5030219)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030219"
-                },
-                {
-                    "package_type": "Security Update (KB5030217)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030217"
-                },
-                {
-                    "package_type": "Security Update (KB5030211)",
-                    "package_url": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5030211"
-                }
-            ],
-            "core_products": [
-                "windows 10 21H2 32-bit_systems",
-                "windows 10 21H2 x64-based_systems",
-                "windows 10 22H2 32-bit_systems",
-                "windows 10 22H2 x64-based_systems",
-                "windows 11 21H2 x64-based_systems",
-                "windows 11 22H2 x64-based_systems"
-            ],
-            "products": "",
-            "symptoms": "",
-            "fixes": "",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "f161954c-4360-d96d-0d43-8209878cd557",
-            "post_id": "CVE-2023-4909",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4909 Inappropriate implementation in Interstitials",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4909",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4909, an inappropriate implementation in Interstitials, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with build number 117.0.2045.31. Microsoft has provided a security update to mitigate this vulnerability. It is important for system administrators to stay informed about the support lifecycle for their software by referring to the Microsoft Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in interstitials of Chromium, which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable to this issue.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "40b8f24a-b31c-e865-177f-428943294489",
-            "post_id": "CVE-2023-4908",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4908 Inappropriate implementation in Picture in Picture",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4908",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4908, an inappropriate implementation in Picture in Picture. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in the Picture in Picture feature. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability manifests as an inappropriate implementation in the Picture in Picture feature of Chromium, which is used by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 117.0.2045.31.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "3fed7f2d-7d82-695f-b56c-44d33e3a721c",
-            "post_id": "CVE-2023-4907",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4907 Inappropriate implementation in Intents",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4907",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4907, an inappropriate implementation in Intents, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. Microsoft acknowledges the efforts of the security community in coordinated vulnerability disclosure. The Microsoft Knowledge Base provides details about the support lifecycle for the software.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability is due to an inappropriate implementation in Intents in Chromium which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "641780f8-98e7-3606-eb47-5ab73e8987a6",
-            "post_id": "CVE-2023-4906",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4906 Insufficient policy enforcement in Autofill",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4906",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4906, an Insufficient policy enforcement vulnerability in Autofill, assigned by Chrome. This vulnerability is caused by a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with build number 117.0.2045.31. Microsoft recognizes the efforts of those in the security community who help protect customers through coordinated vulnerability disclosure.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability manifests as insufficient policy enforcement in the Autofill feature of Chromium, which is used by Microsoft Edge.",
-            "fixes": "The fix involves updating to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable to this issue.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "c5563ca4-2df2-db34-452c-bdcf35828214",
-            "post_id": "CVE-2023-4905",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4905 Inappropriate implementation in Prompts",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4905",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4905, an inappropriate implementation vulnerability in Prompts. This vulnerability was assigned by Chrome and is addressed by ingesting Chromium. The latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. The vulnerability is caused by an inappropriate implementation in Prompts, which could be exploited by an attacker to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability is due to an inappropriate implementation in prompts in Chromium, which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "b2f88088-262e-4665-b242-1f7fa18f12c0",
-            "post_id": "CVE-2023-4904",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4904 Insufficient policy enforcement in Downloads",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4904",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4904, an Insufficient policy enforcement vulnerability in Downloads. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium, making the latest version of Microsoft Edge (Chromium-based) no longer vulnerable. The vulnerability stems from a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the [Google Chrome Releases](https://chromereleases.googleblog.com/2023) page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability allows for insufficient policy enforcement in downloads in Chromium, affecting Microsoft Edge (Chromium-based).",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "eefc5f50-0812-b9d9-fd7a-975c583a32d1",
-            "post_id": "CVE-2023-4903",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4903 Inappropriate implementation in Custom Mobile Tabs",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4903",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4903, an inappropriate implementation vulnerability in Custom Mobile Tabs. This vulnerability, assigned by Chrome, is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update Microsoft Edge to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability impacts Microsoft Edge (Chromium-based) with build number 117.0.2045.31, and the release date is September 15, 2023.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the Custom Mobile Tabs of Chromium.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "a2cf73bd-9223-f145-5fb1-6200a560786b",
-            "post_id": "CVE-2023-4902",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4902 Inappropriate implementation in Input",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4902",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a vulnerability, CVE-2023-4902, related to inappropriate implementation in Input, assigned by Chrome. This vulnerability is in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to update their Microsoft Edge installations to the latest version. For more information, refer to the Google Chrome Releases page. The vulnerability affects Microsoft Edge (Chromium-based) with build number 117.0.2045.31, and the impact severity is not specified. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. It is important to regularly check for security updates and apply them promptly to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The symptom of this vulnerability is an inappropriate implementation in the input of Chromium, which is used by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable. The version is 117.0.2045.31.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "a6e49087-afcc-cb4e-0395-f9f81762e612",
-            "post_id": "CVE-2023-4901",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4901 Inappropriate implementation in Prompts",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4901",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4901, an inappropriate implementation in Prompts. This vulnerability, assigned by Chrome, is due to a flaw in the Chromium Open Source Software (OSS) consumed by Microsoft Edge. An attacker could exploit this vulnerability to execute arbitrary code in the context of the current user. Microsoft has addressed this vulnerability by ingesting Chromium, and the latest version of Microsoft Edge (Chromium-based) is no longer vulnerable. System administrators are advised to ensure their Microsoft Edge installations are updated to the latest version. For more information, refer to the Google Chrome Releases page. No specific workaround or mitigation is provided beyond updating to the latest version of Microsoft Edge (Chromium-based).",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability is due to an inappropriate implementation in prompts in Chromium, which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based) which is no longer vulnerable. The version is 117.0.2045.31.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "9c9ea64a-6880-e4bd-8f11-01416e37a33d",
-            "post_id": "CVE-2023-4900",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "Chromium: CVE-2023-4900 Inappropriate implementation in Custom Tabs",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-4900",
-            "summary": "Microsoft Edge (Chromium-based) is affected by CVE-2023-4900, an inappropriate implementation vulnerability in Custom Tabs. This vulnerability, assigned by Chrome, is addressed by ingesting Chromium, making the latest version of Microsoft Edge (Chromium-based) no longer vulnerable. The vulnerability is caused by an inappropriate implementation in Custom Tabs, and an attacker could exploit it to execute arbitrary code in the context of the current user. Microsoft has provided a solution by releasing a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31. System administrators are advised to update their Microsoft Edge installations to the latest version to mitigate the risk of exploitation. For more information, refer to the Google Chrome Releases page.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The vulnerability is due to an inappropriate implementation in Custom Tabs of Chromium, which is consumed by Microsoft Edge.",
-            "fixes": "The fix for this vulnerability is to update to the latest version of Microsoft Edge (Chromium-based), which is no longer vulnerable as it ingests the fixed version of Chromium.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "a47a6877-6a19-a7b9-f510-ce635cddd6cc",
-            "post_id": "CVE-2023-36735",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36735 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36735",
-            "summary": "Microsoft Edge (Chromium-based) is affected by an elevation of privilege vulnerability, identified as CVE-2023-36735, with a CVSS score of 9.6/8.3. The vulnerability allows an attacker to gain unauthorized access and execute arbitrary code. It is rated as moderate severity due to the level of user interaction required for exploitation. The attacker needs to convince the user to click a link and open a specially crafted file, typically through email or instant messenger. Successful exploitation could lead to a browser sandbox escape and remote code execution. Microsoft has provided a security update with build number 117.0.2045.31 to address this vulnerability. System administrators are advised to apply the security update to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "",
-            "symptoms": "Unsafe default configurations for LDAP channel binding and LDAP signing exist on Active Directory domain controllers that let LDAP clients communicate with them without enforcing LDAP channel binding and LDAP signing. This can open Active Directory domain controllers to an elevation of privilege vulnerability.",
-            "fixes": "Microsoft has released an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "720ad5be-ed41-937f-c2be-89a06214f589",
-            "post_id": "CVE-2023-36727",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36727 Microsoft Edge (Chromium-based) Spoofing Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36727",
-            "summary": "Microsoft Edge (Chromium-based) is affected by a Spoofing Vulnerability (CVE-2023-36727) with a CVSS score of 6.1/5.3. The vulnerability requires user interaction, where the user needs to click on a specially crafted URL to be compromised by the attacker. Successful exploitation could lead to a scope change, causing malicious scripts to execute in the victim\u2019s browser. This could result in some loss of integrity and confidentiality, as limited information from the victim's browser associated with the vulnerable URL can be sent to the attacker by the malicious code. Microsoft has released a security update (build number 117.0.2045.31) to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation. For more information, refer to the Microsoft Security Support Lifecycle.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "Microsoft Edge (Chromium-based)",
-            "symptoms": "The system exhibits a spoofing vulnerability in Microsoft Edge (Chromium-based) where an attacker can exploit the vulnerable component through the network. This requires user interaction for successful exploitation.",
-            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
-        },
-        {
-            "id": "f7027487-10c9-f048-7526-37c41a3a470e",
-            "post_id": "CVE-2023-36562",
-            "published": "15-09-2023",
-            "revision": "1.0",
-            "post_type": "Solution provided",
-            "title": "CVE-2023-36562 Microsoft Edge (Chromium-based) Elevation of Privilege Vulnerability",
-            "source": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-36562",
-            "summary": "Microsoft Edge (Chromium-based) is affected by an elevation of privilege vulnerability, identified as CVE-2023-36562, with a CVSS score of 7.1. The vulnerability requires user interaction, such as opening a specially crafted file, making it exploitable in email or web-based attack scenarios. Successful exploitation could lead to a browser sandbox escape, with potential minor impacts on confidentiality, integrity, and availability. Although the severity is rated as moderate, the CVSS score is higher due to the level of user interaction required. Microsoft has released a security update for Microsoft Edge (Chromium-based) with the build number 117.0.2045.31 to address this vulnerability. System administrators are advised to apply the official fix to mitigate the risk of exploitation.",
-            "related_posts": "[]",
-            "build_number_str": [
-                "117.0.2045.31"
-            ],
-            "kb_article_pairs": [
-                {
-                    "kb_id": "Release Note (15-09-2023)",
-                    "kb_link": "https://docs.microsoft.com/en-us/DeployEdge/microsoft-edge-relnotes-security#september-15-2023"
-                }
-            ],
-            "package_pairs": [
-                {
-                    "package_type": "Security Update",
-                    "package_url": "#"
-                }
-            ],
-            "core_products": [
-                "microsoft edge (chromium-based)  "
-            ],
-            "products": "",
-            "symptoms": "The vulnerability allows an attacker to elevate their privileges in Microsoft Edge (Chromium-based), gaining unauthorized access and the ability to modify data.",
-            "fixes": "Microsoft has provided an official fix for this vulnerability. Users are advised to update their Microsoft Edge (Chromium-based) to the latest version to mitigate this vulnerability.",
-            "conversation_links": [],
-            "receivedDateTimes": [],
-            "pm_fixes": [],
-            "pm_tools": []
         }
     ],
     "section_1_metadata": {
@@ -1712,5 +1713,191 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "2cfc3f5e-d204-6a3d-3dcc-76201ce39240",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15, 2023"
+            },
+            {
+                "id": "11e848ce-1116-202f-605c-1d574ffb7f42",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15th-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15th, 2023"
+            },
+            {
+                "id": "58610eb6-6c17-dac5-7c94-c40157874fc1",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-15th-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-15",
+                "title": "September 15th, 2023"
+            },
+            {
+                "id": "9043b090-c144-f9c5-4fc7-6a79fec52c75",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#september-12-2023",
+                "collection": "security_update_notes",
+                "published": "2023-09-12",
+                "title": "September 12, 2023"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "a28affa2-df70-1ded-060a-7f8d05fced1b",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-10901518140-september-15-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-15",
+                "title": "Version 109.0.1518.140: September 15, 2023"
+            },
+            {
+                "id": "8c9a81d9-2cb7-3630-bb45-2b68994caa6f",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1170204531-september-15-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-15",
+                "title": "Version: 117.0.2045.31: September 15, 2023"
+            },
+            {
+                "id": "7efc1bff-c58a-eb10-63a3-e77e20ed6af8",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-1160193881-september-12-2023",
+                "collection": "stable_channel_notes",
+                "published": "2023-09-12",
+                "title": "Version 116.0.1938.81: September 12, 2023"
+            }
+        ],
+        "windows_10": [
+            {
+                "id": "724230e6-6f8e-f887-bccb-3adf72a70125",
+                "source": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09",
+                "collection": "windows_10",
+                "published": "2023-09-15",
+                "title": "Delete cookies in Microsoft Edge - Microsoft Support"
+            },
+            {
+                "id": "485fcc6b-542e-5274-d2d2-ce711622b36a",
+                "source": "https://support.microsoft.com/en-us/windows/resolving-blue-screen-errors-in-windows-60b01860-58f2-be66-7516-5c45a66ae3c6",
+                "collection": "windows_10",
+                "published": "2023-09-15",
+                "title": "Resolving Blue Screen errors in Windows - Microsoft Support"
+            },
+            {
+                "id": "f996a705-1611-3e0e-2216-0f39cd3977a7",
+                "source": "https://support.microsoft.com/en-us/topic/september-12-2023-kb5030213-os-build-14393-6252-c9d9f24c-3728-4eeb-a017-dd0cd2b106cb",
+                "collection": "windows_10",
+                "published": "2023-09-13",
+                "title": "September 12, 2023\u2014KB5030213 (OS Build 14393.6252) - Microsoft Support"
+            },
+            {
+                "id": "e41559e6-2fcd-8647-7cfb-fae65adc099c",
+                "source": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-apps-139014e7-177b-d1f3-eb2e-7298b2599a34",
+                "collection": "windows_10",
+                "published": "2023-09-13",
+                "title": "Keyboard shortcuts in apps - Microsoft Support"
+            },
+            {
+                "id": "b446cf62-f884-cef1-1f0c-47c2b2e11bf9",
+                "source": "https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-for-accessibility-021bcb62-45c8-e4ef-1e4f-41b8c1fc87fd",
+                "collection": "windows_10",
+                "published": "2023-09-13",
+                "title": "Windows keyboard shortcuts for accessibility - Microsoft Support"
+            },
+            {
+                "id": "68cd0f62-689c-8d13-7e8b-1074e33ff312",
+                "source": "https://support.microsoft.com/en-us/topic/kb5030504-servicing-stack-update-for-windows-server-2016-september-12-2023-a5e51acd-6687-41e9-b4a0-5a2d4ab31e40",
+                "collection": "windows_10",
+                "published": "2023-09-12",
+                "title": "KB5030504: Servicing stack update for Windows Server 2016: September 12, 2023 - Microsoft Support"
+            },
+            {
+                "id": "95967062-6ce4-2f34-d747-e499707ea7ce",
+                "source": "https://support.microsoft.com/en-us/topic/kb5030503-servicing-stack-update-for-windows-10-september-12-2023-9d96add7-bbb2-4f47-b2bd-ce8c9b8b7dd1",
+                "collection": "windows_10",
+                "published": "2023-09-12",
+                "title": "KB5030503: Servicing stack update for Windows 10: September 12, 2023 - Microsoft Support"
+            },
+            {
+                "id": "587cdf35-d89b-cdf5-3d4b-2a126c56bb10",
+                "source": "https://support.microsoft.com/en-us/topic/september-12-2023-kb5030220-os-build-10240-20162-193b8827-810b-4903-be0e-dfedb300971a",
+                "collection": "windows_10",
+                "published": "2023-09-12",
+                "title": "September 12, 2023\u2014KB5030220 (OS Build 10240.20162) - Microsoft Support"
+            },
+            {
+                "id": "5ba01425-5a3f-8317-6cdb-cd7ee82a8b2a",
+                "source": "https://support.microsoft.com/en-us/topic/kb5029778-how-to-manage-the-vulnerability-associated-with-cve-2022-40982-d461157c-0411-4a91-9fc5-9b29e0fe2782",
+                "collection": "windows_10",
+                "published": "2023-09-12",
+                "title": "KB5029778: How to manage the vulnerability associated with CVE-2022-40982 - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "403079ea-2176-ccaf-7622-38cf79118982",
+                "source": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Delete cookies in Microsoft Edge - Microsoft Support"
+            },
+            {
+                "id": "b8495f3c-90de-3e07-8875-2a26dc92353f",
+                "source": "https://support.microsoft.com/en-us/windows/resolving-blue-screen-errors-in-windows-60b01860-58f2-be66-7516-5c45a66ae3c6",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Resolving Blue Screen errors in Windows - Microsoft Support"
+            },
+            {
+                "id": "e5cf3874-f7e0-c032-0556-4d9d78926324",
+                "source": "https://support.microsoft.com/en-us/windows/search-photos-and-videos-by-location-in-windows-photos-27b3e790-05d6-4d86-8b69-7a0ffbf72d84",
+                "collection": "windows_11",
+                "published": "2023-09-15",
+                "title": "Search photos and videos by location in Windows Photos - Microsoft Support"
+            },
+            {
+                "id": "baee58df-7703-e304-f96c-eb65096bd18e",
+                "source": "https://support.microsoft.com/en-us/windows/keyboard-shortcuts-in-apps-139014e7-177b-d1f3-eb2e-7298b2599a34",
+                "collection": "windows_11",
+                "published": "2023-09-13",
+                "title": "Keyboard shortcuts in apps - Microsoft Support"
+            },
+            {
+                "id": "f9f4efda-4593-4207-a0b1-a153c90a90c0",
+                "source": "https://support.microsoft.com/en-us/windows/windows-keyboard-shortcuts-for-accessibility-021bcb62-45c8-e4ef-1e4f-41b8c1fc87fd",
+                "collection": "windows_11",
+                "published": "2023-09-13",
+                "title": "Windows keyboard shortcuts for accessibility - Microsoft Support"
+            },
+            {
+                "id": "bbcc52be-6f71-ea18-2e1b-08db6aedf68d",
+                "source": "https://support.microsoft.com/en-us/topic/kb5030327-setup-dynamic-update-for-windows-11-version-22h2-september-12-2023-e397f4dc-a341-4991-8df6-0a6681d1c19e",
+                "collection": "windows_11",
+                "published": "2023-09-12",
+                "title": "KB5030327: Setup Dynamic Update for Windows 11, version 22H2: September 12, 2023 - Microsoft Support"
+            },
+            {
+                "id": "fde42fae-f604-7304-bb12-10b493cb9cc3",
+                "source": "https://support.microsoft.com/en-us/topic/kb5030326-setup-dynamic-update-for-windows-11-version-21h2-september-12-2023-41284c64-9b30-4d0a-997a-1e9891353c3b",
+                "collection": "windows_11",
+                "published": "2023-09-12",
+                "title": "KB5030326: Setup Dynamic Update for Windows 11, version 21H2: September 12, 2023 - Microsoft Support"
+            },
+            {
+                "id": "0afb5e98-f325-1908-6dca-fd209e27f3fa",
+                "source": "https://support.microsoft.com/en-us/topic/kb5029778-how-to-manage-the-vulnerability-associated-with-cve-2022-40982-d461157c-0411-4a91-9fc5-9b29e0fe2782",
+                "collection": "windows_11",
+                "published": "2023-09-12",
+                "title": "KB5029778: How to manage the vulnerability associated with CVE-2022-40982 - Microsoft Support"
+            },
+            {
+                "id": "765ef6a4-75af-b47f-931e-a56631999686",
+                "source": "https://support.microsoft.com/en-us/windows/control-your-dynamic-lighting-devices-in-windows-8e8f22e3-e820-476c-8f9d-9ffc7b6ffcd2",
+                "collection": "windows_11",
+                "published": "2023-09-12",
+                "title": "Control your Dynamic Lighting devices in Windows - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

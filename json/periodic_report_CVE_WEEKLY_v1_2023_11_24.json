@@ -6,7 +6,7 @@
     "report_month_end": "November",
     "report_year_end": "2023",
     "report_end_date": "2023_11_24",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,7 +14,8 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
         {
@@ -111,5 +112,54 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "windows_10": [
+            {
+                "id": "8fb72949-27e7-2269-816f-70a1ceb9d965",
+                "source": "https://support.microsoft.com/en-us/topic/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0",
+                "collection": "windows_10",
+                "published": "2023-11-17",
+                "title": "Web links from Outlook emails and Teams chats open in Microsoft Edge - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "66a44726-0eb9-072c-17cf-251a84b234a9",
+                "source": "https://support.microsoft.com/en-us/topic/october-10-2023-kb5031354-os-build-22621-2428-ecc07685-218f-4ba9-b3c8-fe2e35059aec",
+                "collection": "windows_11",
+                "published": "2023-11-20",
+                "title": "October 10, 2023\u2014KB5031354 (OS Build 22621.2428) - Microsoft Support"
+            },
+            {
+                "id": "9b7c707c-fbbd-ce53-15b8-f5d7e399ef84",
+                "source": "https://support.microsoft.com/en-us/topic/september-26-2023-kb5030310-os-build-22621-2361-preview-363ac1ae-6ea8-41b3-b3cc-22a2a5682faf",
+                "collection": "windows_11",
+                "published": "2023-11-20",
+                "title": "September 26, 2023\u2014KB5030310 (OS Build 22621.2361) Preview - Microsoft Support"
+            },
+            {
+                "id": "081bbd17-9849-5f19-87db-a242fdc790ad",
+                "source": "https://support.microsoft.com/en-us/topic/windows-11-version-23h2-update-history-59875222-b990-4bd9-932f-91a5954de434",
+                "collection": "windows_11",
+                "published": "2023-11-20",
+                "title": "Windows 11, version 23H2 update history - Microsoft Support"
+            },
+            {
+                "id": "3ac5a169-38f0-0936-2ee8-866b878f34d2",
+                "source": "https://support.microsoft.com/en-us/topic/web-links-from-outlook-emails-and-teams-chats-open-in-microsoft-edge-b0e1a1c1-bd62-462c-9ed5-5938b9c649f0",
+                "collection": "windows_11",
+                "published": "2023-11-17",
+                "title": "Web links from Outlook emails and Teams chats open in Microsoft Edge - Microsoft Support"
+            },
+            {
+                "id": "69446aae-772c-1ae2-1715-ec3469c74bf7",
+                "source": "https://support.microsoft.com/en-us/surface/which-surface-devices-can-be-upgraded-to-windows-11-76c3c125-82e0-4d1e-9550-12ed09f9058e",
+                "collection": "windows_11",
+                "published": "2023-11-17",
+                "title": "Which Surface devices can be upgraded to Windows 11? - Microsoft Support"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }

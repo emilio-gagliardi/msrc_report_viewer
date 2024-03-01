@@ -6,7 +6,7 @@
     "report_month_end": "February",
     "report_year_end": "2024",
     "report_end_date": "2024_02_09",
-    "report_current_date": "24_02_2024",
+    "report_current_date": "01_03_2024",
     "report_title": "Big Hat Group Weekly Security Update Report",
     "report_subtitle": "(Windows and Edge Edition)",
     "report_description": "The Weekly Security Update Report is provided by Big Hat Group with the goal of making it easier to find the information System Administrators and Security Professionals need to keep their systems secure. The CVE Weekly Report is provided as a beta resource.",
@@ -14,7 +14,8 @@
     "toc": {
         "section_1": "MSRC Posts",
         "section_2": "Products",
-        "section_3": "Tooling Support"
+        "section_3": "Tooling Support",
+        "section_4": "Appendix"
     },
     "section_1_data": [
         {
@@ -88,5 +89,54 @@
     "section_3_data": [],
     "section_3_metadata": {
         "total_tools": 0
-    }
+    },
+    "section_4_data": {
+        "security_update_notes": [
+            {
+                "id": "46650b60-1421-ab83-b408-cc1b0c494565",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#february-8-2024",
+                "collection": "security_update_notes",
+                "published": "2024-02-08",
+                "title": "February 8, 2024"
+            },
+            {
+                "id": "d855312f-52d4-8e6d-a0a9-3349ea8d45da",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security#february-7-2024",
+                "collection": "security_update_notes",
+                "published": "2024-02-07",
+                "title": "February 7, 2024"
+            }
+        ],
+        "stable_channel_notes": [
+            {
+                "id": "65be21ae-2f71-d9b3-5827-bc7beccdf8a7",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12002210175-february-8-2024",
+                "collection": "stable_channel_notes",
+                "published": "2024-02-08",
+                "title": "Version 120.0.2210.175: February 8, 2024"
+            },
+            {
+                "id": "90417ecb-9f98-eb0b-602d-720556516059",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12102277112-february-8-2024",
+                "collection": "stable_channel_notes",
+                "published": "2024-02-08",
+                "title": "Version 121.0.2277.112: February 8, 2024"
+            },
+            {
+                "id": "1e424a30-aef0-e9ed-1538-877c3c019b0e",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12102277110-february-7-2024",
+                "collection": "stable_channel_notes",
+                "published": "2024-02-07",
+                "title": "Version 121.0.2277.110: February 7, 2024"
+            },
+            {
+                "id": "ab9af447-555b-17ca-6fe3-2bcaafd30cce",
+                "source": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel#version-12102277106-february-5-2024",
+                "collection": "stable_channel_notes",
+                "published": "2024-02-05",
+                "title": "Version 121.0.2277.106: February 5, 2024"
+            }
+        ]
+    },
+    "section_4_metadata": {}
 }
