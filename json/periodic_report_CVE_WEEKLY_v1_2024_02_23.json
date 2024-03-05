@@ -347,6 +347,80 @@
                 "published": "2024-02-20",
                 "title": "Version 120.0.2210.181: February 20, 2024"
             }
+        ],
+        "windows_10": [
+            {
+                "id": "29086bc7-051a-77d4-ff9c-3621fda77f2d",
+                "source": "https://support.microsoft.com/en-us/topic/january-23-2024-kb5034203-os-build-19045-3996-preview-d9540687-af96-46ba-9192-88fe44833561",
+                "collection": "windows_10",
+                "published": "2024-02-21",
+                "title": "January 23, 2024\u2014KB5034203 (OS Build 19045.3996) Preview - Microsoft Support"
+            },
+            {
+                "id": "90275aba-23d3-f86a-73f7-d6149f4c0169",
+                "source": "https://support.microsoft.com/en-us/windows/help-protect-my-pc-with-microsoft-defender-offline-9306d528-64bf-4668-5b80-ff533f183d6c",
+                "collection": "windows_10",
+                "published": "2024-02-21",
+                "title": "Help protect my PC with Microsoft Defender Offline - Microsoft Support"
+            },
+            {
+                "id": "3a800a4b-dfb9-7f6d-4c0d-0e5a0c45d230",
+                "source": "https://support.microsoft.com/en-us/windows/schedule-a-scan-in-microsoft-defender-antivirus-54b64e9c-880a-c6b6-2416-0eb330ed5d2d",
+                "collection": "windows_10",
+                "published": "2024-02-21",
+                "title": "Schedule a scan in Microsoft Defender Antivirus - Microsoft Support"
+            },
+            {
+                "id": "df45fc92-2aa1-71fd-50ed-d3a930b7a7c0",
+                "source": "https://support.microsoft.com/en-us/windows/install-the-latest-updates-for-windows-92bb1064-cf3b-0b94-7c57-331f7b7db3c6",
+                "collection": "windows_10",
+                "published": "2024-02-20",
+                "title": "Install the latest updates for Windows - Microsoft Support"
+            },
+            {
+                "id": "1bd9b3b4-ac71-588f-c894-dc4093ecab56",
+                "source": "https://support.microsoft.com/en-us/topic/kb5032038-overview-of-windows-backup-as-installed-in-windows-10-and-windows-11-bd264359-4180-4541-a09f-738420f9900d",
+                "collection": "windows_10",
+                "published": "2024-02-16",
+                "title": "KB5032038: Overview of Windows Backup as installed in Windows 10 and Windows 11 - Microsoft Support"
+            },
+            {
+                "id": "dc213b23-5e83-7190-7815-cf6b20316cf9",
+                "source": "https://support.microsoft.com/en-us/windows/get-help-with-timeline-febc28db-034c-d2b0-3bbe-79aa0c501039",
+                "collection": "windows_10",
+                "published": "2024-02-16",
+                "title": "Get help with timeline - Microsoft Support"
+            }
+        ],
+        "windows_11": [
+            {
+                "id": "036a5532-b43d-9795-743e-29f2b439dcb0",
+                "source": "https://support.microsoft.com/en-us/topic/january-23-2024-kb5034204-os-builds-22621-3085-and-22631-3085-preview-7652acf2-56dc-430e-b8ef-ec8f56ec1028",
+                "collection": "windows_11",
+                "published": "2024-02-21",
+                "title": "January 23, 2024\u2014KB5034204 (OS Builds 22621.3085 and 22631.3085) Preview - Microsoft Support"
+            },
+            {
+                "id": "dc8034c3-bba6-0e7c-bf6c-ab60d6b39bb3",
+                "source": "https://support.microsoft.com/en-us/windows/help-protect-my-pc-with-microsoft-defender-offline-9306d528-64bf-4668-5b80-ff533f183d6c",
+                "collection": "windows_11",
+                "published": "2024-02-21",
+                "title": "Help protect my PC with Microsoft Defender Offline - Microsoft Support"
+            },
+            {
+                "id": "ce5eb544-25f0-2225-84c3-6237e5345e4d",
+                "source": "https://support.microsoft.com/en-us/windows/install-the-latest-updates-for-windows-92bb1064-cf3b-0b94-7c57-331f7b7db3c6",
+                "collection": "windows_11",
+                "published": "2024-02-20",
+                "title": "Install the latest updates for Windows - Microsoft Support"
+            },
+            {
+                "id": "4d145bf5-f93a-9285-6fe5-5bbb8755da0c",
+                "source": "https://support.microsoft.com/en-us/topic/kb5032038-overview-of-windows-backup-as-installed-in-windows-10-and-windows-11-bd264359-4180-4541-a09f-738420f9900d",
+                "collection": "windows_11",
+                "published": "2024-02-16",
+                "title": "KB5032038: Overview of Windows Backup as installed in Windows 10 and Windows 11 - Microsoft Support"
+            }
         ]
     },
     "section_4_metadata": {}

@@ -606,6 +606,48 @@
         ],
         "windows_10": [
             {
+                "id": "83f20996-11a9-500c-ae4e-7e7a5a1c654c",
+                "source": "https://support.microsoft.com/en-us/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d",
+                "collection": "windows_10",
+                "published": "2024-01-19",
+                "title": "Microsoft Defender update for Windows operating system installation images - Microsoft Support"
+            },
+            {
+                "id": "7fefdc9f-e9af-0240-b0c9-a727acaa6c12",
+                "source": "https://support.microsoft.com/en-us/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8",
+                "collection": "windows_10",
+                "published": "2024-01-17",
+                "title": "KB5020276\u2014Netjoin: Domain join hardening changes - Microsoft Support"
+            },
+            {
+                "id": "f7dbc7be-5bbe-3732-4102-20c5f08716d8",
+                "source": "https://support.microsoft.com/en-us/windows/windows-arm-based-pcs-faq-477f51df-2e3b-f68f-31b0-06f5e4f8ebb5",
+                "collection": "windows_10",
+                "published": "2024-01-17",
+                "title": "Windows Arm-based PCs FAQ - Microsoft Support"
+            },
+            {
+                "id": "e7204f48-53b7-c23d-019c-4132948014e8",
+                "source": "https://support.microsoft.com/en-us/account-billing/fix-screen-time-limits-not-working-9ae1f6b2-4c40-212e-bf70-556d1235a0ce",
+                "collection": "windows_10",
+                "published": "2024-01-16",
+                "title": "Fix screen time limits not working - Microsoft Support"
+            },
+            {
+                "id": "09e99fbd-0923-e651-c1cf-3dcf58ba2881",
+                "source": "https://support.microsoft.com/en-us/windows/back-up-your-windows-pc-87a81f8a-78fa-456e-b521-ac0560e32338",
+                "collection": "windows_10",
+                "published": "2024-01-16",
+                "title": "Back up your Windows PC - Microsoft Support"
+            },
+            {
+                "id": "65d4caef-d099-f38b-f3b0-50ac860e5829",
+                "source": "https://support.microsoft.com/en-us/account-billing/filter-websites-and-searches-using-microsoft-family-safety-3034d91e-5efa-9fbe-1384-46009f087ccf",
+                "collection": "windows_10",
+                "published": "2024-01-16",
+                "title": "Filter websites and searches using Microsoft Family Safety - Microsoft Support"
+            },
+            {
                 "id": "8d5936c7-2cff-0037-2d26-2b31b5d126b8",
                 "source": "https://support.microsoft.com/en-us/topic/kb5034441-windows-recovery-environment-update-for-windows-10-version-21h2-and-22h2-january-9-2024-62c04204-aaa5-4fee-a02a-2fdea17075a8",
                 "collection": "windows_10",
@@ -628,6 +670,41 @@
             }
         ],
         "windows_11": [
+            {
+                "id": "27f07049-12ce-6b0d-4658-eb451e4c66e9",
+                "source": "https://support.microsoft.com/en-us/topic/microsoft-defender-update-for-windows-operating-system-installation-images-1c89630b-61ff-00a1-04e2-2d1f3865450d",
+                "collection": "windows_11",
+                "published": "2024-01-19",
+                "title": "Microsoft Defender update for Windows operating system installation images - Microsoft Support"
+            },
+            {
+                "id": "f10f5fd5-6c73-7e4b-6108-2f549dfcb447",
+                "source": "https://support.microsoft.com/en-us/topic/kb5020276-netjoin-domain-join-hardening-changes-2b65a0f3-1f4c-42ef-ac0f-1caaf421baf8",
+                "collection": "windows_11",
+                "published": "2024-01-17",
+                "title": "KB5020276\u2014Netjoin: Domain join hardening changes - Microsoft Support"
+            },
+            {
+                "id": "75fb68ee-bbec-2a39-a102-03c44b9cea98",
+                "source": "https://support.microsoft.com/en-us/windows/windows-arm-based-pcs-faq-477f51df-2e3b-f68f-31b0-06f5e4f8ebb5",
+                "collection": "windows_11",
+                "published": "2024-01-17",
+                "title": "Windows Arm-based PCs FAQ - Microsoft Support"
+            },
+            {
+                "id": "e526ef9e-3716-5664-2ba7-6c1331ba2a5c",
+                "source": "https://support.microsoft.com/en-us/windows/back-up-your-windows-pc-87a81f8a-78fa-456e-b521-ac0560e32338",
+                "collection": "windows_11",
+                "published": "2024-01-16",
+                "title": "Back up your Windows PC - Microsoft Support"
+            },
+            {
+                "id": "61c4ed80-598d-eaf1-8c62-535265fe3e5c",
+                "source": "https://support.microsoft.com/en-us/account-billing/filter-websites-and-searches-using-microsoft-family-safety-3034d91e-5efa-9fbe-1384-46009f087ccf",
+                "collection": "windows_11",
+                "published": "2024-01-16",
+                "title": "Filter websites and searches using Microsoft Family Safety - Microsoft Support"
+            },
             {
                 "id": "607c3eb3-8477-57cd-6481-c6d5965e4545",
                 "source": "https://support.microsoft.com/en-us/topic/kb5034440-windows-recovery-environment-update-for-windows-11-version-21h2-january-9-2024-1e07724a-3547-40f5-99ff-862cc48fd523",
